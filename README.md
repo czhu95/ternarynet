@@ -10,7 +10,7 @@ This implementation is based on [tensorpack](https://github.com/ppwwyyxx/tensorp
 
 #### Error Rate of Finetuned TTQ ResNet models on CIFAR-10:
 
-| Network       | Full Precsion | TTQ         |
+| Network       | Full Precision | TTQ         |
 | ------------- | ------------- | ----------- |
 | ResNet-20     | 8.23          | 8.87        |
 | ResNet-32     | 7.67          | 7.63        |
@@ -19,7 +19,7 @@ This implementation is based on [tensorpack](https://github.com/ppwwyyxx/tensorp
 
 #### Error Rate of TTQ AlexNet model on ImageNet from scratch:
 
-| Network       | Full Precsion | TTQ         |
+| Network       | Full Precision | TTQ         |
 | ------------- | ------------- | ----------- |
 | Top1-error    | 42.8          | 42.5        |
 | Top5-error    | 19.7          | 20.3        |
