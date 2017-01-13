@@ -42,6 +42,22 @@ python ./tw-imagenet-alexnet.py --gpu 0,1,2,3 --data IMAGENET_PATH [--t threshol
 ```
 **Note: We used 4 GPUs for training**
 
-
 ## Logs
-Some training logs can be found [here](./examples/Ternary-Net/train_log)
+Some training logs can be found [here](./examples/Ternary-Net/train_log).
+
+## Support
+
+Please use [github issues](https://github.com/czhu95/ternarynet/issues) for any issues related to the code.
+Send email to the authors for general questions related to the paper.
+
+## Citation
+
+If you use our code or models in your research, please cite:
+```
+@article{zhu2016trained,
+  title={Trained Ternary Quantization},
+  author={Zhu, Chenzhuo and Han, Song and Mao, Huizi and Dally, William J},
+  journal={arXiv preprint arXiv:1612.01064},
+  year={2016}
+}
+```
