@@ -1,0 +1,2614 @@
+[32m[1104 10:59:06 @logger.py:59][0m Argv: tw-imagenet-alexnet.py --gpu 0,1,2,3 --t 0.049
+[32m[1104 10:59:06 @utils.py:111][0m TENSORPACK_DATASET not set, using /raid/chenzhuo/dev/projects/binarynet/tensorpack/dataflow/dataset for dataset.
+[32m[1104 10:59:13 @multigpu.py:49][0m Training a model of 4 tower
+[32m[1104 10:59:13 @multigpu.py:57][0m Building graph for training tower 0...
+[32m[1104 10:59:13 @_common.py:61][0m conv0 input: [None, 224, 224, 3]
+[32m[1104 10:59:13 @_common.py:69][0m conv0 output: [None, 54, 54, 96]
+[32m[1104 10:59:13 @_common.py:61][0m conv1 input: [None, 54, 54, 96]
+[32m[1104 10:59:13 @_common.py:69][0m conv1 output: [None, 54, 54, 256]
+[32m[1104 10:59:13 @_common.py:61][0m pool1 input: [None, 54, 54, 256]
+[32m[1104 10:59:13 @_common.py:69][0m pool1 output: [None, 27, 27, 256]
+[32m[1104 10:59:13 @_common.py:61][0m conv2 input: [None, 27, 27, 256]
+[32m[1104 10:59:13 @_common.py:69][0m conv2 output: [None, 27, 27, 384]
+[32m[1104 10:59:13 @_common.py:61][0m pool2 input: [None, 27, 27, 384]
+[32m[1104 10:59:13 @_common.py:69][0m pool2 output: [None, 14, 14, 384]
+[32m[1104 10:59:13 @_common.py:61][0m conv3 input: [None, 14, 14, 384]
+[32m[1104 10:59:13 @_common.py:69][0m conv3 output: [None, 14, 14, 384]
+[32m[1104 10:59:13 @_common.py:61][0m conv4 input: [None, 14, 14, 384]
+[32m[1104 10:59:14 @_common.py:69][0m conv4 output: [None, 14, 14, 256]
+[32m[1104 10:59:14 @_common.py:61][0m pool4 input: [None, 14, 14, 256]
+[32m[1104 10:59:14 @_common.py:69][0m pool4 output: [None, 6, 6, 256]
+[32m[1104 10:59:14 @_common.py:61][0m fc0 input: [None, 6, 6, 256]
+[32m[1104 10:59:14 @_common.py:69][0m fc0 output: [None, 4096]
+[32m[1104 10:59:14 @_common.py:61][0m fc1 input: [None, 4096]
+[32m[1104 10:59:14 @_common.py:69][0m fc1 output: [None, 4096]
+[32m[1104 10:59:14 @_common.py:61][0m fct input: [None, 4096]
+[32m[1104 10:59:14 @_common.py:69][0m fct output: [None, 1000]
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc0/W:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc0/Wp:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc0/Wn:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc1/W:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc1/Wp:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fc1/Wn:0
+[32m[1104 10:59:14 @regularize.py:17][0m Apply regularizer for fct/W:0
+[32m[1104 10:59:15 @multigpu.py:57][0m Building graph for training tower 1...
+[32m[1104 10:59:16 @multigpu.py:57][0m Building graph for training tower 2...
+[32m[1104 10:59:17 @multigpu.py:57][0m Building graph for training tower 3...
+[32m[1104 10:59:19 @modelutils.py:22][0m Model Parameters: 
+conv0/W:0: shape=[12, 12, 3, 96], dim=41472
+conv1/W:0: shape=[5, 5, 48, 256], dim=307200
+conv1/Wp:0: shape=[], dim=1
+conv1/Wn:0: shape=[], dim=1
+bn1/beta:0: shape=[256], dim=256
+bn1/gamma:0: shape=[256], dim=256
+conv2/W:0: shape=[3, 3, 256, 384], dim=884736
+conv2/Wp:0: shape=[], dim=1
+conv2/Wn:0: shape=[], dim=1
+bn2/beta:0: shape=[384], dim=384
+bn2/gamma:0: shape=[384], dim=384
+conv3/W:0: shape=[3, 3, 192, 384], dim=663552
+conv3/Wp:0: shape=[], dim=1
+conv3/Wn:0: shape=[], dim=1
+bn3/beta:0: shape=[384], dim=384
+bn3/gamma:0: shape=[384], dim=384
+conv4/W:0: shape=[3, 3, 192, 256], dim=442368
+conv4/Wp:0: shape=[], dim=1
+conv4/Wn:0: shape=[], dim=1
+bn4/beta:0: shape=[256], dim=256
+bn4/gamma:0: shape=[256], dim=256
+fc0/W:0: shape=[9216, 4096], dim=37748736
+fc0/Wp:0: shape=[], dim=1
+fc0/Wn:0: shape=[], dim=1
+bnfc0/beta:0: shape=[4096], dim=4096
+bnfc0/gamma:0: shape=[4096], dim=4096
+fc1/W:0: shape=[4096, 4096], dim=16777216
+fc1/Wp:0: shape=[], dim=1
+fc1/Wn:0: shape=[], dim=1
+bnfc1/beta:0: shape=[4096], dim=4096
+bnfc1/gamma:0: shape=[4096], dim=4096
+fct/W:0: shape=[4096, 1000], dim=4096000
+fct/b:0: shape=[1000], dim=1000
+Total param=60981236 (232.624954 MB assuming all float32)
+[32m[1104 10:59:19 @base.py:109][0m Setup callbacks ...
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn1/mean/EMA:0 renamed to bn1/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn1/variance/EMA:0 renamed to bn1/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn2/mean/EMA:0 renamed to bn2/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn2/variance/EMA:0 renamed to bn2/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn3/mean/EMA:0 renamed to bn3/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn3/variance/EMA:0 renamed to bn3/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn4/mean/EMA:0 renamed to bn4/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bn4/variance/EMA:0 renamed to bn4/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bnfc0/mean/EMA:0 renamed to bnfc0/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bnfc0/variance/EMA:0 renamed to bnfc0/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bnfc1/mean/EMA:0 renamed to bnfc1/mean/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/bnfc1/variance/EMA:0 renamed to bnfc1/variance/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn2/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn2/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn3/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn3/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn4/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bn4/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bnfc0/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bnfc0/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bnfc1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower1/bnfc1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn2/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn2/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn3/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn3/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn4/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bn4/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bnfc0/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bnfc0/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bnfc1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower2/bnfc1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn2/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn2/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn3/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn3/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn4/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bn4/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bnfc0/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bnfc0/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bnfc1/mean/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:55][0m [ModelSaver] Variable tower3/bnfc1/variance/EMA:0 won't be saved due to an alternative in a different tower
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/train-error-top1/EMA:0 renamed to train-error-top1/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/train-error-top5/EMA:0 renamed to train-error-top5/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/cross_entropy_loss/EMA:0 renamed to cross_entropy_loss/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/AddN/EMA:0 renamed to AddN/EMA:0 when saving model.
+[32m[1104 10:59:19 @common.py:51][0m [ModelSaver] tower0/cost/EMA:0 renamed to cost/EMA:0 when saving model.
+[32m[1104 10:59:20 @base.py:111][0m Building graph for predictor tower 0...
+[32m[1104 10:59:28 @base.py:114][0m Initializing graph variables ...
+[32m[1104 10:59:34 @base.py:156][0m Starting all threads & procs ...
+[32m[1104 10:59:34 @base.py:123][0m Start training with global_step=0
+[32m[1104 11:41:09 @stat.py:82][0m AddN: 0.035644
+[32m[1104 11:41:09 @stat.py:82][0m conv0/W/rms: 0.01462
+[32m[1104 11:41:09 @stat.py:82][0m conv1/W/rms: 0.018677
+[32m[1104 11:41:09 @stat.py:82][0m conv1/Wn:0: 1.0162
+[32m[1104 11:41:09 @stat.py:82][0m conv1/Wp:0: 0.98382
+[32m[1104 11:41:09 @stat.py:82][0m conv2/W/rms: 0.020424
+[32m[1104 11:41:09 @stat.py:82][0m conv2/Wn:0: 1.0109
+[32m[1104 11:41:09 @stat.py:82][0m conv2/Wp:0: 0.98919
+[32m[1104 11:41:09 @stat.py:82][0m conv3/W/rms: 0.021506
+[32m[1104 11:41:09 @stat.py:82][0m conv3/Wn:0: 1.0045
+[32m[1104 11:41:09 @stat.py:82][0m conv3/Wp:0: 0.99556
+[32m[1104 11:41:09 @stat.py:82][0m conv4/W/rms: 0.02424
+[32m[1104 11:41:09 @stat.py:82][0m conv4/Wn:0: 1.0489
+[32m[1104 11:41:09 @stat.py:82][0m conv4/Wp:0: 0.95057
+[32m[1104 11:41:09 @stat.py:82][0m cost: 4.1642
+[32m[1104 11:41:09 @stat.py:82][0m cross_entropy_loss: 4.1286
+[32m[1104 11:41:09 @stat.py:82][0m fc0/W/rms: 0.012232
+[32m[1104 11:41:09 @stat.py:82][0m fc0/Wn:0: 1.0027
+[32m[1104 11:41:09 @stat.py:82][0m fc0/Wp:0: 0.99734
+[32m[1104 11:41:09 @stat.py:82][0m fc1/W/rms: 0.019172
+[32m[1104 11:41:09 @stat.py:82][0m fc1/Wn:0: 1.0359
+[32m[1104 11:41:09 @stat.py:82][0m fc1/Wp:0: 0.96372
+[32m[1104 11:41:09 @stat.py:82][0m fct/W/rms: 0.0242
+[32m[1104 11:41:09 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 11:41:09 @stat.py:82][0m train-error-top1: 0.79742
+[32m[1104 11:41:09 @stat.py:82][0m train-error-top5: 0.58614
+[32m[1104 11:41:09 @stat.py:82][0m val-error-top1: 0.79472
+[32m[1104 11:41:09 @stat.py:82][0m val-error-top5: 0.5894
+[32m[1104 11:41:09 @stat.py:82][0m validation_cost: 4.1606
+[32m[1104 11:41:09 @group.py:40][0m Callbacks took 553.188 sec in total. InferenceRunner: 535.844sec
+[32m[1104 11:41:09 @timer.py:46][0m Epoch 1 (global_step 10000) finished, time:2494.77sec.
+[32m[1104 12:21:38 @stat.py:82][0m AddN: 0.027831
+[32m[1104 12:21:38 @stat.py:82][0m conv0/W/rms: 0.017409
+[32m[1104 12:21:38 @stat.py:82][0m conv1/W/rms: 0.021886
+[32m[1104 12:21:38 @stat.py:82][0m conv1/Wn:0: 1.0255
+[32m[1104 12:21:38 @stat.py:82][0m conv1/Wp:0: 0.97462
+[32m[1104 12:21:38 @stat.py:82][0m conv2/W/rms: 0.02266
+[32m[1104 12:21:38 @stat.py:82][0m conv2/Wn:0: 1.0165
+[32m[1104 12:21:38 @stat.py:82][0m conv2/Wp:0: 0.98361
+[32m[1104 12:21:38 @stat.py:82][0m conv3/W/rms: 0.023661
+[32m[1104 12:21:38 @stat.py:82][0m conv3/Wn:0: 1.0058
+[32m[1104 12:21:38 @stat.py:82][0m conv3/Wp:0: 0.99435
+[32m[1104 12:21:38 @stat.py:82][0m conv4/W/rms: 0.026559
+[32m[1104 12:21:38 @stat.py:82][0m conv4/Wn:0: 1.0717
+[32m[1104 12:21:38 @stat.py:82][0m conv4/Wp:0: 0.92776
+[32m[1104 12:21:38 @stat.py:82][0m cost: 3.4354
+[32m[1104 12:21:38 @stat.py:82][0m cross_entropy_loss: 3.4076
+[32m[1104 12:21:38 @stat.py:82][0m fc0/W/rms: 0.0098889
+[32m[1104 12:21:38 @stat.py:82][0m fc0/Wn:0: 1.0047
+[32m[1104 12:21:38 @stat.py:82][0m fc0/Wp:0: 0.99542
+[32m[1104 12:21:38 @stat.py:82][0m fc1/W/rms: 0.016355
+[32m[1104 12:21:38 @stat.py:82][0m fc1/Wn:0: 1.0427
+[32m[1104 12:21:38 @stat.py:82][0m fc1/Wp:0: 0.95691
+[32m[1104 12:21:38 @stat.py:82][0m fct/W/rms: 0.026724
+[32m[1104 12:21:38 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 12:21:38 @stat.py:82][0m train-error-top1: 0.69398
+[32m[1104 12:21:38 @stat.py:82][0m train-error-top5: 0.4553
+[32m[1104 12:21:38 @stat.py:82][0m val-error-top1: 0.71576
+[32m[1104 12:21:38 @stat.py:82][0m val-error-top5: 0.48532
+[32m[1104 12:21:38 @stat.py:82][0m validation_cost: 3.6145
+[32m[1104 12:21:38 @group.py:40][0m Callbacks took 509.681 sec in total. InferenceRunner: 503.545sec
+[32m[1104 12:21:38 @timer.py:46][0m Epoch 2 (global_step 20000) finished, time:2429.81sec.
+[32m[1104 13:03:14 @stat.py:82][0m AddN: 0.023315
+[32m[1104 13:03:14 @stat.py:82][0m conv0/W/rms: 0.019874
+[32m[1104 13:03:14 @stat.py:82][0m conv1/W/rms: 0.025353
+[32m[1104 13:03:14 @stat.py:82][0m conv1/Wn:0: 1.0363
+[32m[1104 13:03:14 @stat.py:82][0m conv1/Wp:0: 0.96381
+[32m[1104 13:03:14 @stat.py:82][0m conv2/W/rms: 0.024899
+[32m[1104 13:03:14 @stat.py:82][0m conv2/Wn:0: 1.0218
+[32m[1104 13:03:14 @stat.py:82][0m conv2/Wp:0: 0.97838
+[32m[1104 13:03:14 @stat.py:82][0m conv3/W/rms: 0.025768
+[32m[1104 13:03:14 @stat.py:82][0m conv3/Wn:0: 1.0063
+[32m[1104 13:03:14 @stat.py:82][0m conv3/Wp:0: 0.99392
+[32m[1104 13:03:14 @stat.py:82][0m conv4/W/rms: 0.028883
+[32m[1104 13:03:14 @stat.py:82][0m conv4/Wn:0: 1.0875
+[32m[1104 13:03:14 @stat.py:82][0m conv4/Wp:0: 0.912
+[32m[1104 13:03:14 @stat.py:82][0m cost: 3.0624
+[32m[1104 13:03:14 @stat.py:82][0m cross_entropy_loss: 3.0391
+[32m[1104 13:03:14 @stat.py:82][0m fc0/W/rms: 0.0080825
+[32m[1104 13:03:14 @stat.py:82][0m fc0/Wn:0: 1.0062
+[32m[1104 13:03:14 @stat.py:82][0m fc0/Wp:0: 0.99403
+[32m[1104 13:03:14 @stat.py:82][0m fc1/W/rms: 0.014056
+[32m[1104 13:03:14 @stat.py:82][0m fc1/Wn:0: 1.0462
+[32m[1104 13:03:14 @stat.py:82][0m fc1/Wp:0: 0.95345
+[32m[1104 13:03:14 @stat.py:82][0m fct/W/rms: 0.029348
+[32m[1104 13:03:14 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 13:03:14 @stat.py:82][0m train-error-top1: 0.63913
+[32m[1104 13:03:14 @stat.py:82][0m train-error-top5: 0.4004
+[32m[1104 13:03:14 @stat.py:82][0m val-error-top1: 0.66156
+[32m[1104 13:03:14 @stat.py:82][0m val-error-top5: 0.41888
+[32m[1104 13:03:14 @stat.py:82][0m validation_cost: 3.2349
+[32m[1104 13:03:14 @group.py:40][0m Callbacks took 578.983 sec in total. InferenceRunner: 572.465sec
+[32m[1104 13:03:14 @timer.py:46][0m Epoch 3 (global_step 30000) finished, time:2495.78sec.
+[32m[1104 13:44:33 @stat.py:82][0m AddN: 0.021096
+[32m[1104 13:44:33 @stat.py:82][0m conv0/W/rms: 0.022078
+[32m[1104 13:44:33 @stat.py:82][0m conv1/W/rms: 0.028927
+[32m[1104 13:44:33 @stat.py:82][0m conv1/Wn:0: 1.0486
+[32m[1104 13:44:33 @stat.py:82][0m conv1/Wp:0: 0.95159
+[32m[1104 13:44:33 @stat.py:82][0m conv2/W/rms: 0.027098
+[32m[1104 13:44:33 @stat.py:82][0m conv2/Wn:0: 1.0263
+[32m[1104 13:44:33 @stat.py:82][0m conv2/Wp:0: 0.97401
+[32m[1104 13:44:33 @stat.py:82][0m conv3/W/rms: 0.027826
+[32m[1104 13:44:33 @stat.py:82][0m conv3/Wn:0: 1.0075
+[32m[1104 13:44:33 @stat.py:82][0m conv3/Wp:0: 0.99281
+[32m[1104 13:44:33 @stat.py:82][0m conv4/W/rms: 0.031188
+[32m[1104 13:44:33 @stat.py:82][0m conv4/Wn:0: 1.1001
+[32m[1104 13:44:33 @stat.py:82][0m conv4/Wp:0: 0.89941
+[32m[1104 13:44:33 @stat.py:82][0m cost: 2.7934
+[32m[1104 13:44:33 @stat.py:82][0m cross_entropy_loss: 2.7723
+[32m[1104 13:44:33 @stat.py:82][0m fc0/W/rms: 0.0067618
+[32m[1104 13:44:33 @stat.py:82][0m fc0/Wn:0: 1.0099
+[32m[1104 13:44:33 @stat.py:82][0m fc0/Wp:0: 0.99039
+[32m[1104 13:44:33 @stat.py:82][0m fc1/W/rms: 0.012231
+[32m[1104 13:44:33 @stat.py:82][0m fc1/Wn:0: 1.053
+[32m[1104 13:44:33 @stat.py:82][0m fc1/Wp:0: 0.94662
+[32m[1104 13:44:33 @stat.py:82][0m fct/W/rms: 0.031998
+[32m[1104 13:44:33 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 13:44:33 @stat.py:82][0m train-error-top1: 0.59545
+[32m[1104 13:44:33 @stat.py:82][0m train-error-top5: 0.35875
+[32m[1104 13:44:33 @stat.py:82][0m val-error-top1: 0.63232
+[32m[1104 13:44:33 @stat.py:82][0m val-error-top5: 0.38766
+[32m[1104 13:44:33 @stat.py:82][0m validation_cost: 3.0404
+[32m[1104 13:44:33 @group.py:40][0m Callbacks took 565.381 sec in total. InferenceRunner: 557.690sec
+[32m[1104 13:44:33 @timer.py:46][0m Epoch 4 (global_step 40000) finished, time:2478.55sec.
+[32m[1104 14:25:53 @stat.py:82][0m AddN: 0.020462
+[32m[1104 14:25:53 @stat.py:82][0m conv0/W/rms: 0.024056
+[32m[1104 14:25:53 @stat.py:82][0m conv1/W/rms: 0.032502
+[32m[1104 14:25:53 @stat.py:82][0m conv1/Wn:0: 1.0635
+[32m[1104 14:25:53 @stat.py:82][0m conv1/Wp:0: 0.93679
+[32m[1104 14:25:53 @stat.py:82][0m conv2/W/rms: 0.029261
+[32m[1104 14:25:53 @stat.py:82][0m conv2/Wn:0: 1.031
+[32m[1104 14:25:53 @stat.py:82][0m conv2/Wp:0: 0.96937
+[32m[1104 14:25:53 @stat.py:82][0m conv3/W/rms: 0.029842
+[32m[1104 14:25:53 @stat.py:82][0m conv3/Wn:0: 1.0103
+[32m[1104 14:25:53 @stat.py:82][0m conv3/Wp:0: 0.99016
+[32m[1104 14:25:53 @stat.py:82][0m conv4/W/rms: 0.033496
+[32m[1104 14:25:53 @stat.py:82][0m conv4/Wn:0: 1.107
+[32m[1104 14:25:53 @stat.py:82][0m conv4/Wp:0: 0.89261
+[32m[1104 14:25:53 @stat.py:82][0m cost: 2.7022
+[32m[1104 14:25:53 @stat.py:82][0m cross_entropy_loss: 2.6817
+[32m[1104 14:25:53 @stat.py:82][0m fc0/W/rms: 0.0058756
+[32m[1104 14:25:53 @stat.py:82][0m fc0/Wn:0: 1.0143
+[32m[1104 14:25:53 @stat.py:82][0m fc0/Wp:0: 0.98605
+[32m[1104 14:25:53 @stat.py:82][0m fc1/W/rms: 0.010826
+[32m[1104 14:25:53 @stat.py:82][0m fc1/Wn:0: 1.0621
+[32m[1104 14:25:53 @stat.py:82][0m fc1/Wp:0: 0.93753
+[32m[1104 14:25:53 @stat.py:82][0m fct/W/rms: 0.034626
+[32m[1104 14:25:53 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 14:25:53 @stat.py:82][0m train-error-top1: 0.58132
+[32m[1104 14:25:53 @stat.py:82][0m train-error-top5: 0.33273
+[32m[1104 14:25:53 @stat.py:82][0m val-error-top1: 0.59342
+[32m[1104 14:25:53 @stat.py:82][0m val-error-top5: 0.34858
+[32m[1104 14:25:53 @stat.py:82][0m validation_cost: 2.8072
+[32m[1104 14:25:53 @group.py:40][0m Callbacks took 569.981 sec in total. InferenceRunner: 563.666sec
+[32m[1104 14:25:53 @timer.py:46][0m Epoch 5 (global_step 50000) finished, time:2480.01sec.
+[32m[1104 15:07:09 @stat.py:82][0m AddN: 0.020922
+[32m[1104 15:07:09 @stat.py:82][0m conv0/W/rms: 0.025871
+[32m[1104 15:07:09 @stat.py:82][0m conv1/W/rms: 0.036027
+[32m[1104 15:07:09 @stat.py:82][0m conv1/Wn:0: 1.0768
+[32m[1104 15:07:09 @stat.py:82][0m conv1/Wp:0: 0.92346
+[32m[1104 15:07:09 @stat.py:82][0m conv2/W/rms: 0.031403
+[32m[1104 15:07:09 @stat.py:82][0m conv2/Wn:0: 1.0362
+[32m[1104 15:07:09 @stat.py:82][0m conv2/Wp:0: 0.9643
+[32m[1104 15:07:09 @stat.py:82][0m conv3/W/rms: 0.031828
+[32m[1104 15:07:09 @stat.py:82][0m conv3/Wn:0: 1.0128
+[32m[1104 15:07:09 @stat.py:82][0m conv3/Wp:0: 0.9877
+[32m[1104 15:07:09 @stat.py:82][0m conv4/W/rms: 0.035801
+[32m[1104 15:07:09 @stat.py:82][0m conv4/Wn:0: 1.1134
+[32m[1104 15:07:09 @stat.py:82][0m conv4/Wp:0: 0.88633
+[32m[1104 15:07:09 @stat.py:82][0m cost: 2.4908
+[32m[1104 15:07:09 @stat.py:82][0m cross_entropy_loss: 2.4699
+[32m[1104 15:07:09 @stat.py:82][0m fc0/W/rms: 0.00535
+[32m[1104 15:07:09 @stat.py:82][0m fc0/Wn:0: 1.0205
+[32m[1104 15:07:09 @stat.py:82][0m fc0/Wp:0: 0.97993
+[32m[1104 15:07:09 @stat.py:82][0m fc1/W/rms: 0.0097863
+[32m[1104 15:07:09 @stat.py:82][0m fc1/Wn:0: 1.0662
+[32m[1104 15:07:09 @stat.py:82][0m fc1/Wp:0: 0.93344
+[32m[1104 15:07:09 @stat.py:82][0m fct/W/rms: 0.037241
+[32m[1104 15:07:09 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 15:07:09 @stat.py:82][0m train-error-top1: 0.54501
+[32m[1104 15:07:09 @stat.py:82][0m train-error-top5: 0.2997
+[32m[1104 15:07:09 @stat.py:82][0m val-error-top1: 0.5798
+[32m[1104 15:07:09 @stat.py:82][0m val-error-top5: 0.33412
+[32m[1104 15:07:09 @stat.py:82][0m validation_cost: 2.7339
+[32m[1104 15:07:09 @group.py:40][0m Callbacks took 567.392 sec in total. InferenceRunner: 558.577sec
+[32m[1104 15:07:09 @timer.py:46][0m Epoch 6 (global_step 60000) finished, time:2476.53sec.
+[32m[1104 15:48:29 @stat.py:82][0m AddN: 0.022103
+[32m[1104 15:48:29 @stat.py:82][0m conv0/W/rms: 0.027569
+[32m[1104 15:48:29 @stat.py:82][0m conv1/W/rms: 0.039488
+[32m[1104 15:48:29 @stat.py:82][0m conv1/Wn:0: 1.0913
+[32m[1104 15:48:29 @stat.py:82][0m conv1/Wp:0: 0.90903
+[32m[1104 15:48:29 @stat.py:82][0m conv2/W/rms: 0.033504
+[32m[1104 15:48:29 @stat.py:82][0m conv2/Wn:0: 1.0411
+[32m[1104 15:48:29 @stat.py:82][0m conv2/Wp:0: 0.95948
+[32m[1104 15:48:29 @stat.py:82][0m conv3/W/rms: 0.033769
+[32m[1104 15:48:29 @stat.py:82][0m conv3/Wn:0: 1.015
+[32m[1104 15:48:29 @stat.py:82][0m conv3/Wp:0: 0.98558
+[32m[1104 15:48:29 @stat.py:82][0m conv4/W/rms: 0.038076
+[32m[1104 15:48:29 @stat.py:82][0m conv4/Wn:0: 1.117
+[32m[1104 15:48:29 @stat.py:82][0m conv4/Wp:0: 0.8828
+[32m[1104 15:48:29 @stat.py:82][0m cost: 2.4242
+[32m[1104 15:48:29 @stat.py:82][0m cross_entropy_loss: 2.402
+[32m[1104 15:48:29 @stat.py:82][0m fc0/W/rms: 0.0050567
+[32m[1104 15:48:29 @stat.py:82][0m fc0/Wn:0: 1.0274
+[32m[1104 15:48:29 @stat.py:82][0m fc0/Wp:0: 0.97305
+[32m[1104 15:48:29 @stat.py:82][0m fc1/W/rms: 0.0090586
+[32m[1104 15:48:29 @stat.py:82][0m fc1/Wn:0: 1.0698
+[32m[1104 15:48:29 @stat.py:82][0m fc1/Wp:0: 0.9298
+[32m[1104 15:48:29 @stat.py:82][0m fct/W/rms: 0.039841
+[32m[1104 15:48:29 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 15:48:29 @stat.py:82][0m train-error-top1: 0.53756
+[32m[1104 15:48:29 @stat.py:82][0m train-error-top5: 0.28834
+[32m[1104 15:48:29 @stat.py:82][0m val-error-top1: 0.5755
+[32m[1104 15:48:29 @stat.py:82][0m val-error-top5: 0.32696
+[32m[1104 15:48:29 @stat.py:82][0m validation_cost: 2.7088
+[32m[1104 15:48:29 @group.py:40][0m Callbacks took 571.041 sec in total. InferenceRunner: 565.473sec
+[32m[1104 15:48:29 @timer.py:46][0m Epoch 7 (global_step 70000) finished, time:2479.42sec.
+[32m[1104 16:30:09 @stat.py:82][0m AddN: 0.023798
+[32m[1104 16:30:09 @stat.py:82][0m conv0/W/rms: 0.029154
+[32m[1104 16:30:09 @stat.py:82][0m conv1/W/rms: 0.042875
+[32m[1104 16:30:09 @stat.py:82][0m conv1/Wn:0: 1.1059
+[32m[1104 16:30:09 @stat.py:82][0m conv1/Wp:0: 0.89453
+[32m[1104 16:30:09 @stat.py:82][0m conv2/W/rms: 0.035562
+[32m[1104 16:30:09 @stat.py:82][0m conv2/Wn:0: 1.0437
+[32m[1104 16:30:09 @stat.py:82][0m conv2/Wp:0: 0.9569
+[32m[1104 16:30:09 @stat.py:82][0m conv3/W/rms: 0.035686
+[32m[1104 16:30:09 @stat.py:82][0m conv3/Wn:0: 1.0154
+[32m[1104 16:30:09 @stat.py:82][0m conv3/Wp:0: 0.98526
+[32m[1104 16:30:09 @stat.py:82][0m conv4/W/rms: 0.040337
+[32m[1104 16:30:10 @stat.py:82][0m conv4/Wn:0: 1.1198
+[32m[1104 16:30:10 @stat.py:82][0m conv4/Wp:0: 0.88005
+[32m[1104 16:30:10 @stat.py:82][0m cost: 2.3196
+[32m[1104 16:30:10 @stat.py:82][0m cross_entropy_loss: 2.2958
+[32m[1104 16:30:10 @stat.py:82][0m fc0/W/rms: 0.0049423
+[32m[1104 16:30:10 @stat.py:82][0m fc0/Wn:0: 1.0346
+[32m[1104 16:30:10 @stat.py:82][0m fc0/Wp:0: 0.96589
+[32m[1104 16:30:10 @stat.py:82][0m fc1/W/rms: 0.0085827
+[32m[1104 16:30:10 @stat.py:82][0m fc1/Wn:0: 1.0729
+[32m[1104 16:30:10 @stat.py:82][0m fc1/Wp:0: 0.92669
+[32m[1104 16:30:10 @stat.py:82][0m fct/W/rms: 0.042404
+[32m[1104 16:30:10 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 16:30:10 @stat.py:82][0m train-error-top1: 0.51381
+[32m[1104 16:30:10 @stat.py:82][0m train-error-top5: 0.27326
+[32m[1104 16:30:10 @stat.py:82][0m val-error-top1: 0.56468
+[32m[1104 16:30:10 @stat.py:82][0m val-error-top5: 0.31874
+[32m[1104 16:30:10 @stat.py:82][0m validation_cost: 2.6664
+[32m[1104 16:30:10 @group.py:40][0m Callbacks took 587.861 sec in total. InferenceRunner: 582.302sec
+[32m[1104 16:30:10 @timer.py:46][0m Epoch 8 (global_step 80000) finished, time:2500.91sec.
+[32m[1104 17:11:53 @stat.py:82][0m AddN: 0.025847
+[32m[1104 17:11:53 @stat.py:82][0m conv0/W/rms: 0.030652
+[32m[1104 17:11:53 @stat.py:82][0m conv1/W/rms: 0.046175
+[32m[1104 17:11:53 @stat.py:82][0m conv1/Wn:0: 1.1194
+[32m[1104 17:11:53 @stat.py:82][0m conv1/Wp:0: 0.881
+[32m[1104 17:11:53 @stat.py:82][0m conv2/W/rms: 0.037585
+[32m[1104 17:11:53 @stat.py:82][0m conv2/Wn:0: 1.0466
+[32m[1104 17:11:53 @stat.py:82][0m conv2/Wp:0: 0.95412
+[32m[1104 17:11:53 @stat.py:82][0m conv3/W/rms: 0.037573
+[32m[1104 17:11:53 @stat.py:82][0m conv3/Wn:0: 1.0186
+[32m[1104 17:11:53 @stat.py:82][0m conv3/Wp:0: 0.98218
+[32m[1104 17:11:53 @stat.py:82][0m conv4/W/rms: 0.042585
+[32m[1104 17:11:53 @stat.py:82][0m conv4/Wn:0: 1.1231
+[32m[1104 17:11:53 @stat.py:82][0m conv4/Wp:0: 0.87682
+[32m[1104 17:11:53 @stat.py:82][0m cost: 2.2691
+[32m[1104 17:11:53 @stat.py:82][0m cross_entropy_loss: 2.2432
+[32m[1104 17:11:53 @stat.py:82][0m fc0/W/rms: 0.0049195
+[32m[1104 17:11:53 @stat.py:82][0m fc0/Wn:0: 1.0421
+[32m[1104 17:11:53 @stat.py:82][0m fc0/Wp:0: 0.95849
+[32m[1104 17:11:53 @stat.py:82][0m fc1/W/rms: 0.0083094
+[32m[1104 17:11:53 @stat.py:82][0m fc1/Wn:0: 1.0793
+[32m[1104 17:11:53 @stat.py:82][0m fc1/Wp:0: 0.92024
+[32m[1104 17:11:53 @stat.py:82][0m fct/W/rms: 0.044938
+[32m[1104 17:11:53 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 17:11:53 @stat.py:82][0m train-error-top1: 0.50453
+[32m[1104 17:11:53 @stat.py:82][0m train-error-top5: 0.2641
+[32m[1104 17:11:53 @stat.py:82][0m val-error-top1: 0.558
+[32m[1104 17:11:53 @stat.py:82][0m val-error-top5: 0.31072
+[32m[1104 17:11:53 @stat.py:82][0m validation_cost: 2.6175
+[32m[1104 17:11:53 @group.py:40][0m Callbacks took 591.247 sec in total. InferenceRunner: 583.190sec
+[32m[1104 17:11:53 @timer.py:46][0m Epoch 9 (global_step 90000) finished, time:2503.55sec.
+[32m[1104 17:53:21 @stat.py:82][0m AddN: 0.028167
+[32m[1104 17:53:21 @stat.py:82][0m conv0/W/rms: 0.032066
+[32m[1104 17:53:21 @stat.py:82][0m conv1/W/rms: 0.049423
+[32m[1104 17:53:21 @stat.py:82][0m conv1/Wn:0: 1.1331
+[32m[1104 17:53:21 @stat.py:82][0m conv1/Wp:0: 0.8674
+[32m[1104 17:53:21 @stat.py:82][0m conv2/W/rms: 0.039578
+[32m[1104 17:53:21 @stat.py:82][0m conv2/Wn:0: 1.051
+[32m[1104 17:53:21 @stat.py:82][0m conv2/Wp:0: 0.94978
+[32m[1104 17:53:21 @stat.py:82][0m conv3/W/rms: 0.039433
+[32m[1104 17:53:21 @stat.py:82][0m conv3/Wn:0: 1.0217
+[32m[1104 17:53:21 @stat.py:82][0m conv3/Wp:0: 0.97918
+[32m[1104 17:53:21 @stat.py:82][0m conv4/W/rms: 0.044795
+[32m[1104 17:53:21 @stat.py:82][0m conv4/Wn:0: 1.1259
+[32m[1104 17:53:21 @stat.py:82][0m conv4/Wp:0: 0.87418
+[32m[1104 17:53:21 @stat.py:82][0m cost: 2.2163
+[32m[1104 17:53:21 @stat.py:82][0m cross_entropy_loss: 2.1881
+[32m[1104 17:53:21 @stat.py:82][0m fc0/W/rms: 0.0049591
+[32m[1104 17:53:21 @stat.py:82][0m fc0/Wn:0: 1.0495
+[32m[1104 17:53:21 @stat.py:82][0m fc0/Wp:0: 0.95109
+[32m[1104 17:53:21 @stat.py:82][0m fc1/W/rms: 0.0081832
+[32m[1104 17:53:21 @stat.py:82][0m fc1/Wn:0: 1.0843
+[32m[1104 17:53:21 @stat.py:82][0m fc1/Wp:0: 0.9152
+[32m[1104 17:53:21 @stat.py:82][0m fct/W/rms: 0.047446
+[32m[1104 17:53:21 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 17:53:21 @stat.py:82][0m train-error-top1: 0.48771
+[32m[1104 17:53:21 @stat.py:82][0m train-error-top5: 0.25562
+[32m[1104 17:53:21 @stat.py:82][0m val-error-top1: 0.55344
+[32m[1104 17:53:21 @stat.py:82][0m val-error-top5: 0.30626
+[32m[1104 17:53:21 @stat.py:82][0m validation_cost: 2.6148
+[32m[1104 17:53:21 @group.py:40][0m Callbacks took 575.831 sec in total. InferenceRunner: 569.965sec
+[32m[1104 17:53:21 @timer.py:46][0m Epoch 10 (global_step 100000) finished, time:2488.20sec.
+[32m[1104 18:34:42 @stat.py:82][0m AddN: 0.030733
+[32m[1104 18:34:42 @stat.py:82][0m conv0/W/rms: 0.033419
+[32m[1104 18:34:42 @stat.py:82][0m conv1/W/rms: 0.052628
+[32m[1104 18:34:42 @stat.py:82][0m conv1/Wn:0: 1.1462
+[32m[1104 18:34:42 @stat.py:82][0m conv1/Wp:0: 0.85434
+[32m[1104 18:34:42 @stat.py:82][0m conv2/W/rms: 0.041546
+[32m[1104 18:34:42 @stat.py:82][0m conv2/Wn:0: 1.0549
+[32m[1104 18:34:42 @stat.py:82][0m conv2/Wp:0: 0.94603
+[32m[1104 18:34:42 @stat.py:82][0m conv3/W/rms: 0.04125
+[32m[1104 18:34:42 @stat.py:82][0m conv3/Wn:0: 1.0232
+[32m[1104 18:34:42 @stat.py:82][0m conv3/Wp:0: 0.97779
+[32m[1104 18:34:42 @stat.py:82][0m conv4/W/rms: 0.046964
+[32m[1104 18:34:42 @stat.py:82][0m conv4/Wn:0: 1.1292
+[32m[1104 18:34:42 @stat.py:82][0m conv4/Wp:0: 0.87091
+[32m[1104 18:34:42 @stat.py:82][0m cost: 2.2325
+[32m[1104 18:34:42 @stat.py:82][0m cross_entropy_loss: 2.2018
+[32m[1104 18:34:42 @stat.py:82][0m fc0/W/rms: 0.0050722
+[32m[1104 18:34:42 @stat.py:82][0m fc0/Wn:0: 1.0571
+[32m[1104 18:34:42 @stat.py:82][0m fc0/Wp:0: 0.94349
+[32m[1104 18:34:42 @stat.py:82][0m fc1/W/rms: 0.0081743
+[32m[1104 18:34:42 @stat.py:82][0m fc1/Wn:0: 1.0906
+[32m[1104 18:34:42 @stat.py:82][0m fc1/Wp:0: 0.90883
+[32m[1104 18:34:42 @stat.py:82][0m fct/W/rms: 0.04992
+[32m[1104 18:34:42 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 18:34:42 @stat.py:82][0m train-error-top1: 0.49397
+[32m[1104 18:34:42 @stat.py:82][0m train-error-top5: 0.26293
+[32m[1104 18:34:42 @stat.py:82][0m val-error-top1: 0.5389
+[32m[1104 18:34:42 @stat.py:82][0m val-error-top5: 0.29192
+[32m[1104 18:34:42 @stat.py:82][0m validation_cost: 2.5388
+[32m[1104 18:34:42 @group.py:40][0m Callbacks took 569.622 sec in total. InferenceRunner: 561.232sec
+[32m[1104 18:34:42 @timer.py:46][0m Epoch 11 (global_step 110000) finished, time:2480.32sec.
+[32m[1104 19:15:52 @stat.py:82][0m AddN: 0.033482
+[32m[1104 19:15:52 @stat.py:82][0m conv0/W/rms: 0.034726
+[32m[1104 19:15:52 @stat.py:82][0m conv1/W/rms: 0.055766
+[32m[1104 19:15:52 @stat.py:82][0m conv1/Wn:0: 1.1591
+[32m[1104 19:15:52 @stat.py:82][0m conv1/Wp:0: 0.84147
+[32m[1104 19:15:52 @stat.py:82][0m conv2/W/rms: 0.043489
+[32m[1104 19:15:52 @stat.py:82][0m conv2/Wn:0: 1.0584
+[32m[1104 19:15:52 @stat.py:82][0m conv2/Wp:0: 0.94266
+[32m[1104 19:15:52 @stat.py:82][0m conv3/W/rms: 0.043061
+[32m[1104 19:15:52 @stat.py:82][0m conv3/Wn:0: 1.0257
+[32m[1104 19:15:52 @stat.py:82][0m conv3/Wp:0: 0.97538
+[32m[1104 19:15:52 @stat.py:82][0m conv4/W/rms: 0.049118
+[32m[1104 19:15:52 @stat.py:82][0m conv4/Wn:0: 1.1296
+[32m[1104 19:15:52 @stat.py:82][0m conv4/Wp:0: 0.87067
+[32m[1104 19:15:52 @stat.py:82][0m cost: 2.1459
+[32m[1104 19:15:52 @stat.py:82][0m cross_entropy_loss: 2.1124
+[32m[1104 19:15:52 @stat.py:82][0m fc0/W/rms: 0.0052164
+[32m[1104 19:15:52 @stat.py:82][0m fc0/Wn:0: 1.0637
+[32m[1104 19:15:52 @stat.py:82][0m fc0/Wp:0: 0.93695
+[32m[1104 19:15:52 @stat.py:82][0m fc1/W/rms: 0.0082326
+[32m[1104 19:15:52 @stat.py:82][0m fc1/Wn:0: 1.0904
+[32m[1104 19:15:52 @stat.py:82][0m fc1/Wp:0: 0.90898
+[32m[1104 19:15:52 @stat.py:82][0m fct/W/rms: 0.052375
+[32m[1104 19:15:52 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 19:15:52 @stat.py:82][0m train-error-top1: 0.48166
+[32m[1104 19:15:52 @stat.py:82][0m train-error-top5: 0.24533
+[32m[1104 19:15:52 @stat.py:82][0m val-error-top1: 0.53352
+[32m[1104 19:15:52 @stat.py:82][0m val-error-top5: 0.28658
+[32m[1104 19:15:52 @stat.py:82][0m validation_cost: 2.4855
+[32m[1104 19:15:52 @group.py:40][0m Callbacks took 563.052 sec in total. InferenceRunner: 557.554sec
+[32m[1104 19:15:52 @timer.py:46][0m Epoch 12 (global_step 120000) finished, time:2469.98sec.
+[32m[1104 19:57:09 @stat.py:82][0m AddN: 0.03645
+[32m[1104 19:57:09 @stat.py:82][0m conv0/W/rms: 0.035965
+[32m[1104 19:57:09 @stat.py:82][0m conv1/W/rms: 0.058853
+[32m[1104 19:57:09 @stat.py:82][0m conv1/Wn:0: 1.1713
+[32m[1104 19:57:09 @stat.py:82][0m conv1/Wp:0: 0.82936
+[32m[1104 19:57:09 @stat.py:82][0m conv2/W/rms: 0.045406
+[32m[1104 19:57:09 @stat.py:82][0m conv2/Wn:0: 1.0613
+[32m[1104 19:57:09 @stat.py:82][0m conv2/Wp:0: 0.93979
+[32m[1104 19:57:09 @stat.py:82][0m conv3/W/rms: 0.044853
+[32m[1104 19:57:09 @stat.py:82][0m conv3/Wn:0: 1.0281
+[32m[1104 19:57:09 @stat.py:82][0m conv3/Wp:0: 0.97304
+[32m[1104 19:57:09 @stat.py:82][0m conv4/W/rms: 0.051261
+[32m[1104 19:57:09 @stat.py:82][0m conv4/Wn:0: 1.13
+[32m[1104 19:57:09 @stat.py:82][0m conv4/Wp:0: 0.87034
+[32m[1104 19:57:09 @stat.py:82][0m cost: 2.0695
+[32m[1104 19:57:09 @stat.py:82][0m cross_entropy_loss: 2.0331
+[32m[1104 19:57:09 @stat.py:82][0m fc0/W/rms: 0.0053653
+[32m[1104 19:57:09 @stat.py:82][0m fc0/Wn:0: 1.0704
+[32m[1104 19:57:09 @stat.py:82][0m fc0/Wp:0: 0.93037
+[32m[1104 19:57:09 @stat.py:82][0m fc1/W/rms: 0.0083762
+[32m[1104 19:57:09 @stat.py:82][0m fc1/Wn:0: 1.0948
+[32m[1104 19:57:09 @stat.py:82][0m fc1/Wp:0: 0.90457
+[32m[1104 19:57:09 @stat.py:82][0m fct/W/rms: 0.054853
+[32m[1104 19:57:09 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 19:57:09 @stat.py:82][0m train-error-top1: 0.47062
+[32m[1104 19:57:09 @stat.py:82][0m train-error-top5: 0.22694
+[32m[1104 19:57:09 @stat.py:82][0m val-error-top1: 0.53614
+[32m[1104 19:57:09 @stat.py:82][0m val-error-top5: 0.28972
+[32m[1104 19:57:09 @stat.py:82][0m validation_cost: 2.5075
+[32m[1104 19:57:09 @group.py:40][0m Callbacks took 568.689 sec in total. InferenceRunner: 562.529sec
+[32m[1104 19:57:09 @timer.py:46][0m Epoch 13 (global_step 130000) finished, time:2477.89sec.
+[32m[1104 20:38:54 @stat.py:82][0m AddN: 0.039568
+[32m[1104 20:38:54 @stat.py:82][0m conv0/W/rms: 0.037174
+[32m[1104 20:38:54 @stat.py:82][0m conv1/W/rms: 0.061902
+[32m[1104 20:38:54 @stat.py:82][0m conv1/Wn:0: 1.1814
+[32m[1104 20:38:54 @stat.py:82][0m conv1/Wp:0: 0.81927
+[32m[1104 20:38:54 @stat.py:82][0m conv2/W/rms: 0.047302
+[32m[1104 20:38:54 @stat.py:82][0m conv2/Wn:0: 1.0653
+[32m[1104 20:38:54 @stat.py:82][0m conv2/Wp:0: 0.93594
+[32m[1104 20:38:54 @stat.py:82][0m conv3/W/rms: 0.046628
+[32m[1104 20:38:54 @stat.py:82][0m conv3/Wn:0: 1.0318
+[32m[1104 20:38:54 @stat.py:82][0m conv3/Wp:0: 0.96941
+[32m[1104 20:38:54 @stat.py:82][0m conv4/W/rms: 0.053378
+[32m[1104 20:38:54 @stat.py:82][0m conv4/Wn:0: 1.1322
+[32m[1104 20:38:54 @stat.py:82][0m conv4/Wp:0: 0.86818
+[32m[1104 20:38:54 @stat.py:82][0m cost: 2.0272
+[32m[1104 20:38:54 @stat.py:82][0m cross_entropy_loss: 1.9877
+[32m[1104 20:38:54 @stat.py:82][0m fc0/W/rms: 0.0055646
+[32m[1104 20:38:54 @stat.py:82][0m fc0/Wn:0: 1.079
+[32m[1104 20:38:54 @stat.py:82][0m fc0/Wp:0: 0.92176
+[32m[1104 20:38:54 @stat.py:82][0m fc1/W/rms: 0.0085698
+[32m[1104 20:38:54 @stat.py:82][0m fc1/Wn:0: 1.0961
+[32m[1104 20:38:54 @stat.py:82][0m fc1/Wp:0: 0.90318
+[32m[1104 20:38:54 @stat.py:82][0m fct/W/rms: 0.057271
+[32m[1104 20:38:54 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 20:38:54 @stat.py:82][0m train-error-top1: 0.45419
+[32m[1104 20:38:54 @stat.py:82][0m train-error-top5: 0.22347
+[32m[1104 20:38:54 @stat.py:82][0m val-error-top1: 0.52078
+[32m[1104 20:38:54 @stat.py:82][0m val-error-top5: 0.27866
+[32m[1104 20:38:54 @stat.py:82][0m validation_cost: 2.4492
+[32m[1104 20:38:54 @group.py:40][0m Callbacks took 594.596 sec in total. InferenceRunner: 586.964sec
+[32m[1104 20:38:54 @timer.py:46][0m Epoch 14 (global_step 140000) finished, time:2504.13sec.
+[32m[1104 21:19:54 @stat.py:82][0m AddN: 0.042742
+[32m[1104 21:19:54 @stat.py:82][0m conv0/W/rms: 0.038351
+[32m[1104 21:19:54 @stat.py:82][0m conv1/W/rms: 0.064933
+[32m[1104 21:19:54 @stat.py:82][0m conv1/Wn:0: 1.1915
+[32m[1104 21:19:54 @stat.py:82][0m conv1/Wp:0: 0.8093
+[32m[1104 21:19:54 @stat.py:82][0m conv2/W/rms: 0.049182
+[32m[1104 21:19:54 @stat.py:82][0m conv2/Wn:0: 1.0682
+[32m[1104 21:19:54 @stat.py:82][0m conv2/Wp:0: 0.93307
+[32m[1104 21:19:54 @stat.py:82][0m conv3/W/rms: 0.048391
+[32m[1104 21:19:54 @stat.py:82][0m conv3/Wn:0: 1.0333
+[32m[1104 21:19:54 @stat.py:82][0m conv3/Wp:0: 0.96805
+[32m[1104 21:19:54 @stat.py:82][0m conv4/W/rms: 0.055486
+[32m[1104 21:19:54 @stat.py:82][0m conv4/Wn:0: 1.1333
+[32m[1104 21:19:54 @stat.py:82][0m conv4/Wp:0: 0.86719
+[32m[1104 21:19:54 @stat.py:82][0m cost: 2.0319
+[32m[1104 21:19:54 @stat.py:82][0m cross_entropy_loss: 1.9891
+[32m[1104 21:19:54 @stat.py:82][0m fc0/W/rms: 0.005715
+[32m[1104 21:19:54 @stat.py:82][0m fc0/Wn:0: 1.084
+[32m[1104 21:19:54 @stat.py:82][0m fc0/Wp:0: 0.91681
+[32m[1104 21:19:54 @stat.py:82][0m fc1/W/rms: 0.0087783
+[32m[1104 21:19:54 @stat.py:82][0m fc1/Wn:0: 1.0954
+[32m[1104 21:19:54 @stat.py:82][0m fc1/Wp:0: 0.9039
+[32m[1104 21:19:54 @stat.py:82][0m fct/W/rms: 0.059659
+[32m[1104 21:19:54 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 21:19:54 @stat.py:82][0m train-error-top1: 0.4544
+[32m[1104 21:19:54 @stat.py:82][0m train-error-top5: 0.2172
+[32m[1104 21:19:54 @stat.py:82][0m val-error-top1: 0.52382
+[32m[1104 21:19:54 @stat.py:82][0m val-error-top5: 0.27846
+[32m[1104 21:19:54 @stat.py:82][0m validation_cost: 2.483
+[32m[1104 21:19:54 @group.py:40][0m Callbacks took 549.690 sec in total. InferenceRunner: 541.155sec
+[32m[1104 21:19:54 @timer.py:46][0m Epoch 15 (global_step 150000) finished, time:2460.14sec.
+[32m[1104 22:00:40 @stat.py:82][0m AddN: 0.046005
+[32m[1104 22:00:40 @stat.py:82][0m conv0/W/rms: 0.039498
+[32m[1104 22:00:40 @stat.py:82][0m conv1/W/rms: 0.067887
+[32m[1104 22:00:40 @stat.py:82][0m conv1/Wn:0: 1.1996
+[32m[1104 22:00:40 @stat.py:82][0m conv1/Wp:0: 0.80123
+[32m[1104 22:00:40 @stat.py:82][0m conv2/W/rms: 0.051046
+[32m[1104 22:00:40 @stat.py:82][0m conv2/Wn:0: 1.0702
+[32m[1104 22:00:40 @stat.py:82][0m conv2/Wp:0: 0.93116
+[32m[1104 22:00:40 @stat.py:82][0m conv3/W/rms: 0.05013
+[32m[1104 22:00:40 @stat.py:82][0m conv3/Wn:0: 1.0352
+[32m[1104 22:00:40 @stat.py:82][0m conv3/Wp:0: 0.96617
+[32m[1104 22:00:40 @stat.py:82][0m conv4/W/rms: 0.057563
+[32m[1104 22:00:40 @stat.py:82][0m conv4/Wn:0: 1.1345
+[32m[1104 22:00:40 @stat.py:82][0m conv4/Wp:0: 0.86607
+[32m[1104 22:00:40 @stat.py:82][0m cost: 2.0175
+[32m[1104 22:00:40 @stat.py:82][0m cross_entropy_loss: 1.9715
+[32m[1104 22:00:40 @stat.py:82][0m fc0/W/rms: 0.0058955
+[32m[1104 22:00:40 @stat.py:82][0m fc0/Wn:0: 1.09
+[32m[1104 22:00:40 @stat.py:82][0m fc0/Wp:0: 0.91084
+[32m[1104 22:00:40 @stat.py:82][0m fc1/W/rms: 0.0089695
+[32m[1104 22:00:40 @stat.py:82][0m fc1/Wn:0: 1.0955
+[32m[1104 22:00:40 @stat.py:82][0m fc1/Wp:0: 0.90379
+[32m[1104 22:00:40 @stat.py:82][0m fct/W/rms: 0.062008
+[32m[1104 22:00:40 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 22:00:40 @stat.py:82][0m train-error-top1: 0.45303
+[32m[1104 22:00:40 @stat.py:82][0m train-error-top5: 0.22101
+[32m[1104 22:00:40 @stat.py:82][0m val-error-top1: 0.50942
+[32m[1104 22:00:40 @stat.py:82][0m val-error-top5: 0.26766
+[32m[1104 22:00:40 @stat.py:82][0m validation_cost: 2.3926
+[32m[1104 22:00:40 @group.py:40][0m Callbacks took 530.995 sec in total. InferenceRunner: 524.939sec
+[32m[1104 22:00:40 @timer.py:46][0m Epoch 16 (global_step 160000) finished, time:2446.71sec.
+[32m[1104 22:41:34 @stat.py:82][0m AddN: 0.049372
+[32m[1104 22:41:34 @stat.py:82][0m conv0/W/rms: 0.040618
+[32m[1104 22:41:34 @stat.py:82][0m conv1/W/rms: 0.070828
+[32m[1104 22:41:34 @stat.py:82][0m conv1/Wn:0: 1.2084
+[32m[1104 22:41:34 @stat.py:82][0m conv1/Wp:0: 0.7925
+[32m[1104 22:41:34 @stat.py:82][0m conv2/W/rms: 0.052894
+[32m[1104 22:41:34 @stat.py:82][0m conv2/Wn:0: 1.0726
+[32m[1104 22:41:34 @stat.py:82][0m conv2/Wp:0: 0.92883
+[32m[1104 22:41:34 @stat.py:82][0m conv3/W/rms: 0.051859
+[32m[1104 22:41:34 @stat.py:82][0m conv3/Wn:0: 1.0381
+[32m[1104 22:41:34 @stat.py:82][0m conv3/Wp:0: 0.96339
+[32m[1104 22:41:34 @stat.py:82][0m conv4/W/rms: 0.059641
+[32m[1104 22:41:34 @stat.py:82][0m conv4/Wn:0: 1.1339
+[32m[1104 22:41:34 @stat.py:82][0m conv4/Wp:0: 0.86675
+[32m[1104 22:41:34 @stat.py:82][0m cost: 1.939
+[32m[1104 22:41:34 @stat.py:82][0m cross_entropy_loss: 1.8896
+[32m[1104 22:41:34 @stat.py:82][0m fc0/W/rms: 0.0060655
+[32m[1104 22:41:34 @stat.py:82][0m fc0/Wn:0: 1.0952
+[32m[1104 22:41:34 @stat.py:82][0m fc0/Wp:0: 0.90575
+[32m[1104 22:41:34 @stat.py:82][0m fc1/W/rms: 0.0091793
+[32m[1104 22:41:34 @stat.py:82][0m fc1/Wn:0: 1.0976
+[32m[1104 22:41:34 @stat.py:82][0m fc1/Wp:0: 0.90157
+[32m[1104 22:41:34 @stat.py:82][0m fct/W/rms: 0.06434
+[32m[1104 22:41:34 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 22:41:34 @stat.py:82][0m train-error-top1: 0.43044
+[32m[1104 22:41:34 @stat.py:82][0m train-error-top5: 0.20702
+[32m[1104 22:41:34 @stat.py:82][0m val-error-top1: 0.51442
+[32m[1104 22:41:34 @stat.py:82][0m val-error-top5: 0.27076
+[32m[1104 22:41:34 @stat.py:82][0m validation_cost: 2.4324
+[32m[1104 22:41:34 @group.py:40][0m Callbacks took 541.894 sec in total. InferenceRunner: 536.046sec
+[32m[1104 22:41:34 @timer.py:46][0m Epoch 17 (global_step 170000) finished, time:2453.17sec.
+[32m[1104 23:22:43 @stat.py:82][0m AddN: 0.052874
+[32m[1104 23:22:43 @stat.py:82][0m conv0/W/rms: 0.041695
+[32m[1104 23:22:43 @stat.py:82][0m conv1/W/rms: 0.073771
+[32m[1104 23:22:43 @stat.py:82][0m conv1/Wn:0: 1.2184
+[32m[1104 23:22:43 @stat.py:82][0m conv1/Wp:0: 0.78261
+[32m[1104 23:22:43 @stat.py:82][0m conv2/W/rms: 0.054704
+[32m[1104 23:22:43 @stat.py:82][0m conv2/Wn:0: 1.0758
+[32m[1104 23:22:43 @stat.py:82][0m conv2/Wp:0: 0.92575
+[32m[1104 23:22:43 @stat.py:82][0m conv3/W/rms: 0.053575
+[32m[1104 23:22:43 @stat.py:82][0m conv3/Wn:0: 1.0398
+[32m[1104 23:22:43 @stat.py:82][0m conv3/Wp:0: 0.96182
+[32m[1104 23:22:43 @stat.py:82][0m conv4/W/rms: 0.061684
+[32m[1104 23:22:43 @stat.py:82][0m conv4/Wn:0: 1.1334
+[32m[1104 23:22:43 @stat.py:82][0m conv4/Wp:0: 0.86741
+[32m[1104 23:22:43 @stat.py:82][0m cost: 1.9416
+[32m[1104 23:22:43 @stat.py:82][0m cross_entropy_loss: 1.8888
+[32m[1104 23:22:43 @stat.py:82][0m fc0/W/rms: 0.0062646
+[32m[1104 23:22:43 @stat.py:82][0m fc0/Wn:0: 1.1006
+[32m[1104 23:22:43 @stat.py:82][0m fc0/Wp:0: 0.90034
+[32m[1104 23:22:43 @stat.py:82][0m fc1/W/rms: 0.0094027
+[32m[1104 23:22:43 @stat.py:82][0m fc1/Wn:0: 1.095
+[32m[1104 23:22:43 @stat.py:82][0m fc1/Wp:0: 0.90416
+[32m[1104 23:22:43 @stat.py:82][0m fct/W/rms: 0.06665
+[32m[1104 23:22:43 @stat.py:82][0m learning_rate: 0.0001
+[32m[1104 23:22:43 @stat.py:82][0m train-error-top1: 0.4389
+[32m[1104 23:22:43 @stat.py:82][0m train-error-top5: 0.20655
+[32m[1104 23:22:43 @stat.py:82][0m val-error-top1: 0.5081
+[32m[1104 23:22:43 @stat.py:82][0m val-error-top5: 0.26798
+[32m[1104 23:22:43 @stat.py:82][0m validation_cost: 2.4191
+[32m[1104 23:22:43 @group.py:40][0m Callbacks took 555.697 sec in total. InferenceRunner: 548.595sec
+[32m[1104 23:22:43 @timer.py:46][0m Epoch 18 (global_step 180000) finished, time:2469.43sec.
+[32m[1105 00:04:19 @stat.py:82][0m AddN: 0.056342
+[32m[1105 00:04:19 @stat.py:82][0m conv0/W/rms: 0.042745
+[32m[1105 00:04:19 @stat.py:82][0m conv1/W/rms: 0.076639
+[32m[1105 00:04:19 @stat.py:82][0m conv1/Wn:0: 1.2259
+[32m[1105 00:04:19 @stat.py:82][0m conv1/Wp:0: 0.77518
+[32m[1105 00:04:19 @stat.py:82][0m conv2/W/rms: 0.056507
+[32m[1105 00:04:19 @stat.py:82][0m conv2/Wn:0: 1.0774
+[32m[1105 00:04:19 @stat.py:82][0m conv2/Wp:0: 0.9243
+[32m[1105 00:04:19 @stat.py:82][0m conv3/W/rms: 0.055284
+[32m[1105 00:04:19 @stat.py:82][0m conv3/Wn:0: 1.0428
+[32m[1105 00:04:19 @stat.py:82][0m conv3/Wp:0: 0.95887
+[32m[1105 00:04:19 @stat.py:82][0m conv4/W/rms: 0.063718
+[32m[1105 00:04:19 @stat.py:82][0m conv4/Wn:0: 1.1361
+[32m[1105 00:04:19 @stat.py:82][0m conv4/Wp:0: 0.86478
+[32m[1105 00:04:19 @stat.py:82][0m cost: 1.9341
+[32m[1105 00:04:19 @stat.py:82][0m cross_entropy_loss: 1.8777
+[32m[1105 00:04:19 @stat.py:82][0m fc0/W/rms: 0.0063555
+[32m[1105 00:04:19 @stat.py:82][0m fc0/Wn:0: 1.1029
+[32m[1105 00:04:19 @stat.py:82][0m fc0/Wp:0: 0.89813
+[32m[1105 00:04:19 @stat.py:82][0m fc1/W/rms: 0.0096275
+[32m[1105 00:04:19 @stat.py:82][0m fc1/Wn:0: 1.0971
+[32m[1105 00:04:19 @stat.py:82][0m fc1/Wp:0: 0.90205
+[32m[1105 00:04:19 @stat.py:82][0m fct/W/rms: 0.06894
+[32m[1105 00:04:19 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 00:04:19 @stat.py:82][0m train-error-top1: 0.44567
+[32m[1105 00:04:19 @stat.py:82][0m train-error-top5: 0.20702
+[32m[1105 00:04:19 @stat.py:82][0m val-error-top1: 0.5105
+[32m[1105 00:04:19 @stat.py:82][0m val-error-top5: 0.26708
+[32m[1105 00:04:19 @stat.py:82][0m validation_cost: 2.4169
+[32m[1105 00:04:19 @group.py:40][0m Callbacks took 579.476 sec in total. InferenceRunner: 572.484sec
+[32m[1105 00:04:19 @timer.py:46][0m Epoch 19 (global_step 190000) finished, time:2495.57sec.
+[32m[1105 00:46:03 @stat.py:82][0m AddN: 0.059905
+[32m[1105 00:46:03 @stat.py:82][0m conv0/W/rms: 0.043767
+[32m[1105 00:46:03 @stat.py:82][0m conv1/W/rms: 0.079482
+[32m[1105 00:46:03 @stat.py:82][0m conv1/Wn:0: 1.2333
+[32m[1105 00:46:03 @stat.py:82][0m conv1/Wp:0: 0.76784
+[32m[1105 00:46:03 @stat.py:82][0m conv2/W/rms: 0.058301
+[32m[1105 00:46:03 @stat.py:82][0m conv2/Wn:0: 1.0782
+[32m[1105 00:46:03 @stat.py:82][0m conv2/Wp:0: 0.92358
+[32m[1105 00:46:03 @stat.py:82][0m conv3/W/rms: 0.056963
+[32m[1105 00:46:03 @stat.py:82][0m conv3/Wn:0: 1.0434
+[32m[1105 00:46:03 @stat.py:82][0m conv3/Wp:0: 0.95833
+[32m[1105 00:46:03 @stat.py:82][0m conv4/W/rms: 0.065753
+[32m[1105 00:46:03 @stat.py:82][0m conv4/Wn:0: 1.1362
+[32m[1105 00:46:03 @stat.py:82][0m conv4/Wp:0: 0.86472
+[32m[1105 00:46:03 @stat.py:82][0m cost: 1.8951
+[32m[1105 00:46:03 @stat.py:82][0m cross_entropy_loss: 1.8352
+[32m[1105 00:46:03 @stat.py:82][0m fc0/W/rms: 0.0064413
+[32m[1105 00:46:03 @stat.py:82][0m fc0/Wn:0: 1.1056
+[32m[1105 00:46:03 @stat.py:82][0m fc0/Wp:0: 0.89551
+[32m[1105 00:46:03 @stat.py:82][0m fc1/W/rms: 0.0098669
+[32m[1105 00:46:03 @stat.py:82][0m fc1/Wn:0: 1.0958
+[32m[1105 00:46:03 @stat.py:82][0m fc1/Wp:0: 0.90335
+[32m[1105 00:46:03 @stat.py:82][0m fct/W/rms: 0.071214
+[32m[1105 00:46:03 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 00:46:03 @stat.py:82][0m train-error-top1: 0.42909
+[32m[1105 00:46:03 @stat.py:82][0m train-error-top5: 0.20035
+[32m[1105 00:46:03 @stat.py:82][0m val-error-top1: 0.4991
+[32m[1105 00:46:03 @stat.py:82][0m val-error-top5: 0.2599
+[32m[1105 00:46:03 @stat.py:82][0m validation_cost: 2.3818
+[32m[1105 00:46:03 @group.py:40][0m Callbacks took 592.999 sec in total. InferenceRunner: 587.464sec
+[32m[1105 00:46:03 @timer.py:46][0m Epoch 20 (global_step 200000) finished, time:2504.76sec.
+[32m[1105 01:27:51 @stat.py:82][0m AddN: 0.063469
+[32m[1105 01:27:51 @stat.py:82][0m conv0/W/rms: 0.044775
+[32m[1105 01:27:51 @stat.py:82][0m conv1/W/rms: 0.082317
+[32m[1105 01:27:51 @stat.py:82][0m conv1/Wn:0: 1.2402
+[32m[1105 01:27:51 @stat.py:82][0m conv1/Wp:0: 0.76109
+[32m[1105 01:27:51 @stat.py:82][0m conv2/W/rms: 0.060073
+[32m[1105 01:27:51 @stat.py:82][0m conv2/Wn:0: 1.0809
+[32m[1105 01:27:51 @stat.py:82][0m conv2/Wp:0: 0.92093
+[32m[1105 01:27:51 @stat.py:82][0m conv3/W/rms: 0.058631
+[32m[1105 01:27:51 @stat.py:82][0m conv3/Wn:0: 1.0454
+[32m[1105 01:27:51 @stat.py:82][0m conv3/Wp:0: 0.95642
+[32m[1105 01:27:51 @stat.py:82][0m conv4/W/rms: 0.067767
+[32m[1105 01:27:51 @stat.py:82][0m conv4/Wn:0: 1.1331
+[32m[1105 01:27:51 @stat.py:82][0m conv4/Wp:0: 0.86793
+[32m[1105 01:27:51 @stat.py:82][0m cost: 1.9102
+[32m[1105 01:27:51 @stat.py:82][0m cross_entropy_loss: 1.8468
+[32m[1105 01:27:51 @stat.py:82][0m fc0/W/rms: 0.0065003
+[32m[1105 01:27:51 @stat.py:82][0m fc0/Wn:0: 1.1097
+[32m[1105 01:27:51 @stat.py:82][0m fc0/Wp:0: 0.89141
+[32m[1105 01:27:51 @stat.py:82][0m fc1/W/rms: 0.010066
+[32m[1105 01:27:51 @stat.py:82][0m fc1/Wn:0: 1.0955
+[32m[1105 01:27:51 @stat.py:82][0m fc1/Wp:0: 0.90357
+[32m[1105 01:27:51 @stat.py:82][0m fct/W/rms: 0.073461
+[32m[1105 01:27:51 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 01:27:51 @stat.py:82][0m train-error-top1: 0.42931
+[32m[1105 01:27:51 @stat.py:82][0m train-error-top5: 0.20122
+[32m[1105 01:27:51 @stat.py:82][0m val-error-top1: 0.50382
+[32m[1105 01:27:51 @stat.py:82][0m val-error-top5: 0.26096
+[32m[1105 01:27:51 @stat.py:82][0m validation_cost: 2.415
+[32m[1105 01:27:51 @group.py:40][0m Callbacks took 595.320 sec in total. InferenceRunner: 589.559sec
+[32m[1105 01:27:51 @timer.py:46][0m Epoch 21 (global_step 210000) finished, time:2507.80sec.
+[32m[1105 02:09:02 @stat.py:82][0m AddN: 0.067216
+[32m[1105 02:09:02 @stat.py:82][0m conv0/W/rms: 0.045765
+[32m[1105 02:09:02 @stat.py:82][0m conv1/W/rms: 0.08512
+[32m[1105 02:09:02 @stat.py:82][0m conv1/Wn:0: 1.2454
+[32m[1105 02:09:02 @stat.py:82][0m conv1/Wp:0: 0.7559
+[32m[1105 02:09:02 @stat.py:82][0m conv2/W/rms: 0.061832
+[32m[1105 02:09:02 @stat.py:82][0m conv2/Wn:0: 1.0825
+[32m[1105 02:09:02 @stat.py:82][0m conv2/Wp:0: 0.91943
+[32m[1105 02:09:02 @stat.py:82][0m conv3/W/rms: 0.060282
+[32m[1105 02:09:02 @stat.py:82][0m conv3/Wn:0: 1.0487
+[32m[1105 02:09:02 @stat.py:82][0m conv3/Wp:0: 0.95323
+[32m[1105 02:09:02 @stat.py:82][0m conv4/W/rms: 0.069762
+[32m[1105 02:09:02 @stat.py:82][0m conv4/Wn:0: 1.1335
+[32m[1105 02:09:02 @stat.py:82][0m conv4/Wp:0: 0.86768
+[32m[1105 02:09:02 @stat.py:82][0m cost: 1.8484
+[32m[1105 02:09:02 @stat.py:82][0m cross_entropy_loss: 1.7812
+[32m[1105 02:09:02 @stat.py:82][0m fc0/W/rms: 0.0066157
+[32m[1105 02:09:02 @stat.py:82][0m fc0/Wn:0: 1.1126
+[32m[1105 02:09:02 @stat.py:82][0m fc0/Wp:0: 0.88864
+[32m[1105 02:09:02 @stat.py:82][0m fc1/W/rms: 0.010315
+[32m[1105 02:09:02 @stat.py:82][0m fc1/Wn:0: 1.0968
+[32m[1105 02:09:02 @stat.py:82][0m fc1/Wp:0: 0.9023
+[32m[1105 02:09:02 @stat.py:82][0m fct/W/rms: 0.075681
+[32m[1105 02:09:02 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 02:09:02 @stat.py:82][0m train-error-top1: 0.42022
+[32m[1105 02:09:02 @stat.py:82][0m train-error-top5: 0.19281
+[32m[1105 02:09:02 @stat.py:82][0m val-error-top1: 0.49698
+[32m[1105 02:09:02 @stat.py:82][0m val-error-top5: 0.25454
+[32m[1105 02:09:02 @stat.py:82][0m validation_cost: 2.3823
+[32m[1105 02:09:02 @group.py:40][0m Callbacks took 567.268 sec in total. InferenceRunner: 559.362sec
+[32m[1105 02:09:02 @timer.py:46][0m Epoch 22 (global_step 220000) finished, time:2470.55sec.
+[32m[1105 02:50:06 @stat.py:82][0m AddN: 0.071104
+[32m[1105 02:50:06 @stat.py:82][0m conv0/W/rms: 0.046732
+[32m[1105 02:50:06 @stat.py:82][0m conv1/W/rms: 0.087931
+[32m[1105 02:50:06 @stat.py:82][0m conv1/Wn:0: 1.2511
+[32m[1105 02:50:06 @stat.py:82][0m conv1/Wp:0: 0.75036
+[32m[1105 02:50:06 @stat.py:82][0m conv2/W/rms: 0.063574
+[32m[1105 02:50:06 @stat.py:82][0m conv2/Wn:0: 1.0858
+[32m[1105 02:50:06 @stat.py:82][0m conv2/Wp:0: 0.91618
+[32m[1105 02:50:06 @stat.py:82][0m conv3/W/rms: 0.061936
+[32m[1105 02:50:06 @stat.py:82][0m conv3/Wn:0: 1.049
+[32m[1105 02:50:06 @stat.py:82][0m conv3/Wp:0: 0.95296
+[32m[1105 02:50:06 @stat.py:82][0m conv4/W/rms: 0.071765
+[32m[1105 02:50:06 @stat.py:82][0m conv4/Wn:0: 1.1338
+[32m[1105 02:50:06 @stat.py:82][0m conv4/Wp:0: 0.86747
+[32m[1105 02:50:06 @stat.py:82][0m cost: 1.8658
+[32m[1105 02:50:06 @stat.py:82][0m cross_entropy_loss: 1.7947
+[32m[1105 02:50:06 @stat.py:82][0m fc0/W/rms: 0.0067573
+[32m[1105 02:50:06 @stat.py:82][0m fc0/Wn:0: 1.1161
+[32m[1105 02:50:06 @stat.py:82][0m fc0/Wp:0: 0.88512
+[32m[1105 02:50:06 @stat.py:82][0m fc1/W/rms: 0.010603
+[32m[1105 02:50:06 @stat.py:82][0m fc1/Wn:0: 1.0986
+[32m[1105 02:50:06 @stat.py:82][0m fc1/Wp:0: 0.9004
+[32m[1105 02:50:06 @stat.py:82][0m fct/W/rms: 0.077879
+[32m[1105 02:50:06 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 02:50:06 @stat.py:82][0m train-error-top1: 0.41721
+[32m[1105 02:50:06 @stat.py:82][0m train-error-top5: 0.19569
+[32m[1105 02:50:06 @stat.py:82][0m val-error-top1: 0.49952
+[32m[1105 02:50:06 @stat.py:82][0m val-error-top5: 0.25978
+[32m[1105 02:50:06 @stat.py:82][0m validation_cost: 2.3976
+[32m[1105 02:50:06 @group.py:40][0m Callbacks took 568.501 sec in total. InferenceRunner: 559.860sec
+[32m[1105 02:50:06 @timer.py:46][0m Epoch 23 (global_step 230000) finished, time:2464.11sec.
+[32m[1105 03:31:20 @stat.py:82][0m AddN: 0.074966
+[32m[1105 03:31:20 @stat.py:82][0m conv0/W/rms: 0.047681
+[32m[1105 03:31:20 @stat.py:82][0m conv1/W/rms: 0.09073
+[32m[1105 03:31:20 @stat.py:82][0m conv1/Wn:0: 1.2551
+[32m[1105 03:31:20 @stat.py:82][0m conv1/Wp:0: 0.74644
+[32m[1105 03:31:20 @stat.py:82][0m conv2/W/rms: 0.065326
+[32m[1105 03:31:20 @stat.py:82][0m conv2/Wn:0: 1.0862
+[32m[1105 03:31:20 @stat.py:82][0m conv2/Wp:0: 0.91596
+[32m[1105 03:31:20 @stat.py:82][0m conv3/W/rms: 0.063561
+[32m[1105 03:31:20 @stat.py:82][0m conv3/Wn:0: 1.0492
+[32m[1105 03:31:20 @stat.py:82][0m conv3/Wp:0: 0.95288
+[32m[1105 03:31:20 @stat.py:82][0m conv4/W/rms: 0.073739
+[32m[1105 03:31:20 @stat.py:82][0m conv4/Wn:0: 1.1364
+[32m[1105 03:31:20 @stat.py:82][0m conv4/Wp:0: 0.86497
+[32m[1105 03:31:20 @stat.py:82][0m cost: 1.8197
+[32m[1105 03:31:20 @stat.py:82][0m cross_entropy_loss: 1.7447
+[32m[1105 03:31:20 @stat.py:82][0m fc0/W/rms: 0.0068734
+[32m[1105 03:31:20 @stat.py:82][0m fc0/Wn:0: 1.1182
+[32m[1105 03:31:20 @stat.py:82][0m fc0/Wp:0: 0.88306
+[32m[1105 03:31:20 @stat.py:82][0m fc1/W/rms: 0.010833
+[32m[1105 03:31:20 @stat.py:82][0m fc1/Wn:0: 1.095
+[32m[1105 03:31:20 @stat.py:82][0m fc1/Wp:0: 0.90403
+[32m[1105 03:31:20 @stat.py:82][0m fct/W/rms: 0.080048
+[32m[1105 03:31:20 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 03:31:20 @stat.py:82][0m train-error-top1: 0.41579
+[32m[1105 03:31:20 @stat.py:82][0m train-error-top5: 0.18901
+[32m[1105 03:31:20 @stat.py:82][0m val-error-top1: 0.50458
+[32m[1105 03:31:20 @stat.py:82][0m val-error-top5: 0.2618
+[32m[1105 03:31:20 @stat.py:82][0m validation_cost: 2.4433
+[32m[1105 03:31:20 @group.py:40][0m Callbacks took 575.993 sec in total. InferenceRunner: 568.904sec
+[32m[1105 03:31:20 @timer.py:46][0m Epoch 24 (global_step 240000) finished, time:2474.54sec.
+[32m[1105 04:12:33 @stat.py:82][0m AddN: 0.078994
+[32m[1105 04:12:33 @stat.py:82][0m conv0/W/rms: 0.048608
+[32m[1105 04:12:33 @stat.py:82][0m conv1/W/rms: 0.093523
+[32m[1105 04:12:33 @stat.py:82][0m conv1/Wn:0: 1.2597
+[32m[1105 04:12:33 @stat.py:82][0m conv1/Wp:0: 0.74191
+[32m[1105 04:12:33 @stat.py:82][0m conv2/W/rms: 0.067079
+[32m[1105 04:12:33 @stat.py:82][0m conv2/Wn:0: 1.0891
+[32m[1105 04:12:33 @stat.py:82][0m conv2/Wp:0: 0.91316
+[32m[1105 04:12:33 @stat.py:82][0m conv3/W/rms: 0.065202
+[32m[1105 04:12:33 @stat.py:82][0m conv3/Wn:0: 1.051
+[32m[1105 04:12:33 @stat.py:82][0m conv3/Wp:0: 0.95123
+[32m[1105 04:12:33 @stat.py:82][0m conv4/W/rms: 0.07569
+[32m[1105 04:12:33 @stat.py:82][0m conv4/Wn:0: 1.1352
+[32m[1105 04:12:33 @stat.py:82][0m conv4/Wp:0: 0.86619
+[32m[1105 04:12:33 @stat.py:82][0m cost: 1.7895
+[32m[1105 04:12:33 @stat.py:82][0m cross_entropy_loss: 1.7105
+[32m[1105 04:12:33 @stat.py:82][0m fc0/W/rms: 0.0070055
+[32m[1105 04:12:33 @stat.py:82][0m fc0/Wn:0: 1.1208
+[32m[1105 04:12:33 @stat.py:82][0m fc0/Wp:0: 0.88058
+[32m[1105 04:12:33 @stat.py:82][0m fc1/W/rms: 0.011001
+[32m[1105 04:12:33 @stat.py:82][0m fc1/Wn:0: 1.0886
+[32m[1105 04:12:33 @stat.py:82][0m fc1/Wp:0: 0.91039
+[32m[1105 04:12:33 @stat.py:82][0m fct/W/rms: 0.082275
+[32m[1105 04:12:33 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 04:12:33 @stat.py:82][0m train-error-top1: 0.4033
+[32m[1105 04:12:33 @stat.py:82][0m train-error-top5: 0.17732
+[32m[1105 04:12:33 @stat.py:82][0m val-error-top1: 0.50054
+[32m[1105 04:12:33 @stat.py:82][0m val-error-top5: 0.26248
+[32m[1105 04:12:33 @stat.py:82][0m validation_cost: 2.4358
+[32m[1105 04:12:33 @group.py:40][0m Callbacks took 569.389 sec in total. InferenceRunner: 561.158sec
+[32m[1105 04:12:33 @timer.py:46][0m Epoch 25 (global_step 250000) finished, time:2472.61sec.
+[32m[1105 04:54:04 @stat.py:82][0m AddN: 0.083026
+[32m[1105 04:54:04 @stat.py:82][0m conv0/W/rms: 0.049528
+[32m[1105 04:54:04 @stat.py:82][0m conv1/W/rms: 0.096284
+[32m[1105 04:54:04 @stat.py:82][0m conv1/Wn:0: 1.2635
+[32m[1105 04:54:04 @stat.py:82][0m conv1/Wp:0: 0.73816
+[32m[1105 04:54:04 @stat.py:82][0m conv2/W/rms: 0.068816
+[32m[1105 04:54:04 @stat.py:82][0m conv2/Wn:0: 1.089
+[32m[1105 04:54:04 @stat.py:82][0m conv2/Wp:0: 0.91332
+[32m[1105 04:54:04 @stat.py:82][0m conv3/W/rms: 0.066837
+[32m[1105 04:54:04 @stat.py:82][0m conv3/Wn:0: 1.0528
+[32m[1105 04:54:04 @stat.py:82][0m conv3/Wp:0: 0.94948
+[32m[1105 04:54:04 @stat.py:82][0m conv4/W/rms: 0.077651
+[32m[1105 04:54:04 @stat.py:82][0m conv4/Wn:0: 1.1344
+[32m[1105 04:54:04 @stat.py:82][0m conv4/Wp:0: 0.86716
+[32m[1105 04:54:04 @stat.py:82][0m cost: 1.7824
+[32m[1105 04:54:04 @stat.py:82][0m cross_entropy_loss: 1.6994
+[32m[1105 04:54:04 @stat.py:82][0m fc0/W/rms: 0.0071374
+[32m[1105 04:54:04 @stat.py:82][0m fc0/Wn:0: 1.1243
+[32m[1105 04:54:04 @stat.py:82][0m fc0/Wp:0: 0.8771
+[32m[1105 04:54:04 @stat.py:82][0m fc1/W/rms: 0.011189
+[32m[1105 04:54:04 @stat.py:82][0m fc1/Wn:0: 1.0934
+[32m[1105 04:54:04 @stat.py:82][0m fc1/Wp:0: 0.90554
+[32m[1105 04:54:04 @stat.py:82][0m fct/W/rms: 0.084431
+[32m[1105 04:54:04 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 04:54:04 @stat.py:82][0m train-error-top1: 0.39971
+[32m[1105 04:54:04 @stat.py:82][0m train-error-top5: 0.17561
+[32m[1105 04:54:04 @stat.py:82][0m val-error-top1: 0.496
+[32m[1105 04:54:04 @stat.py:82][0m val-error-top5: 0.25544
+[32m[1105 04:54:04 @stat.py:82][0m validation_cost: 2.3949
+[32m[1105 04:54:04 @group.py:40][0m Callbacks took 590.565 sec in total. InferenceRunner: 582.931sec
+[32m[1105 04:54:04 @timer.py:46][0m Epoch 26 (global_step 260000) finished, time:2491.24sec.
+[32m[1105 05:35:04 @stat.py:82][0m AddN: 0.086959
+[32m[1105 05:35:04 @stat.py:82][0m conv0/W/rms: 0.050419
+[32m[1105 05:35:04 @stat.py:82][0m conv1/W/rms: 0.09904
+[32m[1105 05:35:04 @stat.py:82][0m conv1/Wn:0: 1.268
+[32m[1105 05:35:04 @stat.py:82][0m conv1/Wp:0: 0.73379
+[32m[1105 05:35:04 @stat.py:82][0m conv2/W/rms: 0.070543
+[32m[1105 05:35:04 @stat.py:82][0m conv2/Wn:0: 1.0916
+[32m[1105 05:35:04 @stat.py:82][0m conv2/Wp:0: 0.91081
+[32m[1105 05:35:04 @stat.py:82][0m conv3/W/rms: 0.068449
+[32m[1105 05:35:04 @stat.py:82][0m conv3/Wn:0: 1.0548
+[32m[1105 05:35:04 @stat.py:82][0m conv3/Wp:0: 0.94753
+[32m[1105 05:35:04 @stat.py:82][0m conv4/W/rms: 0.079599
+[32m[1105 05:35:04 @stat.py:82][0m conv4/Wn:0: 1.1369
+[32m[1105 05:35:04 @stat.py:82][0m conv4/Wp:0: 0.86468
+[32m[1105 05:35:04 @stat.py:82][0m cost: 1.7813
+[32m[1105 05:35:04 @stat.py:82][0m cross_entropy_loss: 1.6943
+[32m[1105 05:35:04 @stat.py:82][0m fc0/W/rms: 0.0071836
+[32m[1105 05:35:04 @stat.py:82][0m fc0/Wn:0: 1.1242
+[32m[1105 05:35:04 @stat.py:82][0m fc0/Wp:0: 0.87724
+[32m[1105 05:35:04 @stat.py:82][0m fc1/W/rms: 0.011346
+[32m[1105 05:35:04 @stat.py:82][0m fc1/Wn:0: 1.0887
+[32m[1105 05:35:04 @stat.py:82][0m fc1/Wp:0: 0.91022
+[32m[1105 05:35:04 @stat.py:82][0m fct/W/rms: 0.086556
+[32m[1105 05:35:04 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 05:35:04 @stat.py:82][0m train-error-top1: 0.40348
+[32m[1105 05:35:04 @stat.py:82][0m train-error-top5: 0.18033
+[32m[1105 05:35:04 @stat.py:82][0m val-error-top1: 0.4944
+[32m[1105 05:35:04 @stat.py:82][0m val-error-top5: 0.2554
+[32m[1105 05:35:04 @stat.py:82][0m validation_cost: 2.4035
+[32m[1105 05:35:04 @group.py:40][0m Callbacks took 564.699 sec in total. InferenceRunner: 557.073sec
+[32m[1105 05:35:04 @timer.py:46][0m Epoch 27 (global_step 270000) finished, time:2459.90sec.
+[32m[1105 06:16:14 @stat.py:82][0m AddN: 0.090916
+[32m[1105 06:16:14 @stat.py:82][0m conv0/W/rms: 0.051295
+[32m[1105 06:16:14 @stat.py:82][0m conv1/W/rms: 0.10181
+[32m[1105 06:16:14 @stat.py:82][0m conv1/Wn:0: 1.2712
+[32m[1105 06:16:14 @stat.py:82][0m conv1/Wp:0: 0.73071
+[32m[1105 06:16:14 @stat.py:82][0m conv2/W/rms: 0.072262
+[32m[1105 06:16:14 @stat.py:82][0m conv2/Wn:0: 1.0933
+[32m[1105 06:16:14 @stat.py:82][0m conv2/Wp:0: 0.90924
+[32m[1105 06:16:14 @stat.py:82][0m conv3/W/rms: 0.070036
+[32m[1105 06:16:14 @stat.py:82][0m conv3/Wn:0: 1.0569
+[32m[1105 06:16:14 @stat.py:82][0m conv3/Wp:0: 0.94555
+[32m[1105 06:16:14 @stat.py:82][0m conv4/W/rms: 0.08151
+[32m[1105 06:16:14 @stat.py:82][0m conv4/Wn:0: 1.1374
+[32m[1105 06:16:14 @stat.py:82][0m conv4/Wp:0: 0.86431
+[32m[1105 06:16:14 @stat.py:82][0m cost: 1.8069
+[32m[1105 06:16:14 @stat.py:82][0m cross_entropy_loss: 1.716
+[32m[1105 06:16:14 @stat.py:82][0m fc0/W/rms: 0.0072361
+[32m[1105 06:16:14 @stat.py:82][0m fc0/Wn:0: 1.1258
+[32m[1105 06:16:14 @stat.py:82][0m fc0/Wp:0: 0.87577
+[32m[1105 06:16:14 @stat.py:82][0m fc1/W/rms: 0.011462
+[32m[1105 06:16:14 @stat.py:82][0m fc1/Wn:0: 1.0911
+[32m[1105 06:16:14 @stat.py:82][0m fc1/Wp:0: 0.90782
+[32m[1105 06:16:14 @stat.py:82][0m fct/W/rms: 0.088662
+[32m[1105 06:16:14 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 06:16:14 @stat.py:82][0m train-error-top1: 0.40953
+[32m[1105 06:16:14 @stat.py:82][0m train-error-top5: 0.18202
+[32m[1105 06:16:14 @stat.py:82][0m val-error-top1: 0.4901
+[32m[1105 06:16:14 @stat.py:82][0m val-error-top5: 0.251
+[32m[1105 06:16:14 @stat.py:82][0m validation_cost: 2.3807
+[32m[1105 06:16:14 @group.py:40][0m Callbacks took 577.701 sec in total. InferenceRunner: 570.275sec
+[32m[1105 06:16:14 @timer.py:46][0m Epoch 28 (global_step 280000) finished, time:2470.26sec.
+[32m[1105 06:57:22 @stat.py:82][0m AddN: 0.094997
+[32m[1105 06:57:22 @stat.py:82][0m conv0/W/rms: 0.05216
+[32m[1105 06:57:22 @stat.py:82][0m conv1/W/rms: 0.10453
+[32m[1105 06:57:22 @stat.py:82][0m conv1/Wn:0: 1.2736
+[32m[1105 06:57:22 @stat.py:82][0m conv1/Wp:0: 0.72836
+[32m[1105 06:57:22 @stat.py:82][0m conv2/W/rms: 0.073974
+[32m[1105 06:57:22 @stat.py:82][0m conv2/Wn:0: 1.0925
+[32m[1105 06:57:22 @stat.py:82][0m conv2/Wp:0: 0.91006
+[32m[1105 06:57:22 @stat.py:82][0m conv3/W/rms: 0.07163
+[32m[1105 06:57:22 @stat.py:82][0m conv3/Wn:0: 1.0576
+[32m[1105 06:57:22 @stat.py:82][0m conv3/Wp:0: 0.94496
+[32m[1105 06:57:22 @stat.py:82][0m conv4/W/rms: 0.083437
+[32m[1105 06:57:22 @stat.py:82][0m conv4/Wn:0: 1.1384
+[32m[1105 06:57:22 @stat.py:82][0m conv4/Wp:0: 0.86338
+[32m[1105 06:57:22 @stat.py:82][0m cost: 1.7451
+[32m[1105 06:57:22 @stat.py:82][0m cross_entropy_loss: 1.6501
+[32m[1105 06:57:22 @stat.py:82][0m fc0/W/rms: 0.0073036
+[32m[1105 06:57:22 @stat.py:82][0m fc0/Wn:0: 1.1297
+[32m[1105 06:57:22 @stat.py:82][0m fc0/Wp:0: 0.87191
+[32m[1105 06:57:22 @stat.py:82][0m fc1/W/rms: 0.011633
+[32m[1105 06:57:22 @stat.py:82][0m fc1/Wn:0: 1.09
+[32m[1105 06:57:22 @stat.py:82][0m fc1/Wp:0: 0.90887
+[32m[1105 06:57:22 @stat.py:82][0m fct/W/rms: 0.090742
+[32m[1105 06:57:22 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 06:57:22 @stat.py:82][0m train-error-top1: 0.39401
+[32m[1105 06:57:22 @stat.py:82][0m train-error-top5: 0.17376
+[32m[1105 06:57:22 @stat.py:82][0m val-error-top1: 0.49162
+[32m[1105 06:57:22 @stat.py:82][0m val-error-top5: 0.25206
+[32m[1105 06:57:22 @stat.py:82][0m validation_cost: 2.4112
+[32m[1105 06:57:22 @group.py:40][0m Callbacks took 571.553 sec in total. InferenceRunner: 564.105sec
+[32m[1105 06:57:22 @timer.py:46][0m Epoch 29 (global_step 290000) finished, time:2467.54sec.
+[32m[1105 07:39:08 @stat.py:82][0m AddN: 0.099273
+[32m[1105 07:39:08 @stat.py:82][0m conv0/W/rms: 0.053007
+[32m[1105 07:39:08 @stat.py:82][0m conv1/W/rms: 0.10727
+[32m[1105 07:39:08 @stat.py:82][0m conv1/Wn:0: 1.2761
+[32m[1105 07:39:08 @stat.py:82][0m conv1/Wp:0: 0.72596
+[32m[1105 07:39:08 @stat.py:82][0m conv2/W/rms: 0.075676
+[32m[1105 07:39:08 @stat.py:82][0m conv2/Wn:0: 1.0949
+[32m[1105 07:39:08 @stat.py:82][0m conv2/Wp:0: 0.90783
+[32m[1105 07:39:08 @stat.py:82][0m conv3/W/rms: 0.073225
+[32m[1105 07:39:08 @stat.py:82][0m conv3/Wn:0: 1.0577
+[32m[1105 07:39:08 @stat.py:82][0m conv3/Wp:0: 0.94496
+[32m[1105 07:39:08 @stat.py:82][0m conv4/W/rms: 0.085334
+[32m[1105 07:39:08 @stat.py:82][0m conv4/Wn:0: 1.1387
+[32m[1105 07:39:08 @stat.py:82][0m conv4/Wp:0: 0.86319
+[32m[1105 07:39:08 @stat.py:82][0m cost: 1.7384
+[32m[1105 07:39:08 @stat.py:82][0m cross_entropy_loss: 1.6391
+[32m[1105 07:39:08 @stat.py:82][0m fc0/W/rms: 0.0074678
+[32m[1105 07:39:08 @stat.py:82][0m fc0/Wn:0: 1.1326
+[32m[1105 07:39:08 @stat.py:82][0m fc0/Wp:0: 0.86904
+[32m[1105 07:39:08 @stat.py:82][0m fc1/W/rms: 0.011813
+[32m[1105 07:39:08 @stat.py:82][0m fc1/Wn:0: 1.0876
+[32m[1105 07:39:08 @stat.py:82][0m fc1/Wp:0: 0.91127
+[32m[1105 07:39:08 @stat.py:82][0m fct/W/rms: 0.092802
+[32m[1105 07:39:08 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 07:39:08 @stat.py:82][0m train-error-top1: 0.38432
+[32m[1105 07:39:08 @stat.py:82][0m train-error-top5: 0.17048
+[32m[1105 07:39:08 @stat.py:82][0m val-error-top1: 0.4891
+[32m[1105 07:39:08 @stat.py:82][0m val-error-top5: 0.24956
+[32m[1105 07:39:08 @stat.py:82][0m validation_cost: 2.403
+[32m[1105 07:39:08 @group.py:40][0m Callbacks took 607.879 sec in total. InferenceRunner: 599.549sec
+[32m[1105 07:39:08 @timer.py:46][0m Epoch 30 (global_step 300000) finished, time:2506.09sec.
+[32m[1105 08:20:18 @stat.py:82][0m AddN: 0.10348
+[32m[1105 08:20:18 @stat.py:82][0m conv0/W/rms: 0.053847
+[32m[1105 08:20:18 @stat.py:82][0m conv1/W/rms: 0.11001
+[32m[1105 08:20:18 @stat.py:82][0m conv1/Wn:0: 1.2778
+[32m[1105 08:20:18 @stat.py:82][0m conv1/Wp:0: 0.72437
+[32m[1105 08:20:18 @stat.py:82][0m conv2/W/rms: 0.077364
+[32m[1105 08:20:18 @stat.py:82][0m conv2/Wn:0: 1.0944
+[32m[1105 08:20:18 @stat.py:82][0m conv2/Wp:0: 0.90838
+[32m[1105 08:20:18 @stat.py:82][0m conv3/W/rms: 0.074805
+[32m[1105 08:20:18 @stat.py:82][0m conv3/Wn:0: 1.0593
+[32m[1105 08:20:18 @stat.py:82][0m conv3/Wp:0: 0.94347
+[32m[1105 08:20:18 @stat.py:82][0m conv4/W/rms: 0.087262
+[32m[1105 08:20:18 @stat.py:82][0m conv4/Wn:0: 1.1379
+[32m[1105 08:20:18 @stat.py:82][0m conv4/Wp:0: 0.86408
+[32m[1105 08:20:18 @stat.py:82][0m cost: 1.7275
+[32m[1105 08:20:18 @stat.py:82][0m cross_entropy_loss: 1.624
+[32m[1105 08:20:18 @stat.py:82][0m fc0/W/rms: 0.007554
+[32m[1105 08:20:18 @stat.py:82][0m fc0/Wn:0: 1.1346
+[32m[1105 08:20:18 @stat.py:82][0m fc0/Wp:0: 0.86711
+[32m[1105 08:20:18 @stat.py:82][0m fc1/W/rms: 0.011989
+[32m[1105 08:20:18 @stat.py:82][0m fc1/Wn:0: 1.0905
+[32m[1105 08:20:18 @stat.py:82][0m fc1/Wp:0: 0.90829
+[32m[1105 08:20:18 @stat.py:82][0m fct/W/rms: 0.094838
+[32m[1105 08:20:18 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 08:20:18 @stat.py:82][0m train-error-top1: 0.38776
+[32m[1105 08:20:18 @stat.py:82][0m train-error-top5: 0.16033
+[32m[1105 08:20:18 @stat.py:82][0m val-error-top1: 0.49222
+[32m[1105 08:20:18 @stat.py:82][0m val-error-top5: 0.25372
+[32m[1105 08:20:18 @stat.py:82][0m validation_cost: 2.4388
+[32m[1105 08:20:18 @group.py:40][0m Callbacks took 573.409 sec in total. InferenceRunner: 567.811sec
+[32m[1105 08:20:18 @timer.py:46][0m Epoch 31 (global_step 310000) finished, time:2469.82sec.
+[32m[1105 09:01:36 @stat.py:82][0m AddN: 0.10764
+[32m[1105 09:01:37 @stat.py:82][0m conv0/W/rms: 0.054669
+[32m[1105 09:01:37 @stat.py:82][0m conv1/W/rms: 0.11272
+[32m[1105 09:01:37 @stat.py:82][0m conv1/Wn:0: 1.2802
+[32m[1105 09:01:37 @stat.py:82][0m conv1/Wp:0: 0.72203
+[32m[1105 09:01:37 @stat.py:82][0m conv2/W/rms: 0.079052
+[32m[1105 09:01:37 @stat.py:82][0m conv2/Wn:0: 1.0952
+[32m[1105 09:01:37 @stat.py:82][0m conv2/Wp:0: 0.9077
+[32m[1105 09:01:37 @stat.py:82][0m conv3/W/rms: 0.076373
+[32m[1105 09:01:37 @stat.py:82][0m conv3/Wn:0: 1.0598
+[32m[1105 09:01:37 @stat.py:82][0m conv3/Wp:0: 0.94303
+[32m[1105 09:01:37 @stat.py:82][0m conv4/W/rms: 0.089154
+[32m[1105 09:01:37 @stat.py:82][0m conv4/Wn:0: 1.1382
+[32m[1105 09:01:37 @stat.py:82][0m conv4/Wp:0: 0.86389
+[32m[1105 09:01:37 @stat.py:82][0m cost: 1.7141
+[32m[1105 09:01:37 @stat.py:82][0m cross_entropy_loss: 1.6065
+[32m[1105 09:01:37 @stat.py:82][0m fc0/W/rms: 0.0075561
+[32m[1105 09:01:37 @stat.py:82][0m fc0/Wn:0: 1.1328
+[32m[1105 09:01:37 @stat.py:82][0m fc0/Wp:0: 0.86891
+[32m[1105 09:01:37 @stat.py:82][0m fc1/W/rms: 0.012151
+[32m[1105 09:01:37 @stat.py:82][0m fc1/Wn:0: 1.0866
+[32m[1105 09:01:37 @stat.py:82][0m fc1/Wp:0: 0.9122
+[32m[1105 09:01:37 @stat.py:82][0m fct/W/rms: 0.096869
+[32m[1105 09:01:37 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 09:01:37 @stat.py:82][0m train-error-top1: 0.37885
+[32m[1105 09:01:37 @stat.py:82][0m train-error-top5: 0.16385
+[32m[1105 09:01:37 @stat.py:82][0m val-error-top1: 0.4962
+[32m[1105 09:01:37 @stat.py:82][0m val-error-top5: 0.2581
+[32m[1105 09:01:37 @stat.py:82][0m validation_cost: 2.4704
+[32m[1105 09:01:37 @group.py:40][0m Callbacks took 588.065 sec in total. InferenceRunner: 580.205sec
+[32m[1105 09:01:37 @timer.py:46][0m Epoch 32 (global_step 320000) finished, time:2478.68sec.
+[32m[1105 09:42:31 @stat.py:82][0m AddN: 0.11185
+[32m[1105 09:42:31 @stat.py:82][0m conv0/W/rms: 0.055486
+[32m[1105 09:42:31 @stat.py:82][0m conv1/W/rms: 0.11546
+[32m[1105 09:42:31 @stat.py:82][0m conv1/Wn:0: 1.283
+[32m[1105 09:42:31 @stat.py:82][0m conv1/Wp:0: 0.71931
+[32m[1105 09:42:31 @stat.py:82][0m conv2/W/rms: 0.08073
+[32m[1105 09:42:31 @stat.py:82][0m conv2/Wn:0: 1.0964
+[32m[1105 09:42:31 @stat.py:82][0m conv2/Wp:0: 0.9066
+[32m[1105 09:42:31 @stat.py:82][0m conv3/W/rms: 0.07794
+[32m[1105 09:42:31 @stat.py:82][0m conv3/Wn:0: 1.0611
+[32m[1105 09:42:31 @stat.py:82][0m conv3/Wp:0: 0.94183
+[32m[1105 09:42:31 @stat.py:82][0m conv4/W/rms: 0.091072
+[32m[1105 09:42:31 @stat.py:82][0m conv4/Wn:0: 1.1357
+[32m[1105 09:42:31 @stat.py:82][0m conv4/Wp:0: 0.86646
+[32m[1105 09:42:31 @stat.py:82][0m cost: 1.7277
+[32m[1105 09:42:31 @stat.py:82][0m cross_entropy_loss: 1.6158
+[32m[1105 09:42:31 @stat.py:82][0m fc0/W/rms: 0.007557
+[32m[1105 09:42:31 @stat.py:82][0m fc0/Wn:0: 1.1341
+[32m[1105 09:42:31 @stat.py:82][0m fc0/Wp:0: 0.86771
+[32m[1105 09:42:31 @stat.py:82][0m fc1/W/rms: 0.012336
+[32m[1105 09:42:31 @stat.py:82][0m fc1/Wn:0: 1.0875
+[32m[1105 09:42:31 @stat.py:82][0m fc1/Wp:0: 0.91123
+[32m[1105 09:42:31 @stat.py:82][0m fct/W/rms: 0.098873
+[32m[1105 09:42:31 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 09:42:31 @stat.py:82][0m train-error-top1: 0.38231
+[32m[1105 09:42:31 @stat.py:82][0m train-error-top5: 0.16499
+[32m[1105 09:42:31 @stat.py:82][0m val-error-top1: 0.48348
+[32m[1105 09:42:31 @stat.py:82][0m val-error-top5: 0.24634
+[32m[1105 09:42:31 @stat.py:82][0m validation_cost: 2.4021
+[32m[1105 09:42:31 @group.py:40][0m Callbacks took 562.143 sec in total. InferenceRunner: 551.640sec
+[32m[1105 09:42:31 @timer.py:46][0m Epoch 33 (global_step 330000) finished, time:2454.18sec.
+[32m[1105 10:23:30 @stat.py:82][0m AddN: 0.11605
+[32m[1105 10:23:30 @stat.py:82][0m conv0/W/rms: 0.056283
+[32m[1105 10:23:30 @stat.py:82][0m conv1/W/rms: 0.11817
+[32m[1105 10:23:30 @stat.py:82][0m conv1/Wn:0: 1.2848
+[32m[1105 10:23:30 @stat.py:82][0m conv1/Wp:0: 0.7176
+[32m[1105 10:23:30 @stat.py:82][0m conv2/W/rms: 0.08241
+[32m[1105 10:23:30 @stat.py:82][0m conv2/Wn:0: 1.099
+[32m[1105 10:23:30 @stat.py:82][0m conv2/Wp:0: 0.90406
+[32m[1105 10:23:30 @stat.py:82][0m conv3/W/rms: 0.079497
+[32m[1105 10:23:30 @stat.py:82][0m conv3/Wn:0: 1.063
+[32m[1105 10:23:30 @stat.py:82][0m conv3/Wp:0: 0.94005
+[32m[1105 10:23:30 @stat.py:82][0m conv4/W/rms: 0.092986
+[32m[1105 10:23:30 @stat.py:82][0m conv4/Wn:0: 1.1326
+[32m[1105 10:23:30 @stat.py:82][0m conv4/Wp:0: 0.86968
+[32m[1105 10:23:30 @stat.py:82][0m cost: 1.6774
+[32m[1105 10:23:30 @stat.py:82][0m cross_entropy_loss: 1.5614
+[32m[1105 10:23:30 @stat.py:82][0m fc0/W/rms: 0.0075771
+[32m[1105 10:23:30 @stat.py:82][0m fc0/Wn:0: 1.1338
+[32m[1105 10:23:30 @stat.py:82][0m fc0/Wp:0: 0.86806
+[32m[1105 10:23:30 @stat.py:82][0m fc1/W/rms: 0.012448
+[32m[1105 10:23:30 @stat.py:82][0m fc1/Wn:0: 1.0843
+[32m[1105 10:23:30 @stat.py:82][0m fc1/Wp:0: 0.91445
+[32m[1105 10:23:30 @stat.py:82][0m fct/W/rms: 0.10086
+[32m[1105 10:23:30 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 10:23:30 @stat.py:82][0m train-error-top1: 0.37841
+[32m[1105 10:23:30 @stat.py:82][0m train-error-top5: 0.15613
+[32m[1105 10:23:30 @stat.py:82][0m val-error-top1: 0.4857
+[32m[1105 10:23:30 @stat.py:82][0m val-error-top5: 0.2477
+[32m[1105 10:23:30 @stat.py:82][0m validation_cost: 2.4232
+[32m[1105 10:23:30 @group.py:40][0m Callbacks took 570.129 sec in total. InferenceRunner: 564.058sec
+[32m[1105 10:23:30 @timer.py:46][0m Epoch 34 (global_step 340000) finished, time:2459.56sec.
+[32m[1105 11:04:39 @stat.py:82][0m AddN: 0.12035
+[32m[1105 11:04:39 @stat.py:82][0m conv0/W/rms: 0.057076
+[32m[1105 11:04:39 @stat.py:82][0m conv1/W/rms: 0.12088
+[32m[1105 11:04:39 @stat.py:82][0m conv1/Wn:0: 1.2877
+[32m[1105 11:04:39 @stat.py:82][0m conv1/Wp:0: 0.71482
+[32m[1105 11:04:39 @stat.py:82][0m conv2/W/rms: 0.08409
+[32m[1105 11:04:39 @stat.py:82][0m conv2/Wn:0: 1.102
+[32m[1105 11:04:39 @stat.py:82][0m conv2/Wp:0: 0.90118
+[32m[1105 11:04:39 @stat.py:82][0m conv3/W/rms: 0.081047
+[32m[1105 11:04:39 @stat.py:82][0m conv3/Wn:0: 1.0652
+[32m[1105 11:04:39 @stat.py:82][0m conv3/Wp:0: 0.93791
+[32m[1105 11:04:39 @stat.py:82][0m conv4/W/rms: 0.094906
+[32m[1105 11:04:39 @stat.py:82][0m conv4/Wn:0: 1.1342
+[32m[1105 11:04:39 @stat.py:82][0m conv4/Wp:0: 0.86818
+[32m[1105 11:04:39 @stat.py:82][0m cost: 1.7156
+[32m[1105 11:04:39 @stat.py:82][0m cross_entropy_loss: 1.5953
+[32m[1105 11:04:39 @stat.py:82][0m fc0/W/rms: 0.00766
+[32m[1105 11:04:39 @stat.py:82][0m fc0/Wn:0: 1.1347
+[32m[1105 11:04:39 @stat.py:82][0m fc0/Wp:0: 0.86722
+[32m[1105 11:04:39 @stat.py:82][0m fc1/W/rms: 0.01252
+[32m[1105 11:04:39 @stat.py:82][0m fc1/Wn:0: 1.0835
+[32m[1105 11:04:39 @stat.py:82][0m fc1/Wp:0: 0.91514
+[32m[1105 11:04:39 @stat.py:82][0m fct/W/rms: 0.10283
+[32m[1105 11:04:39 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 11:04:39 @stat.py:82][0m train-error-top1: 0.38096
+[32m[1105 11:04:39 @stat.py:82][0m train-error-top5: 0.15973
+[32m[1105 11:04:39 @stat.py:82][0m val-error-top1: 0.49056
+[32m[1105 11:04:39 @stat.py:82][0m val-error-top5: 0.25076
+[32m[1105 11:04:39 @stat.py:82][0m validation_cost: 2.4474
+[32m[1105 11:04:39 @group.py:40][0m Callbacks took 580.733 sec in total. InferenceRunner: 574.009sec
+[32m[1105 11:04:39 @timer.py:46][0m Epoch 35 (global_step 350000) finished, time:2469.01sec.
+[32m[1105 11:45:46 @stat.py:82][0m AddN: 0.12472
+[32m[1105 11:45:46 @stat.py:82][0m conv0/W/rms: 0.057856
+[32m[1105 11:45:46 @stat.py:82][0m conv1/W/rms: 0.12359
+[32m[1105 11:45:46 @stat.py:82][0m conv1/Wn:0: 1.287
+[32m[1105 11:45:46 @stat.py:82][0m conv1/Wp:0: 0.7156
+[32m[1105 11:45:46 @stat.py:82][0m conv2/W/rms: 0.085771
+[32m[1105 11:45:46 @stat.py:82][0m conv2/Wn:0: 1.1007
+[32m[1105 11:45:46 @stat.py:82][0m conv2/Wp:0: 0.90254
+[32m[1105 11:45:46 @stat.py:82][0m conv3/W/rms: 0.082571
+[32m[1105 11:45:46 @stat.py:82][0m conv3/Wn:0: 1.0651
+[32m[1105 11:45:46 @stat.py:82][0m conv3/Wp:0: 0.93807
+[32m[1105 11:45:46 @stat.py:82][0m conv4/W/rms: 0.096812
+[32m[1105 11:45:46 @stat.py:82][0m conv4/Wn:0: 1.1361
+[32m[1105 11:45:46 @stat.py:82][0m conv4/Wp:0: 0.86633
+[32m[1105 11:45:46 @stat.py:82][0m cost: 1.7201
+[32m[1105 11:45:46 @stat.py:82][0m cross_entropy_loss: 1.5953
+[32m[1105 11:45:46 @stat.py:82][0m fc0/W/rms: 0.0077506
+[32m[1105 11:45:46 @stat.py:82][0m fc0/Wn:0: 1.1364
+[32m[1105 11:45:46 @stat.py:82][0m fc0/Wp:0: 0.86557
+[32m[1105 11:45:46 @stat.py:82][0m fc1/W/rms: 0.012592
+[32m[1105 11:45:46 @stat.py:82][0m fc1/Wn:0: 1.0831
+[32m[1105 11:45:46 @stat.py:82][0m fc1/Wp:0: 0.91561
+[32m[1105 11:45:46 @stat.py:82][0m fct/W/rms: 0.10478
+[32m[1105 11:45:46 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 11:45:46 @stat.py:82][0m train-error-top1: 0.38139
+[32m[1105 11:45:46 @stat.py:82][0m train-error-top5: 0.1644
+[32m[1105 11:45:46 @stat.py:82][0m val-error-top1: 0.48362
+[32m[1105 11:45:46 @stat.py:82][0m val-error-top5: 0.24576
+[32m[1105 11:45:46 @stat.py:82][0m validation_cost: 2.442
+[32m[1105 11:45:46 @group.py:40][0m Callbacks took 579.458 sec in total. InferenceRunner: 570.123sec
+[32m[1105 11:45:46 @timer.py:46][0m Epoch 36 (global_step 360000) finished, time:2466.90sec.
+[32m[1105 12:26:38 @stat.py:82][0m AddN: 0.12911
+[32m[1105 12:26:38 @stat.py:82][0m conv0/W/rms: 0.058619
+[32m[1105 12:26:38 @stat.py:82][0m conv1/W/rms: 0.12626
+[32m[1105 12:26:38 @stat.py:82][0m conv1/Wn:0: 1.2876
+[32m[1105 12:26:38 @stat.py:82][0m conv1/Wp:0: 0.71511
+[32m[1105 12:26:38 @stat.py:82][0m conv2/W/rms: 0.087443
+[32m[1105 12:26:38 @stat.py:82][0m conv2/Wn:0: 1.1021
+[32m[1105 12:26:38 @stat.py:82][0m conv2/Wp:0: 0.90127
+[32m[1105 12:26:38 @stat.py:82][0m conv3/W/rms: 0.084099
+[32m[1105 12:26:38 @stat.py:82][0m conv3/Wn:0: 1.0661
+[32m[1105 12:26:38 @stat.py:82][0m conv3/Wp:0: 0.93722
+[32m[1105 12:26:38 @stat.py:82][0m conv4/W/rms: 0.098736
+[32m[1105 12:26:38 @stat.py:82][0m conv4/Wn:0: 1.1324
+[32m[1105 12:26:38 @stat.py:82][0m conv4/Wp:0: 0.87017
+[32m[1105 12:26:38 @stat.py:82][0m cost: 1.6611
+[32m[1105 12:26:38 @stat.py:82][0m cross_entropy_loss: 1.532
+[32m[1105 12:26:38 @stat.py:82][0m fc0/W/rms: 0.0077783
+[32m[1105 12:26:38 @stat.py:82][0m fc0/Wn:0: 1.137
+[32m[1105 12:26:38 @stat.py:82][0m fc0/Wp:0: 0.86494
+[32m[1105 12:26:38 @stat.py:82][0m fc1/W/rms: 0.012644
+[32m[1105 12:26:38 @stat.py:82][0m fc1/Wn:0: 1.0801
+[32m[1105 12:26:38 @stat.py:82][0m fc1/Wp:0: 0.91854
+[32m[1105 12:26:38 @stat.py:82][0m fct/W/rms: 0.10677
+[32m[1105 12:26:38 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 12:26:38 @stat.py:82][0m train-error-top1: 0.36843
+[32m[1105 12:26:38 @stat.py:82][0m train-error-top5: 0.15398
+[32m[1105 12:26:38 @stat.py:82][0m val-error-top1: 0.48802
+[32m[1105 12:26:38 @stat.py:82][0m val-error-top5: 0.24826
+[32m[1105 12:26:38 @stat.py:82][0m validation_cost: 2.4542
+[32m[1105 12:26:38 @group.py:40][0m Callbacks took 565.400 sec in total. InferenceRunner: 559.753sec
+[32m[1105 12:26:38 @timer.py:46][0m Epoch 37 (global_step 370000) finished, time:2451.96sec.
+[32m[1105 13:07:51 @stat.py:82][0m AddN: 0.13359
+[32m[1105 13:07:51 @stat.py:82][0m conv0/W/rms: 0.059374
+[32m[1105 13:07:51 @stat.py:82][0m conv1/W/rms: 0.12898
+[32m[1105 13:07:51 @stat.py:82][0m conv1/Wn:0: 1.2884
+[32m[1105 13:07:51 @stat.py:82][0m conv1/Wp:0: 0.71437
+[32m[1105 13:07:51 @stat.py:82][0m conv2/W/rms: 0.089102
+[32m[1105 13:07:51 @stat.py:82][0m conv2/Wn:0: 1.1034
+[32m[1105 13:07:51 @stat.py:82][0m conv2/Wp:0: 0.90009
+[32m[1105 13:07:51 @stat.py:82][0m conv3/W/rms: 0.085632
+[32m[1105 13:07:51 @stat.py:82][0m conv3/Wn:0: 1.0664
+[32m[1105 13:07:51 @stat.py:82][0m conv3/Wp:0: 0.93699
+[32m[1105 13:07:51 @stat.py:82][0m conv4/W/rms: 0.10066
+[32m[1105 13:07:51 @stat.py:82][0m conv4/Wn:0: 1.133
+[32m[1105 13:07:51 @stat.py:82][0m conv4/Wp:0: 0.86962
+[32m[1105 13:07:51 @stat.py:82][0m cost: 1.6966
+[32m[1105 13:07:51 @stat.py:82][0m cross_entropy_loss: 1.563
+[32m[1105 13:07:51 @stat.py:82][0m fc0/W/rms: 0.007819
+[32m[1105 13:07:51 @stat.py:82][0m fc0/Wn:0: 1.1377
+[32m[1105 13:07:51 @stat.py:82][0m fc0/Wp:0: 0.8643
+[32m[1105 13:07:51 @stat.py:82][0m fc1/W/rms: 0.012782
+[32m[1105 13:07:51 @stat.py:82][0m fc1/Wn:0: 1.0822
+[32m[1105 13:07:51 @stat.py:82][0m fc1/Wp:0: 0.91642
+[32m[1105 13:07:51 @stat.py:82][0m fct/W/rms: 0.1087
+[32m[1105 13:07:51 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 13:07:51 @stat.py:82][0m train-error-top1: 0.38341
+[32m[1105 13:07:51 @stat.py:82][0m train-error-top5: 0.15756
+[32m[1105 13:07:51 @stat.py:82][0m val-error-top1: 0.48376
+[32m[1105 13:07:51 @stat.py:82][0m val-error-top5: 0.24562
+[32m[1105 13:07:51 @stat.py:82][0m validation_cost: 2.4402
+[32m[1105 13:07:51 @group.py:40][0m Callbacks took 587.229 sec in total. InferenceRunner: 581.242sec
+[32m[1105 13:07:51 @timer.py:46][0m Epoch 38 (global_step 380000) finished, time:2473.04sec.
+[32m[1105 13:48:58 @stat.py:82][0m AddN: 0.13806
+[32m[1105 13:48:58 @stat.py:82][0m conv0/W/rms: 0.060118
+[32m[1105 13:48:58 @stat.py:82][0m conv1/W/rms: 0.13167
+[32m[1105 13:48:58 @stat.py:82][0m conv1/Wn:0: 1.29
+[32m[1105 13:48:58 @stat.py:82][0m conv1/Wp:0: 0.71294
+[32m[1105 13:48:58 @stat.py:82][0m conv2/W/rms: 0.090761
+[32m[1105 13:48:58 @stat.py:82][0m conv2/Wn:0: 1.1028
+[32m[1105 13:48:58 @stat.py:82][0m conv2/Wp:0: 0.90073
+[32m[1105 13:48:58 @stat.py:82][0m conv3/W/rms: 0.087153
+[32m[1105 13:48:58 @stat.py:82][0m conv3/Wn:0: 1.0678
+[32m[1105 13:48:58 @stat.py:82][0m conv3/Wp:0: 0.9357
+[32m[1105 13:48:58 @stat.py:82][0m conv4/W/rms: 0.10257
+[32m[1105 13:48:58 @stat.py:82][0m conv4/Wn:0: 1.1322
+[32m[1105 13:48:58 @stat.py:82][0m conv4/Wp:0: 0.87048
+[32m[1105 13:48:58 @stat.py:82][0m cost: 1.6728
+[32m[1105 13:48:58 @stat.py:82][0m cross_entropy_loss: 1.5347
+[32m[1105 13:48:58 @stat.py:82][0m fc0/W/rms: 0.0078169
+[32m[1105 13:48:58 @stat.py:82][0m fc0/Wn:0: 1.1371
+[32m[1105 13:48:58 @stat.py:82][0m fc0/Wp:0: 0.86499
+[32m[1105 13:48:58 @stat.py:82][0m fc1/W/rms: 0.01299
+[32m[1105 13:48:58 @stat.py:82][0m fc1/Wn:0: 1.0862
+[32m[1105 13:48:58 @stat.py:82][0m fc1/Wp:0: 0.91239
+[32m[1105 13:48:58 @stat.py:82][0m fct/W/rms: 0.1106
+[32m[1105 13:48:58 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 13:48:58 @stat.py:82][0m train-error-top1: 0.37361
+[32m[1105 13:48:58 @stat.py:82][0m train-error-top5: 0.15876
+[32m[1105 13:48:58 @stat.py:82][0m val-error-top1: 0.48712
+[32m[1105 13:48:58 @stat.py:82][0m val-error-top5: 0.24436
+[32m[1105 13:48:58 @stat.py:82][0m validation_cost: 2.4667
+[32m[1105 13:48:58 @group.py:40][0m Callbacks took 578.914 sec in total. InferenceRunner: 572.061sec
+[32m[1105 13:48:58 @timer.py:46][0m Epoch 39 (global_step 390000) finished, time:2466.41sec.
+[32m[1105 14:29:55 @stat.py:82][0m AddN: 0.14246
+[32m[1105 14:29:55 @stat.py:82][0m conv0/W/rms: 0.060845
+[32m[1105 14:29:55 @stat.py:82][0m conv1/W/rms: 0.13435
+[32m[1105 14:29:55 @stat.py:82][0m conv1/Wn:0: 1.2874
+[32m[1105 14:29:55 @stat.py:82][0m conv1/Wp:0: 0.71564
+[32m[1105 14:29:55 @stat.py:82][0m conv2/W/rms: 0.092428
+[32m[1105 14:29:55 @stat.py:82][0m conv2/Wn:0: 1.1036
+[32m[1105 14:29:55 @stat.py:82][0m conv2/Wp:0: 0.9
+[32m[1105 14:29:55 @stat.py:82][0m conv3/W/rms: 0.088674
+[32m[1105 14:29:55 @stat.py:82][0m conv3/Wn:0: 1.0692
+[32m[1105 14:29:55 @stat.py:82][0m conv3/Wp:0: 0.93439
+[32m[1105 14:29:55 @stat.py:82][0m conv4/W/rms: 0.10449
+[32m[1105 14:29:55 @stat.py:82][0m conv4/Wn:0: 1.1334
+[32m[1105 14:29:55 @stat.py:82][0m conv4/Wp:0: 0.86941
+[32m[1105 14:29:55 @stat.py:82][0m cost: 1.6603
+[32m[1105 14:29:55 @stat.py:82][0m cross_entropy_loss: 1.5179
+[32m[1105 14:29:55 @stat.py:82][0m fc0/W/rms: 0.0077731
+[32m[1105 14:29:55 @stat.py:82][0m fc0/Wn:0: 1.1367
+[32m[1105 14:29:55 @stat.py:82][0m fc0/Wp:0: 0.86541
+[32m[1105 14:29:55 @stat.py:82][0m fc1/W/rms: 0.013165
+[32m[1105 14:29:55 @stat.py:82][0m fc1/Wn:0: 1.0825
+[32m[1105 14:29:55 @stat.py:82][0m fc1/Wp:0: 0.91611
+[32m[1105 14:29:55 @stat.py:82][0m fct/W/rms: 0.11247
+[32m[1105 14:29:55 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 14:29:55 @stat.py:82][0m train-error-top1: 0.37104
+[32m[1105 14:29:55 @stat.py:82][0m train-error-top5: 0.14382
+[32m[1105 14:29:55 @stat.py:82][0m val-error-top1: 0.47968
+[32m[1105 14:29:55 @stat.py:82][0m val-error-top5: 0.24502
+[32m[1105 14:29:55 @stat.py:82][0m validation_cost: 2.441
+[32m[1105 14:29:55 @group.py:40][0m Callbacks took 571.810 sec in total. InferenceRunner: 566.372sec
+[32m[1105 14:29:55 @timer.py:46][0m Epoch 40 (global_step 400000) finished, time:2457.26sec.
+[32m[1105 15:11:04 @stat.py:82][0m AddN: 0.14688
+[32m[1105 15:11:04 @stat.py:82][0m conv0/W/rms: 0.061584
+[32m[1105 15:11:04 @stat.py:82][0m conv1/W/rms: 0.13703
+[32m[1105 15:11:04 @stat.py:82][0m conv1/Wn:0: 1.2897
+[32m[1105 15:11:04 @stat.py:82][0m conv1/Wp:0: 0.71341
+[32m[1105 15:11:04 @stat.py:82][0m conv2/W/rms: 0.094075
+[32m[1105 15:11:04 @stat.py:82][0m conv2/Wn:0: 1.1026
+[32m[1105 15:11:04 @stat.py:82][0m conv2/Wp:0: 0.90114
+[32m[1105 15:11:04 @stat.py:82][0m conv3/W/rms: 0.090176
+[32m[1105 15:11:04 @stat.py:82][0m conv3/Wn:0: 1.0672
+[32m[1105 15:11:04 @stat.py:82][0m conv3/Wp:0: 0.93641
+[32m[1105 15:11:04 @stat.py:82][0m conv4/W/rms: 0.1064
+[32m[1105 15:11:04 @stat.py:82][0m conv4/Wn:0: 1.1289
+[32m[1105 15:11:04 @stat.py:82][0m conv4/Wp:0: 0.87398
+[32m[1105 15:11:04 @stat.py:82][0m cost: 1.6681
+[32m[1105 15:11:04 @stat.py:82][0m cross_entropy_loss: 1.5212
+[32m[1105 15:11:04 @stat.py:82][0m fc0/W/rms: 0.007749
+[32m[1105 15:11:04 @stat.py:82][0m fc0/Wn:0: 1.1352
+[32m[1105 15:11:04 @stat.py:82][0m fc0/Wp:0: 0.86704
+[32m[1105 15:11:04 @stat.py:82][0m fc1/W/rms: 0.013298
+[32m[1105 15:11:04 @stat.py:82][0m fc1/Wn:0: 1.0822
+[32m[1105 15:11:04 @stat.py:82][0m fc1/Wp:0: 0.91633
+[32m[1105 15:11:04 @stat.py:82][0m fct/W/rms: 0.11432
+[32m[1105 15:11:04 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 15:11:04 @stat.py:82][0m train-error-top1: 0.36953
+[32m[1105 15:11:04 @stat.py:82][0m train-error-top5: 0.14996
+[32m[1105 15:11:04 @stat.py:82][0m val-error-top1: 0.4818
+[32m[1105 15:11:04 @stat.py:82][0m val-error-top5: 0.24584
+[32m[1105 15:11:04 @stat.py:82][0m validation_cost: 2.464
+[32m[1105 15:11:05 @group.py:40][0m Callbacks took 587.838 sec in total. InferenceRunner: 578.967sec
+[32m[1105 15:11:05 @timer.py:46][0m Epoch 41 (global_step 410000) finished, time:2469.65sec.
+[32m[1105 15:52:13 @stat.py:82][0m AddN: 0.15133
+[32m[1105 15:52:13 @stat.py:82][0m conv0/W/rms: 0.062312
+[32m[1105 15:52:13 @stat.py:82][0m conv1/W/rms: 0.13972
+[32m[1105 15:52:13 @stat.py:82][0m conv1/Wn:0: 1.291
+[32m[1105 15:52:13 @stat.py:82][0m conv1/Wp:0: 0.71223
+[32m[1105 15:52:13 @stat.py:82][0m conv2/W/rms: 0.095726
+[32m[1105 15:52:13 @stat.py:82][0m conv2/Wn:0: 1.1027
+[32m[1105 15:52:13 @stat.py:82][0m conv2/Wp:0: 0.90115
+[32m[1105 15:52:13 @stat.py:82][0m conv3/W/rms: 0.091672
+[32m[1105 15:52:13 @stat.py:82][0m conv3/Wn:0: 1.0664
+[32m[1105 15:52:13 @stat.py:82][0m conv3/Wp:0: 0.93732
+[32m[1105 15:52:13 @stat.py:82][0m conv4/W/rms: 0.10831
+[32m[1105 15:52:13 @stat.py:82][0m conv4/Wn:0: 1.1295
+[32m[1105 15:52:13 @stat.py:82][0m conv4/Wp:0: 0.87343
+[32m[1105 15:52:13 @stat.py:82][0m cost: 1.657
+[32m[1105 15:52:13 @stat.py:82][0m cross_entropy_loss: 1.5057
+[32m[1105 15:52:13 @stat.py:82][0m fc0/W/rms: 0.0077154
+[32m[1105 15:52:13 @stat.py:82][0m fc0/Wn:0: 1.1331
+[32m[1105 15:52:13 @stat.py:82][0m fc0/Wp:0: 0.86919
+[32m[1105 15:52:13 @stat.py:82][0m fc1/W/rms: 0.01343
+[32m[1105 15:52:13 @stat.py:82][0m fc1/Wn:0: 1.0834
+[32m[1105 15:52:13 @stat.py:82][0m fc1/Wp:0: 0.9151
+[32m[1105 15:52:13 @stat.py:82][0m fct/W/rms: 0.11617
+[32m[1105 15:52:13 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 15:52:13 @stat.py:82][0m train-error-top1: 0.36819
+[32m[1105 15:52:13 @stat.py:82][0m train-error-top5: 0.149
+[32m[1105 15:52:13 @stat.py:82][0m val-error-top1: 0.48142
+[32m[1105 15:52:13 @stat.py:82][0m val-error-top5: 0.24492
+[32m[1105 15:52:13 @stat.py:82][0m validation_cost: 2.4509
+[32m[1105 15:52:13 @group.py:40][0m Callbacks took 587.952 sec in total. InferenceRunner: 579.678sec
+[32m[1105 15:52:13 @timer.py:46][0m Epoch 42 (global_step 420000) finished, time:2468.76sec.
+[32m[1105 16:33:02 @stat.py:82][0m AddN: 0.15603
+[32m[1105 16:33:02 @stat.py:82][0m conv0/W/rms: 0.063038
+[32m[1105 16:33:02 @stat.py:82][0m conv1/W/rms: 0.1424
+[32m[1105 16:33:02 @stat.py:82][0m conv1/Wn:0: 1.2902
+[32m[1105 16:33:02 @stat.py:82][0m conv1/Wp:0: 0.71305
+[32m[1105 16:33:02 @stat.py:82][0m conv2/W/rms: 0.097366
+[32m[1105 16:33:02 @stat.py:82][0m conv2/Wn:0: 1.1032
+[32m[1105 16:33:02 @stat.py:82][0m conv2/Wp:0: 0.90076
+[32m[1105 16:33:02 @stat.py:82][0m conv3/W/rms: 0.093182
+[32m[1105 16:33:02 @stat.py:82][0m conv3/Wn:0: 1.0678
+[32m[1105 16:33:02 @stat.py:82][0m conv3/Wp:0: 0.93605
+[32m[1105 16:33:02 @stat.py:82][0m conv4/W/rms: 0.11022
+[32m[1105 16:33:02 @stat.py:82][0m conv4/Wn:0: 1.1269
+[32m[1105 16:33:02 @stat.py:82][0m conv4/Wp:0: 0.8761
+[32m[1105 16:33:02 @stat.py:82][0m cost: 1.6165
+[32m[1105 16:33:02 @stat.py:82][0m cross_entropy_loss: 1.4605
+[32m[1105 16:33:02 @stat.py:82][0m fc0/W/rms: 0.0078172
+[32m[1105 16:33:02 @stat.py:82][0m fc0/Wn:0: 1.1361
+[32m[1105 16:33:02 @stat.py:82][0m fc0/Wp:0: 0.86618
+[32m[1105 16:33:02 @stat.py:82][0m fc1/W/rms: 0.013587
+[32m[1105 16:33:02 @stat.py:82][0m fc1/Wn:0: 1.0828
+[32m[1105 16:33:02 @stat.py:82][0m fc1/Wp:0: 0.91571
+[32m[1105 16:33:02 @stat.py:82][0m fct/W/rms: 0.11799
+[32m[1105 16:33:02 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 16:33:02 @stat.py:82][0m train-error-top1: 0.35843
+[32m[1105 16:33:02 @stat.py:82][0m train-error-top5: 0.14005
+[32m[1105 16:33:02 @stat.py:82][0m val-error-top1: 0.48406
+[32m[1105 16:33:02 @stat.py:82][0m val-error-top5: 0.24338
+[32m[1105 16:33:02 @stat.py:82][0m validation_cost: 2.4539
+[32m[1105 16:33:02 @group.py:40][0m Callbacks took 566.395 sec in total. InferenceRunner: 559.175sec
+[32m[1105 16:33:02 @timer.py:46][0m Epoch 43 (global_step 430000) finished, time:2448.80sec.
+[32m[1105 17:14:12 @stat.py:82][0m AddN: 0.16063
+[32m[1105 17:14:12 @stat.py:82][0m conv0/W/rms: 0.063744
+[32m[1105 17:14:12 @stat.py:82][0m conv1/W/rms: 0.14505
+[32m[1105 17:14:12 @stat.py:82][0m conv1/Wn:0: 1.2881
+[32m[1105 17:14:12 @stat.py:82][0m conv1/Wp:0: 0.71526
+[32m[1105 17:14:12 @stat.py:82][0m conv2/W/rms: 0.098985
+[32m[1105 17:14:12 @stat.py:82][0m conv2/Wn:0: 1.1054
+[32m[1105 17:14:12 @stat.py:82][0m conv2/Wp:0: 0.89864
+[32m[1105 17:14:12 @stat.py:82][0m conv3/W/rms: 0.094679
+[32m[1105 17:14:12 @stat.py:82][0m conv3/Wn:0: 1.0694
+[32m[1105 17:14:12 @stat.py:82][0m conv3/Wp:0: 0.93447
+[32m[1105 17:14:12 @stat.py:82][0m conv4/W/rms: 0.11213
+[32m[1105 17:14:12 @stat.py:82][0m conv4/Wn:0: 1.1269
+[32m[1105 17:14:12 @stat.py:82][0m conv4/Wp:0: 0.87626
+[32m[1105 17:14:12 @stat.py:82][0m cost: 1.6637
+[32m[1105 17:14:12 @stat.py:82][0m cross_entropy_loss: 1.503
+[32m[1105 17:14:12 @stat.py:82][0m fc0/W/rms: 0.0078555
+[32m[1105 17:14:12 @stat.py:82][0m fc0/Wn:0: 1.1349
+[32m[1105 17:14:12 @stat.py:82][0m fc0/Wp:0: 0.86744
+[32m[1105 17:14:12 @stat.py:82][0m fc1/W/rms: 0.013688
+[32m[1105 17:14:12 @stat.py:82][0m fc1/Wn:0: 1.0836
+[32m[1105 17:14:12 @stat.py:82][0m fc1/Wp:0: 0.91492
+[32m[1105 17:14:12 @stat.py:82][0m fct/W/rms: 0.11981
+[32m[1105 17:14:12 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 17:14:12 @stat.py:82][0m train-error-top1: 0.37019
+[32m[1105 17:14:12 @stat.py:82][0m train-error-top5: 0.14683
+[32m[1105 17:14:12 @stat.py:82][0m val-error-top1: 0.48518
+[32m[1105 17:14:12 @stat.py:82][0m val-error-top5: 0.24904
+[32m[1105 17:14:12 @stat.py:82][0m validation_cost: 2.5144
+[32m[1105 17:14:12 @group.py:40][0m Callbacks took 588.261 sec in total. InferenceRunner: 580.375sec
+[32m[1105 17:14:12 @timer.py:46][0m Epoch 44 (global_step 440000) finished, time:2469.82sec.
+[32m[1105 17:55:24 @stat.py:82][0m AddN: 0.16531
+[32m[1105 17:55:24 @stat.py:82][0m conv0/W/rms: 0.064443
+[32m[1105 17:55:24 @stat.py:82][0m conv1/W/rms: 0.14772
+[32m[1105 17:55:24 @stat.py:82][0m conv1/Wn:0: 1.2882
+[32m[1105 17:55:24 @stat.py:82][0m conv1/Wp:0: 0.71525
+[32m[1105 17:55:24 @stat.py:82][0m conv2/W/rms: 0.10061
+[32m[1105 17:55:24 @stat.py:82][0m conv2/Wn:0: 1.1046
+[32m[1105 17:55:24 @stat.py:82][0m conv2/Wp:0: 0.89946
+[32m[1105 17:55:24 @stat.py:82][0m conv3/W/rms: 0.09617
+[32m[1105 17:55:24 @stat.py:82][0m conv3/Wn:0: 1.0696
+[32m[1105 17:55:24 @stat.py:82][0m conv3/Wp:0: 0.93441
+[32m[1105 17:55:24 @stat.py:82][0m conv4/W/rms: 0.11403
+[32m[1105 17:55:24 @stat.py:82][0m conv4/Wn:0: 1.1239
+[32m[1105 17:55:24 @stat.py:82][0m conv4/Wp:0: 0.8793
+[32m[1105 17:55:24 @stat.py:82][0m cost: 1.6946
+[32m[1105 17:55:24 @stat.py:82][0m cross_entropy_loss: 1.5292
+[32m[1105 17:55:24 @stat.py:82][0m fc0/W/rms: 0.007913
+[32m[1105 17:55:24 @stat.py:82][0m fc0/Wn:0: 1.1376
+[32m[1105 17:55:24 @stat.py:82][0m fc0/Wp:0: 0.86485
+[32m[1105 17:55:24 @stat.py:82][0m fc1/W/rms: 0.013804
+[32m[1105 17:55:24 @stat.py:82][0m fc1/Wn:0: 1.0782
+[32m[1105 17:55:24 @stat.py:82][0m fc1/Wp:0: 0.92027
+[32m[1105 17:55:24 @stat.py:82][0m fct/W/rms: 0.12161
+[32m[1105 17:55:24 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 17:55:24 @stat.py:82][0m train-error-top1: 0.37051
+[32m[1105 17:55:24 @stat.py:82][0m train-error-top5: 0.15895
+[32m[1105 17:55:24 @stat.py:82][0m val-error-top1: 0.48096
+[32m[1105 17:55:24 @stat.py:82][0m val-error-top5: 0.24366
+[32m[1105 17:55:24 @stat.py:82][0m validation_cost: 2.4751
+[32m[1105 17:55:24 @group.py:40][0m Callbacks took 591.283 sec in total. InferenceRunner: 584.389sec
+[32m[1105 17:55:24 @timer.py:46][0m Epoch 45 (global_step 450000) finished, time:2472.28sec.
+[32m[1105 18:36:30 @stat.py:82][0m AddN: 0.16999
+[32m[1105 18:36:30 @stat.py:82][0m conv0/W/rms: 0.065128
+[32m[1105 18:36:30 @stat.py:82][0m conv1/W/rms: 0.1504
+[32m[1105 18:36:30 @stat.py:82][0m conv1/Wn:0: 1.2885
+[32m[1105 18:36:30 @stat.py:82][0m conv1/Wp:0: 0.71511
+[32m[1105 18:36:30 @stat.py:82][0m conv2/W/rms: 0.10224
+[32m[1105 18:36:30 @stat.py:82][0m conv2/Wn:0: 1.1073
+[32m[1105 18:36:30 @stat.py:82][0m conv2/Wp:0: 0.89693
+[32m[1105 18:36:30 @stat.py:82][0m conv3/W/rms: 0.097646
+[32m[1105 18:36:30 @stat.py:82][0m conv3/Wn:0: 1.07
+[32m[1105 18:36:30 @stat.py:82][0m conv3/Wp:0: 0.93413
+[32m[1105 18:36:30 @stat.py:82][0m conv4/W/rms: 0.11593
+[32m[1105 18:36:30 @stat.py:82][0m conv4/Wn:0: 1.1232
+[32m[1105 18:36:30 @stat.py:82][0m conv4/Wp:0: 0.88013
+[32m[1105 18:36:30 @stat.py:82][0m cost: 1.6977
+[32m[1105 18:36:30 @stat.py:82][0m cross_entropy_loss: 1.5277
+[32m[1105 18:36:30 @stat.py:82][0m fc0/W/rms: 0.0079403
+[32m[1105 18:36:30 @stat.py:82][0m fc0/Wn:0: 1.1366
+[32m[1105 18:36:30 @stat.py:82][0m fc0/Wp:0: 0.86591
+[32m[1105 18:36:30 @stat.py:82][0m fc1/W/rms: 0.013963
+[32m[1105 18:36:30 @stat.py:82][0m fc1/Wn:0: 1.0851
+[32m[1105 18:36:30 @stat.py:82][0m fc1/Wp:0: 0.9133
+[32m[1105 18:36:30 @stat.py:82][0m fct/W/rms: 0.12339
+[32m[1105 18:36:30 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 18:36:30 @stat.py:82][0m train-error-top1: 0.37227
+[32m[1105 18:36:30 @stat.py:82][0m train-error-top5: 0.15078
+[32m[1105 18:36:30 @stat.py:82][0m val-error-top1: 0.48484
+[32m[1105 18:36:30 @stat.py:82][0m val-error-top5: 0.24534
+[32m[1105 18:36:30 @stat.py:82][0m validation_cost: 2.4956
+[32m[1105 18:36:30 @group.py:40][0m Callbacks took 577.655 sec in total. InferenceRunner: 569.765sec
+[32m[1105 18:36:30 @timer.py:46][0m Epoch 46 (global_step 460000) finished, time:2465.64sec.
+[32m[1105 19:17:56 @stat.py:82][0m AddN: 0.17467
+[32m[1105 19:17:56 @stat.py:82][0m conv0/W/rms: 0.065813
+[32m[1105 19:17:56 @stat.py:82][0m conv1/W/rms: 0.15304
+[32m[1105 19:17:56 @stat.py:82][0m conv1/Wn:0: 1.2887
+[32m[1105 19:17:56 @stat.py:82][0m conv1/Wp:0: 0.71495
+[32m[1105 19:17:56 @stat.py:82][0m conv2/W/rms: 0.10386
+[32m[1105 19:17:56 @stat.py:82][0m conv2/Wn:0: 1.1077
+[32m[1105 19:17:56 @stat.py:82][0m conv2/Wp:0: 0.89662
+[32m[1105 19:17:56 @stat.py:82][0m conv3/W/rms: 0.099098
+[32m[1105 19:17:56 @stat.py:82][0m conv3/Wn:0: 1.0707
+[32m[1105 19:17:56 @stat.py:82][0m conv3/Wp:0: 0.93351
+[32m[1105 19:17:56 @stat.py:82][0m conv4/W/rms: 0.1178
+[32m[1105 19:17:56 @stat.py:82][0m conv4/Wn:0: 1.1233
+[32m[1105 19:17:56 @stat.py:82][0m conv4/Wp:0: 0.88009
+[32m[1105 19:17:56 @stat.py:82][0m cost: 1.6428
+[32m[1105 19:17:56 @stat.py:82][0m cross_entropy_loss: 1.4682
+[32m[1105 19:17:56 @stat.py:82][0m fc0/W/rms: 0.0079286
+[32m[1105 19:17:56 @stat.py:82][0m fc0/Wn:0: 1.1362
+[32m[1105 19:17:56 @stat.py:82][0m fc0/Wp:0: 0.86637
+[32m[1105 19:17:56 @stat.py:82][0m fc1/W/rms: 0.014114
+[32m[1105 19:17:56 @stat.py:82][0m fc1/Wn:0: 1.0824
+[32m[1105 19:17:56 @stat.py:82][0m fc1/Wp:0: 0.91605
+[32m[1105 19:17:56 @stat.py:82][0m fct/W/rms: 0.12516
+[32m[1105 19:17:56 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 19:17:56 @stat.py:82][0m train-error-top1: 0.3602
+[32m[1105 19:17:56 @stat.py:82][0m train-error-top5: 0.14471
+[32m[1105 19:17:56 @stat.py:82][0m val-error-top1: 0.47822
+[32m[1105 19:17:56 @stat.py:82][0m val-error-top5: 0.24344
+[32m[1105 19:17:56 @stat.py:82][0m validation_cost: 2.4768
+[32m[1105 19:17:56 @group.py:40][0m Callbacks took 584.739 sec in total. InferenceRunner: 579.283sec
+[32m[1105 19:17:56 @timer.py:46][0m Epoch 47 (global_step 470000) finished, time:2486.25sec.
+[32m[1105 19:58:38 @stat.py:82][0m AddN: 0.17932
+[32m[1105 19:58:38 @stat.py:82][0m conv0/W/rms: 0.066493
+[32m[1105 19:58:38 @stat.py:82][0m conv1/W/rms: 0.15569
+[32m[1105 19:58:38 @stat.py:82][0m conv1/Wn:0: 1.2883
+[32m[1105 19:58:38 @stat.py:82][0m conv1/Wp:0: 0.71542
+[32m[1105 19:58:38 @stat.py:82][0m conv2/W/rms: 0.10549
+[32m[1105 19:58:38 @stat.py:82][0m conv2/Wn:0: 1.108
+[32m[1105 19:58:38 @stat.py:82][0m conv2/Wp:0: 0.89638
+[32m[1105 19:58:38 @stat.py:82][0m conv3/W/rms: 0.10056
+[32m[1105 19:58:38 @stat.py:82][0m conv3/Wn:0: 1.0709
+[32m[1105 19:58:38 @stat.py:82][0m conv3/Wp:0: 0.93342
+[32m[1105 19:58:38 @stat.py:82][0m conv4/W/rms: 0.11968
+[32m[1105 19:58:38 @stat.py:82][0m conv4/Wn:0: 1.1235
+[32m[1105 19:58:38 @stat.py:82][0m conv4/Wp:0: 0.87998
+[32m[1105 19:58:38 @stat.py:82][0m cost: 1.6596
+[32m[1105 19:58:38 @stat.py:82][0m cross_entropy_loss: 1.4802
+[32m[1105 19:58:38 @stat.py:82][0m fc0/W/rms: 0.0079284
+[32m[1105 19:58:38 @stat.py:82][0m fc0/Wn:0: 1.1376
+[32m[1105 19:58:38 @stat.py:82][0m fc0/Wp:0: 0.86501
+[32m[1105 19:58:38 @stat.py:82][0m fc1/W/rms: 0.014232
+[32m[1105 19:58:38 @stat.py:82][0m fc1/Wn:0: 1.081
+[32m[1105 19:58:38 @stat.py:82][0m fc1/Wp:0: 0.91742
+[32m[1105 19:58:38 @stat.py:82][0m fct/W/rms: 0.12691
+[32m[1105 19:58:38 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 19:58:38 @stat.py:82][0m train-error-top1: 0.36867
+[32m[1105 19:58:38 @stat.py:82][0m train-error-top5: 0.14441
+[32m[1105 19:58:38 @stat.py:82][0m val-error-top1: 0.4802
+[32m[1105 19:58:38 @stat.py:82][0m val-error-top5: 0.24278
+[32m[1105 19:58:38 @stat.py:82][0m validation_cost: 2.4929
+[32m[1105 19:58:38 @group.py:40][0m Callbacks took 540.242 sec in total. InferenceRunner: 532.232sec
+[32m[1105 19:58:38 @timer.py:46][0m Epoch 48 (global_step 480000) finished, time:2442.18sec.
+[32m[1105 20:39:17 @stat.py:82][0m AddN: 0.18407
+[32m[1105 20:39:17 @stat.py:82][0m conv0/W/rms: 0.067153
+[32m[1105 20:39:17 @stat.py:82][0m conv1/W/rms: 0.15834
+[32m[1105 20:39:17 @stat.py:82][0m conv1/Wn:0: 1.2898
+[32m[1105 20:39:17 @stat.py:82][0m conv1/Wp:0: 0.7141
+[32m[1105 20:39:17 @stat.py:82][0m conv2/W/rms: 0.10711
+[32m[1105 20:39:17 @stat.py:82][0m conv2/Wn:0: 1.1088
+[32m[1105 20:39:17 @stat.py:82][0m conv2/Wp:0: 0.89562
+[32m[1105 20:39:17 @stat.py:82][0m conv3/W/rms: 0.10202
+[32m[1105 20:39:17 @stat.py:82][0m conv3/Wn:0: 1.0698
+[32m[1105 20:39:17 @stat.py:82][0m conv3/Wp:0: 0.93458
+[32m[1105 20:39:17 @stat.py:82][0m conv4/W/rms: 0.12156
+[32m[1105 20:39:17 @stat.py:82][0m conv4/Wn:0: 1.1215
+[32m[1105 20:39:17 @stat.py:82][0m conv4/Wp:0: 0.88212
+[32m[1105 20:39:17 @stat.py:82][0m cost: 1.6792
+[32m[1105 20:39:17 @stat.py:82][0m cross_entropy_loss: 1.4952
+[32m[1105 20:39:17 @stat.py:82][0m fc0/W/rms: 0.0078986
+[32m[1105 20:39:17 @stat.py:82][0m fc0/Wn:0: 1.1369
+[32m[1105 20:39:17 @stat.py:82][0m fc0/Wp:0: 0.86573
+[32m[1105 20:39:17 @stat.py:82][0m fc1/W/rms: 0.014339
+[32m[1105 20:39:17 @stat.py:82][0m fc1/Wn:0: 1.08
+[32m[1105 20:39:17 @stat.py:82][0m fc1/Wp:0: 0.91832
+[32m[1105 20:39:17 @stat.py:82][0m fct/W/rms: 0.12869
+[32m[1105 20:39:17 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 20:39:17 @stat.py:82][0m train-error-top1: 0.36947
+[32m[1105 20:39:17 @stat.py:82][0m train-error-top5: 0.14959
+[32m[1105 20:39:17 @stat.py:82][0m val-error-top1: 0.47802
+[32m[1105 20:39:17 @stat.py:82][0m val-error-top5: 0.24232
+[32m[1105 20:39:17 @stat.py:82][0m validation_cost: 2.4999
+[32m[1105 20:39:17 @group.py:40][0m Callbacks took 541.013 sec in total. InferenceRunner: 534.109sec
+[32m[1105 20:39:17 @timer.py:46][0m Epoch 49 (global_step 490000) finished, time:2438.63sec.
+[32m[1105 21:20:24 @stat.py:82][0m AddN: 0.1888
+[32m[1105 21:20:24 @stat.py:82][0m conv0/W/rms: 0.067809
+[32m[1105 21:20:24 @stat.py:82][0m conv1/W/rms: 0.16098
+[32m[1105 21:20:24 @stat.py:82][0m conv1/Wn:0: 1.2876
+[32m[1105 21:20:24 @stat.py:82][0m conv1/Wp:0: 0.71637
+[32m[1105 21:20:24 @stat.py:82][0m conv2/W/rms: 0.10874
+[32m[1105 21:20:24 @stat.py:82][0m conv2/Wn:0: 1.1084
+[32m[1105 21:20:24 @stat.py:82][0m conv2/Wp:0: 0.89615
+[32m[1105 21:20:24 @stat.py:82][0m conv3/W/rms: 0.10347
+[32m[1105 21:20:24 @stat.py:82][0m conv3/Wn:0: 1.07
+[32m[1105 21:20:24 @stat.py:82][0m conv3/Wp:0: 0.93443
+[32m[1105 21:20:24 @stat.py:82][0m conv4/W/rms: 0.12345
+[32m[1105 21:20:24 @stat.py:82][0m conv4/Wn:0: 1.1233
+[32m[1105 21:20:24 @stat.py:82][0m conv4/Wp:0: 0.88038
+[32m[1105 21:20:24 @stat.py:82][0m cost: 1.5948
+[32m[1105 21:20:24 @stat.py:82][0m cross_entropy_loss: 1.406
+[32m[1105 21:20:24 @stat.py:82][0m fc0/W/rms: 0.0078899
+[32m[1105 21:20:24 @stat.py:82][0m fc0/Wn:0: 1.1341
+[32m[1105 21:20:24 @stat.py:82][0m fc0/Wp:0: 0.86855
+[32m[1105 21:20:24 @stat.py:82][0m fc1/W/rms: 0.014458
+[32m[1105 21:20:24 @stat.py:82][0m fc1/Wn:0: 1.0768
+[32m[1105 21:20:24 @stat.py:82][0m fc1/Wp:0: 0.92149
+[32m[1105 21:20:24 @stat.py:82][0m fct/W/rms: 0.13042
+[32m[1105 21:20:24 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 21:20:24 @stat.py:82][0m train-error-top1: 0.34995
+[32m[1105 21:20:24 @stat.py:82][0m train-error-top5: 0.13153
+[32m[1105 21:20:24 @stat.py:82][0m val-error-top1: 0.4795
+[32m[1105 21:20:24 @stat.py:82][0m val-error-top5: 0.24498
+[32m[1105 21:20:24 @stat.py:82][0m validation_cost: 2.5369
+[32m[1105 21:20:24 @group.py:40][0m Callbacks took 568.759 sec in total. InferenceRunner: 562.569sec
+[32m[1105 21:20:24 @timer.py:46][0m Epoch 50 (global_step 500000) finished, time:2467.15sec.
+[32m[1105 22:02:01 @stat.py:82][0m AddN: 0.19348
+[32m[1105 22:02:01 @stat.py:82][0m conv0/W/rms: 0.068465
+[32m[1105 22:02:01 @stat.py:82][0m conv1/W/rms: 0.16366
+[32m[1105 22:02:01 @stat.py:82][0m conv1/Wn:0: 1.2886
+[32m[1105 22:02:01 @stat.py:82][0m conv1/Wp:0: 0.71551
+[32m[1105 22:02:01 @stat.py:82][0m conv2/W/rms: 0.11036
+[32m[1105 22:02:01 @stat.py:82][0m conv2/Wn:0: 1.109
+[32m[1105 22:02:01 @stat.py:82][0m conv2/Wp:0: 0.89566
+[32m[1105 22:02:01 @stat.py:82][0m conv3/W/rms: 0.10493
+[32m[1105 22:02:01 @stat.py:82][0m conv3/Wn:0: 1.072
+[32m[1105 22:02:01 @stat.py:82][0m conv3/Wp:0: 0.93259
+[32m[1105 22:02:01 @stat.py:82][0m conv4/W/rms: 0.12535
+[32m[1105 22:02:01 @stat.py:82][0m conv4/Wn:0: 1.1232
+[32m[1105 22:02:01 @stat.py:82][0m conv4/Wp:0: 0.88054
+[32m[1105 22:02:01 @stat.py:82][0m cost: 1.6593
+[32m[1105 22:02:01 @stat.py:82][0m cross_entropy_loss: 1.4659
+[32m[1105 22:02:01 @stat.py:82][0m fc0/W/rms: 0.0079176
+[32m[1105 22:02:01 @stat.py:82][0m fc0/Wn:0: 1.1353
+[32m[1105 22:02:01 @stat.py:82][0m fc0/Wp:0: 0.86742
+[32m[1105 22:02:01 @stat.py:82][0m fc1/W/rms: 0.01449
+[32m[1105 22:02:01 @stat.py:82][0m fc1/Wn:0: 1.0783
+[32m[1105 22:02:01 @stat.py:82][0m fc1/Wp:0: 0.92005
+[32m[1105 22:02:01 @stat.py:82][0m fct/W/rms: 0.13214
+[32m[1105 22:02:01 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 22:02:01 @stat.py:82][0m train-error-top1: 0.36054
+[32m[1105 22:02:01 @stat.py:82][0m train-error-top5: 0.14413
+[32m[1105 22:02:01 @stat.py:82][0m val-error-top1: 0.47842
+[32m[1105 22:02:01 @stat.py:82][0m val-error-top5: 0.2415
+[32m[1105 22:02:01 @stat.py:82][0m validation_cost: 2.5153
+[32m[1105 22:02:01 @group.py:40][0m Callbacks took 587.796 sec in total. InferenceRunner: 579.799sec
+[32m[1105 22:02:01 @timer.py:46][0m Epoch 51 (global_step 510000) finished, time:2496.78sec.
+[32m[1105 22:43:23 @stat.py:82][0m AddN: 0.1982
+[32m[1105 22:43:23 @stat.py:82][0m conv0/W/rms: 0.069121
+[32m[1105 22:43:23 @stat.py:82][0m conv1/W/rms: 0.16628
+[32m[1105 22:43:23 @stat.py:82][0m conv1/Wn:0: 1.284
+[32m[1105 22:43:23 @stat.py:82][0m conv1/Wp:0: 0.72016
+[32m[1105 22:43:23 @stat.py:82][0m conv2/W/rms: 0.11197
+[32m[1105 22:43:23 @stat.py:82][0m conv2/Wn:0: 1.1103
+[32m[1105 22:43:23 @stat.py:82][0m conv2/Wp:0: 0.89442
+[32m[1105 22:43:23 @stat.py:82][0m conv3/W/rms: 0.10639
+[32m[1105 22:43:23 @stat.py:82][0m conv3/Wn:0: 1.0731
+[32m[1105 22:43:23 @stat.py:82][0m conv3/Wp:0: 0.93151
+[32m[1105 22:43:23 @stat.py:82][0m conv4/W/rms: 0.12724
+[32m[1105 22:43:23 @stat.py:82][0m conv4/Wn:0: 1.1219
+[32m[1105 22:43:23 @stat.py:82][0m conv4/Wp:0: 0.88192
+[32m[1105 22:43:23 @stat.py:82][0m cost: 1.6524
+[32m[1105 22:43:23 @stat.py:82][0m cross_entropy_loss: 1.4542
+[32m[1105 22:43:23 @stat.py:82][0m fc0/W/rms: 0.0079622
+[32m[1105 22:43:23 @stat.py:82][0m fc0/Wn:0: 1.1352
+[32m[1105 22:43:23 @stat.py:82][0m fc0/Wp:0: 0.86757
+[32m[1105 22:43:23 @stat.py:82][0m fc1/W/rms: 0.014547
+[32m[1105 22:43:23 @stat.py:82][0m fc1/Wn:0: 1.0781
+[32m[1105 22:43:23 @stat.py:82][0m fc1/Wp:0: 0.92019
+[32m[1105 22:43:23 @stat.py:82][0m fct/W/rms: 0.13382
+[32m[1105 22:43:23 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 22:43:23 @stat.py:82][0m train-error-top1: 0.35592
+[32m[1105 22:43:23 @stat.py:82][0m train-error-top5: 0.14417
+[32m[1105 22:43:23 @stat.py:82][0m val-error-top1: 0.48068
+[32m[1105 22:43:23 @stat.py:82][0m val-error-top5: 0.24236
+[32m[1105 22:43:23 @stat.py:82][0m validation_cost: 2.5227
+[32m[1105 22:43:23 @group.py:40][0m Callbacks took 574.397 sec in total. InferenceRunner: 567.602sec
+[32m[1105 22:43:23 @timer.py:46][0m Epoch 52 (global_step 520000) finished, time:2482.69sec.
+[32m[1105 23:24:35 @stat.py:82][0m AddN: 0.20289
+[32m[1105 23:24:35 @stat.py:82][0m conv0/W/rms: 0.069778
+[32m[1105 23:24:35 @stat.py:82][0m conv1/W/rms: 0.16894
+[32m[1105 23:24:35 @stat.py:82][0m conv1/Wn:0: 1.2829
+[32m[1105 23:24:35 @stat.py:82][0m conv1/Wp:0: 0.72135
+[32m[1105 23:24:35 @stat.py:82][0m conv2/W/rms: 0.11357
+[32m[1105 23:24:35 @stat.py:82][0m conv2/Wn:0: 1.1098
+[32m[1105 23:24:35 @stat.py:82][0m conv2/Wp:0: 0.89506
+[32m[1105 23:24:35 @stat.py:82][0m conv3/W/rms: 0.10785
+[32m[1105 23:24:35 @stat.py:82][0m conv3/Wn:0: 1.0745
+[32m[1105 23:24:35 @stat.py:82][0m conv3/Wp:0: 0.93027
+[32m[1105 23:24:35 @stat.py:82][0m conv4/W/rms: 0.12913
+[32m[1105 23:24:35 @stat.py:82][0m conv4/Wn:0: 1.119
+[32m[1105 23:24:35 @stat.py:82][0m conv4/Wp:0: 0.88493
+[32m[1105 23:24:35 @stat.py:82][0m cost: 1.6816
+[32m[1105 23:24:35 @stat.py:82][0m cross_entropy_loss: 1.4787
+[32m[1105 23:24:35 @stat.py:82][0m fc0/W/rms: 0.0079384
+[32m[1105 23:24:35 @stat.py:82][0m fc0/Wn:0: 1.1351
+[32m[1105 23:24:35 @stat.py:82][0m fc0/Wp:0: 0.86777
+[32m[1105 23:24:35 @stat.py:82][0m fc1/W/rms: 0.01464
+[32m[1105 23:24:35 @stat.py:82][0m fc1/Wn:0: 1.0782
+[32m[1105 23:24:35 @stat.py:82][0m fc1/Wp:0: 0.92006
+[32m[1105 23:24:35 @stat.py:82][0m fct/W/rms: 0.13549
+[32m[1105 23:24:35 @stat.py:82][0m learning_rate: 0.0001
+[32m[1105 23:24:35 @stat.py:82][0m train-error-top1: 0.36692
+[32m[1105 23:24:35 @stat.py:82][0m train-error-top5: 0.14817
+[32m[1105 23:24:35 @stat.py:82][0m val-error-top1: 0.47798
+[32m[1105 23:24:35 @stat.py:82][0m val-error-top5: 0.24042
+[32m[1105 23:24:35 @stat.py:82][0m validation_cost: 2.5329
+[32m[1105 23:24:35 @group.py:40][0m Callbacks took 583.691 sec in total. InferenceRunner: 574.423sec
+[32m[1105 23:24:35 @timer.py:46][0m Epoch 53 (global_step 530000) finished, time:2471.95sec.
+[32m[1106 00:05:51 @stat.py:82][0m AddN: 0.20766
+[32m[1106 00:05:51 @stat.py:82][0m conv0/W/rms: 0.070419
+[32m[1106 00:05:51 @stat.py:82][0m conv1/W/rms: 0.1716
+[32m[1106 00:05:51 @stat.py:82][0m conv1/Wn:0: 1.2829
+[32m[1106 00:05:51 @stat.py:82][0m conv1/Wp:0: 0.72148
+[32m[1106 00:05:51 @stat.py:82][0m conv2/W/rms: 0.11518
+[32m[1106 00:05:51 @stat.py:82][0m conv2/Wn:0: 1.1094
+[32m[1106 00:05:51 @stat.py:82][0m conv2/Wp:0: 0.89554
+[32m[1106 00:05:51 @stat.py:82][0m conv3/W/rms: 0.1093
+[32m[1106 00:05:51 @stat.py:82][0m conv3/Wn:0: 1.0735
+[32m[1106 00:05:51 @stat.py:82][0m conv3/Wp:0: 0.93129
+[32m[1106 00:05:51 @stat.py:82][0m conv4/W/rms: 0.131
+[32m[1106 00:05:51 @stat.py:82][0m conv4/Wn:0: 1.1197
+[32m[1106 00:05:51 @stat.py:82][0m conv4/Wp:0: 0.88433
+[32m[1106 00:05:51 @stat.py:82][0m cost: 1.685
+[32m[1106 00:05:51 @stat.py:82][0m cross_entropy_loss: 1.4773
+[32m[1106 00:05:51 @stat.py:82][0m fc0/W/rms: 0.0079372
+[32m[1106 00:05:51 @stat.py:82][0m fc0/Wn:0: 1.1331
+[32m[1106 00:05:51 @stat.py:82][0m fc0/Wp:0: 0.86986
+[32m[1106 00:05:51 @stat.py:82][0m fc1/W/rms: 0.014745
+[32m[1106 00:05:51 @stat.py:82][0m fc1/Wn:0: 1.0805
+[32m[1106 00:05:51 @stat.py:82][0m fc1/Wp:0: 0.91775
+[32m[1106 00:05:51 @stat.py:82][0m fct/W/rms: 0.13716
+[32m[1106 00:05:51 @stat.py:82][0m learning_rate: 0.0001
+[32m[1106 00:05:51 @stat.py:82][0m train-error-top1: 0.36193
+[32m[1106 00:05:51 @stat.py:82][0m train-error-top5: 0.14865
+[32m[1106 00:05:51 @stat.py:82][0m val-error-top1: 0.47546
+[32m[1106 00:05:51 @stat.py:82][0m val-error-top5: 0.24044
+[32m[1106 00:05:51 @stat.py:82][0m validation_cost: 2.5265
+[32m[1106 00:05:51 @group.py:40][0m Callbacks took 579.508 sec in total. InferenceRunner: 573.423sec
+[32m[1106 00:05:51 @timer.py:46][0m Epoch 54 (global_step 540000) finished, time:2475.91sec.
+[32m[1106 00:47:19 @stat.py:82][0m AddN: 0.21247
+[32m[1106 00:47:19 @stat.py:82][0m conv0/W/rms: 0.07105
+[32m[1106 00:47:19 @stat.py:82][0m conv1/W/rms: 0.17424
+[32m[1106 00:47:19 @stat.py:82][0m conv1/Wn:0: 1.2813
+[32m[1106 00:47:19 @stat.py:82][0m conv1/Wp:0: 0.72315
+[32m[1106 00:47:19 @stat.py:82][0m conv2/W/rms: 0.11679
+[32m[1106 00:47:19 @stat.py:82][0m conv2/Wn:0: 1.1105
+[32m[1106 00:47:19 @stat.py:82][0m conv2/Wp:0: 0.89454
+[32m[1106 00:47:19 @stat.py:82][0m conv3/W/rms: 0.11075
+[32m[1106 00:47:19 @stat.py:82][0m conv3/Wn:0: 1.0755
+[32m[1106 00:47:19 @stat.py:82][0m conv3/Wp:0: 0.92935
+[32m[1106 00:47:19 @stat.py:82][0m conv4/W/rms: 0.13288
+[32m[1106 00:47:19 @stat.py:82][0m conv4/Wn:0: 1.1174
+[32m[1106 00:47:19 @stat.py:82][0m conv4/Wp:0: 0.88671
+[32m[1106 00:47:19 @stat.py:82][0m cost: 1.6523
+[32m[1106 00:47:19 @stat.py:82][0m cross_entropy_loss: 1.4399
+[32m[1106 00:47:19 @stat.py:82][0m fc0/W/rms: 0.0079283
+[32m[1106 00:47:19 @stat.py:82][0m fc0/Wn:0: 1.1332
+[32m[1106 00:47:19 @stat.py:82][0m fc0/Wp:0: 0.86978
+[32m[1106 00:47:19 @stat.py:82][0m fc1/W/rms: 0.014857
+[32m[1106 00:47:19 @stat.py:82][0m fc1/Wn:0: 1.0816
+[32m[1106 00:47:19 @stat.py:82][0m fc1/Wp:0: 0.91655
+[32m[1106 00:47:19 @stat.py:82][0m fct/W/rms: 0.13881
+[32m[1106 00:47:19 @stat.py:82][0m learning_rate: 0.0001
+[32m[1106 00:47:19 @stat.py:82][0m train-error-top1: 0.35342
+[32m[1106 00:47:19 @stat.py:82][0m train-error-top5: 0.14561
+[32m[1106 00:47:19 @stat.py:82][0m val-error-top1: 0.47918
+[32m[1106 00:47:19 @stat.py:82][0m val-error-top5: 0.24034
+[32m[1106 00:47:19 @stat.py:82][0m validation_cost: 2.538
+[32m[1106 00:47:19 @group.py:40][0m Callbacks took 591.643 sec in total. InferenceRunner: 585.409sec
+[32m[1106 00:47:19 @timer.py:46][0m Epoch 55 (global_step 550000) finished, time:2487.80sec.
+[32m[1106 01:19:08 @param.py:109][0m learning_rate at epoch 57 will change to 0.00002000
+[32m[1106 01:27:53 @stat.py:82][0m AddN: 0.21739
+[32m[1106 01:27:53 @stat.py:82][0m conv0/W/rms: 0.071678
+[32m[1106 01:27:53 @stat.py:82][0m conv1/W/rms: 0.17686
+[32m[1106 01:27:53 @stat.py:82][0m conv1/Wn:0: 1.2817
+[32m[1106 01:27:53 @stat.py:82][0m conv1/Wp:0: 0.72285
+[32m[1106 01:27:53 @stat.py:82][0m conv2/W/rms: 0.11838
+[32m[1106 01:27:53 @stat.py:82][0m conv2/Wn:0: 1.1092
+[32m[1106 01:27:53 @stat.py:82][0m conv2/Wp:0: 0.89588
+[32m[1106 01:27:53 @stat.py:82][0m conv3/W/rms: 0.11219
+[32m[1106 01:27:53 @stat.py:82][0m conv3/Wn:0: 1.077
+[32m[1106 01:27:53 @stat.py:82][0m conv3/Wp:0: 0.92797
+[32m[1106 01:27:53 @stat.py:82][0m conv4/W/rms: 0.13475
+[32m[1106 01:27:53 @stat.py:82][0m conv4/Wn:0: 1.1171
+[32m[1106 01:27:53 @stat.py:82][0m conv4/Wp:0: 0.88707
+[32m[1106 01:27:53 @stat.py:82][0m cost: 1.6537
+[32m[1106 01:27:53 @stat.py:82][0m cross_entropy_loss: 1.4363
+[32m[1106 01:27:53 @stat.py:82][0m fc0/W/rms: 0.0079978
+[32m[1106 01:27:53 @stat.py:82][0m fc0/Wn:0: 1.1354
+[32m[1106 01:27:53 @stat.py:82][0m fc0/Wp:0: 0.86768
+[32m[1106 01:27:53 @stat.py:82][0m fc1/W/rms: 0.014983
+[32m[1106 01:27:53 @stat.py:82][0m fc1/Wn:0: 1.0808
+[32m[1106 01:27:53 @stat.py:82][0m fc1/Wp:0: 0.9174
+[32m[1106 01:27:53 @stat.py:82][0m fct/W/rms: 0.14044
+[32m[1106 01:27:53 @stat.py:82][0m learning_rate: 0.0001
+[32m[1106 01:27:53 @stat.py:82][0m train-error-top1: 0.35458
+[32m[1106 01:27:53 @stat.py:82][0m train-error-top5: 0.1413
+[32m[1106 01:27:53 @stat.py:82][0m val-error-top1: 0.48232
+[32m[1106 01:27:53 @stat.py:82][0m val-error-top5: 0.24442
+[32m[1106 01:27:53 @stat.py:82][0m validation_cost: 2.5634
+[32m[1106 01:27:53 @group.py:40][0m Callbacks took 530.260 sec in total. InferenceRunner: 524.550sec
+[32m[1106 01:27:53 @timer.py:46][0m Epoch 56 (global_step 560000) finished, time:2433.89sec.
+[32m[1106 01:08:37 @stat.py:82][0m AddN: 0.21774
+[32m[1106 01:08:37 @stat.py:82][0m conv0/W/rms: 0.071703
+[32m[1106 01:08:37 @stat.py:82][0m conv1/W/rms: 0.17715
+[32m[1106 01:08:37 @stat.py:82][0m conv1/Wn:0: 1.2842
+[32m[1106 01:08:37 @stat.py:82][0m conv1/Wp:0: 0.72042
+[32m[1106 01:08:37 @stat.py:82][0m conv2/W/rms: 0.11854
+[32m[1106 01:08:37 @stat.py:82][0m conv2/Wn:0: 1.1104
+[32m[1106 01:08:37 @stat.py:82][0m conv2/Wp:0: 0.89468
+[32m[1106 01:08:37 @stat.py:82][0m conv3/W/rms: 0.11233
+[32m[1106 01:08:37 @stat.py:82][0m conv3/Wn:0: 1.0785
+[32m[1106 01:08:37 @stat.py:82][0m conv3/Wp:0: 0.9265
+[32m[1106 01:08:37 @stat.py:82][0m conv4/W/rms: 0.13496
+[32m[1106 01:08:37 @stat.py:82][0m conv4/Wn:0: 1.1184
+[32m[1106 01:08:37 @stat.py:82][0m conv4/Wp:0: 0.88581
+[32m[1106 01:08:37 @stat.py:82][0m cost: 1.3539
+[32m[1106 01:08:37 @stat.py:82][0m cross_entropy_loss: 1.1361
+[32m[1106 01:08:37 @stat.py:82][0m fc0/W/rms: 0.0077151
+[32m[1106 01:08:37 @stat.py:82][0m fc0/Wn:0: 1.1344
+[32m[1106 01:08:37 @stat.py:82][0m fc0/Wp:0: 0.86866
+[32m[1106 01:08:37 @stat.py:82][0m fc1/W/rms: 0.014706
+[32m[1106 01:08:37 @stat.py:82][0m fc1/Wn:0: 1.0797
+[32m[1106 01:08:37 @stat.py:82][0m fc1/Wp:0: 0.91843
+[32m[1106 01:08:37 @stat.py:82][0m fct/W/rms: 0.14081
+[32m[1106 01:08:37 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 01:08:37 @stat.py:82][0m train-error-top1: 0.27947
+[32m[1106 01:08:37 @stat.py:82][0m train-error-top5: 0.099077
+[32m[1106 01:08:37 @stat.py:82][0m val-error-top1: 0.44028
+[32m[1106 01:08:37 @stat.py:82][0m val-error-top5: 0.21266
+[32m[1106 01:08:37 @stat.py:82][0m validation_cost: 2.3138
+[32m[1106 01:08:37 @group.py:40][0m Callbacks took 548.686 sec in total. InferenceRunner: 541.547sec
+[32m[1106 01:08:37 @timer.py:46][0m Epoch 57 (global_step 570000) finished, time:2443.84sec.
+[32m[1106 01:49:09 @stat.py:82][0m AddN: 0.21819
+[32m[1106 01:49:09 @stat.py:82][0m conv0/W/rms: 0.07173
+[32m[1106 01:49:09 @stat.py:82][0m conv1/W/rms: 0.17744
+[32m[1106 01:49:09 @stat.py:82][0m conv1/Wn:0: 1.2842
+[32m[1106 01:49:09 @stat.py:82][0m conv1/Wp:0: 0.72035
+[32m[1106 01:49:09 @stat.py:82][0m conv2/W/rms: 0.11869
+[32m[1106 01:49:09 @stat.py:82][0m conv2/Wn:0: 1.1104
+[32m[1106 01:49:09 @stat.py:82][0m conv2/Wp:0: 0.89474
+[32m[1106 01:49:09 @stat.py:82][0m conv3/W/rms: 0.11247
+[32m[1106 01:49:09 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 01:49:09 @stat.py:82][0m conv3/Wp:0: 0.92582
+[32m[1106 01:49:09 @stat.py:82][0m conv4/W/rms: 0.13517
+[32m[1106 01:49:09 @stat.py:82][0m conv4/Wn:0: 1.1187
+[32m[1106 01:49:09 @stat.py:82][0m conv4/Wp:0: 0.88547
+[32m[1106 01:49:09 @stat.py:82][0m cost: 1.3206
+[32m[1106 01:49:09 @stat.py:82][0m cross_entropy_loss: 1.1024
+[32m[1106 01:49:09 @stat.py:82][0m fc0/W/rms: 0.0074518
+[32m[1106 01:49:09 @stat.py:82][0m fc0/Wn:0: 1.1334
+[32m[1106 01:49:09 @stat.py:82][0m fc0/Wp:0: 0.86962
+[32m[1106 01:49:09 @stat.py:82][0m fc1/W/rms: 0.014433
+[32m[1106 01:49:09 @stat.py:82][0m fc1/Wn:0: 1.0783
+[32m[1106 01:49:09 @stat.py:82][0m fc1/Wp:0: 0.9198
+[32m[1106 01:49:09 @stat.py:82][0m fct/W/rms: 0.14122
+[32m[1106 01:49:09 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 01:49:09 @stat.py:82][0m train-error-top1: 0.2747
+[32m[1106 01:49:09 @stat.py:82][0m train-error-top5: 0.098068
+[32m[1106 01:49:09 @stat.py:82][0m val-error-top1: 0.43476
+[32m[1106 01:49:09 @stat.py:82][0m val-error-top5: 0.20826
+[32m[1106 01:49:09 @stat.py:82][0m validation_cost: 2.3039
+[32m[1106 01:49:09 @group.py:40][0m Callbacks took 536.693 sec in total. InferenceRunner: 530.828sec
+[32m[1106 01:49:09 @timer.py:46][0m Epoch 58 (global_step 580000) finished, time:2432.12sec.
+[32m[1106 02:30:02 @stat.py:82][0m AddN: 0.21871
+[32m[1106 02:30:02 @stat.py:82][0m conv0/W/rms: 0.071754
+[32m[1106 02:30:02 @stat.py:82][0m conv1/W/rms: 0.17774
+[32m[1106 02:30:02 @stat.py:82][0m conv1/Wn:0: 1.2849
+[32m[1106 02:30:02 @stat.py:82][0m conv1/Wp:0: 0.71973
+[32m[1106 02:30:02 @stat.py:82][0m conv2/W/rms: 0.11885
+[32m[1106 02:30:02 @stat.py:82][0m conv2/Wn:0: 1.1103
+[32m[1106 02:30:02 @stat.py:82][0m conv2/Wp:0: 0.89478
+[32m[1106 02:30:02 @stat.py:82][0m conv3/W/rms: 0.1126
+[32m[1106 02:30:02 @stat.py:82][0m conv3/Wn:0: 1.0787
+[32m[1106 02:30:02 @stat.py:82][0m conv3/Wp:0: 0.92634
+[32m[1106 02:30:02 @stat.py:82][0m conv4/W/rms: 0.13538
+[32m[1106 02:30:02 @stat.py:82][0m conv4/Wn:0: 1.1195
+[32m[1106 02:30:02 @stat.py:82][0m conv4/Wp:0: 0.8847
+[32m[1106 02:30:02 @stat.py:82][0m cost: 1.2661
+[32m[1106 02:30:02 @stat.py:82][0m cross_entropy_loss: 1.0473
+[32m[1106 02:30:02 @stat.py:82][0m fc0/W/rms: 0.0072076
+[32m[1106 02:30:02 @stat.py:82][0m fc0/Wn:0: 1.1319
+[32m[1106 02:30:02 @stat.py:82][0m fc0/Wp:0: 0.87112
+[32m[1106 02:30:02 @stat.py:82][0m fc1/W/rms: 0.014174
+[32m[1106 02:30:02 @stat.py:82][0m fc1/Wn:0: 1.077
+[32m[1106 02:30:02 @stat.py:82][0m fc1/Wp:0: 0.92108
+[32m[1106 02:30:02 @stat.py:82][0m fct/W/rms: 0.14162
+[32m[1106 02:30:02 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 02:30:02 @stat.py:82][0m train-error-top1: 0.25824
+[32m[1106 02:30:02 @stat.py:82][0m train-error-top5: 0.088651
+[32m[1106 02:30:02 @stat.py:82][0m val-error-top1: 0.43396
+[32m[1106 02:30:02 @stat.py:82][0m val-error-top5: 0.20754
+[32m[1106 02:30:02 @stat.py:82][0m validation_cost: 2.2932
+[32m[1106 02:30:02 @group.py:40][0m Callbacks took 548.445 sec in total. InferenceRunner: 540.217sec
+[32m[1106 02:30:02 @timer.py:46][0m Epoch 59 (global_step 590000) finished, time:2453.47sec.
+[32m[1106 03:10:32 @stat.py:82][0m AddN: 0.21929
+[32m[1106 03:10:32 @stat.py:82][0m conv0/W/rms: 0.071782
+[32m[1106 03:10:32 @stat.py:82][0m conv1/W/rms: 0.17805
+[32m[1106 03:10:32 @stat.py:82][0m conv1/Wn:0: 1.2848
+[32m[1106 03:10:32 @stat.py:82][0m conv1/Wp:0: 0.71975
+[32m[1106 03:10:32 @stat.py:82][0m conv2/W/rms: 0.11901
+[32m[1106 03:10:32 @stat.py:82][0m conv2/Wn:0: 1.1104
+[32m[1106 03:10:32 @stat.py:82][0m conv2/Wp:0: 0.89467
+[32m[1106 03:10:32 @stat.py:82][0m conv3/W/rms: 0.11274
+[32m[1106 03:10:32 @stat.py:82][0m conv3/Wn:0: 1.0788
+[32m[1106 03:10:32 @stat.py:82][0m conv3/Wp:0: 0.92617
+[32m[1106 03:10:32 @stat.py:82][0m conv4/W/rms: 0.13559
+[32m[1106 03:10:32 @stat.py:82][0m conv4/Wn:0: 1.1199
+[32m[1106 03:10:32 @stat.py:82][0m conv4/Wp:0: 0.88426
+[32m[1106 03:10:32 @stat.py:82][0m cost: 1.2284
+[32m[1106 03:10:32 @stat.py:82][0m cross_entropy_loss: 1.0091
+[32m[1106 03:10:32 @stat.py:82][0m fc0/W/rms: 0.0069859
+[32m[1106 03:10:32 @stat.py:82][0m fc0/Wn:0: 1.131
+[32m[1106 03:10:32 @stat.py:82][0m fc0/Wp:0: 0.87201
+[32m[1106 03:10:32 @stat.py:82][0m fc1/W/rms: 0.013934
+[32m[1106 03:10:32 @stat.py:82][0m fc1/Wn:0: 1.075
+[32m[1106 03:10:32 @stat.py:82][0m fc1/Wp:0: 0.92312
+[32m[1106 03:10:32 @stat.py:82][0m fct/W/rms: 0.14202
+[32m[1106 03:10:32 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 03:10:32 @stat.py:82][0m train-error-top1: 0.25349
+[32m[1106 03:10:32 @stat.py:82][0m train-error-top5: 0.085529
+[32m[1106 03:10:32 @stat.py:82][0m val-error-top1: 0.4348
+[32m[1106 03:10:32 @stat.py:82][0m val-error-top5: 0.21052
+[32m[1106 03:10:32 @stat.py:82][0m validation_cost: 2.3082
+[32m[1106 03:10:32 @group.py:40][0m Callbacks took 529.899 sec in total. InferenceRunner: 522.009sec
+[32m[1106 03:10:32 @timer.py:46][0m Epoch 60 (global_step 600000) finished, time:2429.84sec.
+[32m[1106 03:51:26 @stat.py:82][0m AddN: 0.21994
+[32m[1106 03:51:26 @stat.py:82][0m conv0/W/rms: 0.071809
+[32m[1106 03:51:26 @stat.py:82][0m conv1/W/rms: 0.17835
+[32m[1106 03:51:26 @stat.py:82][0m conv1/Wn:0: 1.2842
+[32m[1106 03:51:26 @stat.py:82][0m conv1/Wp:0: 0.72044
+[32m[1106 03:51:26 @stat.py:82][0m conv2/W/rms: 0.11917
+[32m[1106 03:51:26 @stat.py:82][0m conv2/Wn:0: 1.1097
+[32m[1106 03:51:26 @stat.py:82][0m conv2/Wp:0: 0.89546
+[32m[1106 03:51:26 @stat.py:82][0m conv3/W/rms: 0.11288
+[32m[1106 03:51:26 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 03:51:26 @stat.py:82][0m conv3/Wp:0: 0.92581
+[32m[1106 03:51:26 @stat.py:82][0m conv4/W/rms: 0.1358
+[32m[1106 03:51:26 @stat.py:82][0m conv4/Wn:0: 1.12
+[32m[1106 03:51:26 @stat.py:82][0m conv4/Wp:0: 0.88422
+[32m[1106 03:51:26 @stat.py:82][0m cost: 1.1798
+[32m[1106 03:51:26 @stat.py:82][0m cross_entropy_loss: 0.95988
+[32m[1106 03:51:26 @stat.py:82][0m fc0/W/rms: 0.0067843
+[32m[1106 03:51:26 @stat.py:82][0m fc0/Wn:0: 1.1302
+[32m[1106 03:51:26 @stat.py:82][0m fc0/Wp:0: 0.87277
+[32m[1106 03:51:26 @stat.py:82][0m fc1/W/rms: 0.013707
+[32m[1106 03:51:26 @stat.py:82][0m fc1/Wn:0: 1.0736
+[32m[1106 03:51:26 @stat.py:82][0m fc1/Wp:0: 0.92447
+[32m[1106 03:51:26 @stat.py:82][0m fct/W/rms: 0.14242
+[32m[1106 03:51:26 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 03:51:26 @stat.py:82][0m train-error-top1: 0.24408
+[32m[1106 03:51:26 @stat.py:82][0m train-error-top5: 0.077376
+[32m[1106 03:51:26 @stat.py:82][0m val-error-top1: 0.43784
+[32m[1106 03:51:26 @stat.py:82][0m val-error-top5: 0.21264
+[32m[1106 03:51:26 @stat.py:82][0m validation_cost: 2.3411
+[32m[1106 03:51:27 @group.py:40][0m Callbacks took 554.014 sec in total. InferenceRunner: 545.475sec
+[32m[1106 03:51:27 @timer.py:46][0m Epoch 61 (global_step 610000) finished, time:2454.21sec.
+[32m[1106 04:32:03 @stat.py:82][0m AddN: 0.22063
+[32m[1106 04:32:03 @stat.py:82][0m conv0/W/rms: 0.071837
+[32m[1106 04:32:03 @stat.py:82][0m conv1/W/rms: 0.17866
+[32m[1106 04:32:03 @stat.py:82][0m conv1/Wn:0: 1.2836
+[32m[1106 04:32:03 @stat.py:82][0m conv1/Wp:0: 0.72101
+[32m[1106 04:32:03 @stat.py:82][0m conv2/W/rms: 0.11933
+[32m[1106 04:32:03 @stat.py:82][0m conv2/Wn:0: 1.1102
+[32m[1106 04:32:03 @stat.py:82][0m conv2/Wp:0: 0.89493
+[32m[1106 04:32:03 @stat.py:82][0m conv3/W/rms: 0.11302
+[32m[1106 04:32:03 @stat.py:82][0m conv3/Wn:0: 1.079
+[32m[1106 04:32:03 @stat.py:82][0m conv3/Wp:0: 0.92598
+[32m[1106 04:32:03 @stat.py:82][0m conv4/W/rms: 0.13602
+[32m[1106 04:32:03 @stat.py:82][0m conv4/Wn:0: 1.1204
+[32m[1106 04:32:03 @stat.py:82][0m conv4/Wp:0: 0.88379
+[32m[1106 04:32:03 @stat.py:82][0m cost: 1.1422
+[32m[1106 04:32:03 @stat.py:82][0m cross_entropy_loss: 0.92153
+[32m[1106 04:32:03 @stat.py:82][0m fc0/W/rms: 0.0066028
+[32m[1106 04:32:03 @stat.py:82][0m fc0/Wn:0: 1.1296
+[32m[1106 04:32:03 @stat.py:82][0m fc0/Wp:0: 0.87338
+[32m[1106 04:32:03 @stat.py:82][0m fc1/W/rms: 0.013493
+[32m[1106 04:32:03 @stat.py:82][0m fc1/Wn:0: 1.0725
+[32m[1106 04:32:03 @stat.py:82][0m fc1/Wp:0: 0.9255
+[32m[1106 04:32:03 @stat.py:82][0m fct/W/rms: 0.14282
+[32m[1106 04:32:03 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 04:32:03 @stat.py:82][0m train-error-top1: 0.23276
+[32m[1106 04:32:03 @stat.py:82][0m train-error-top5: 0.075227
+[32m[1106 04:32:03 @stat.py:82][0m val-error-top1: 0.43588
+[32m[1106 04:32:03 @stat.py:82][0m val-error-top5: 0.21318
+[32m[1106 04:32:03 @stat.py:82][0m validation_cost: 2.3482
+[32m[1106 04:32:03 @group.py:40][0m Callbacks took 539.200 sec in total. InferenceRunner: 531.430sec
+[32m[1106 04:32:03 @timer.py:46][0m Epoch 62 (global_step 620000) finished, time:2436.27sec.
+[32m[1106 05:12:38 @stat.py:82][0m AddN: 0.22135
+[32m[1106 05:12:38 @stat.py:82][0m conv0/W/rms: 0.071862
+[32m[1106 05:12:38 @stat.py:82][0m conv1/W/rms: 0.17898
+[32m[1106 05:12:38 @stat.py:82][0m conv1/Wn:0: 1.2834
+[32m[1106 05:12:38 @stat.py:82][0m conv1/Wp:0: 0.72117
+[32m[1106 05:12:38 @stat.py:82][0m conv2/W/rms: 0.11949
+[32m[1106 05:12:38 @stat.py:82][0m conv2/Wn:0: 1.1092
+[32m[1106 05:12:38 @stat.py:82][0m conv2/Wp:0: 0.89587
+[32m[1106 05:12:38 @stat.py:82][0m conv3/W/rms: 0.11316
+[32m[1106 05:12:38 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 05:12:38 @stat.py:82][0m conv3/Wp:0: 0.92582
+[32m[1106 05:12:38 @stat.py:82][0m conv4/W/rms: 0.13624
+[32m[1106 05:12:38 @stat.py:82][0m conv4/Wn:0: 1.1195
+[32m[1106 05:12:38 @stat.py:82][0m conv4/Wp:0: 0.88467
+[32m[1106 05:12:38 @stat.py:82][0m cost: 1.1647
+[32m[1106 05:12:38 @stat.py:82][0m cross_entropy_loss: 0.94332
+[32m[1106 05:12:38 @stat.py:82][0m fc0/W/rms: 0.0064399
+[32m[1106 05:12:38 @stat.py:82][0m fc0/Wn:0: 1.1295
+[32m[1106 05:12:38 @stat.py:82][0m fc0/Wp:0: 0.87348
+[32m[1106 05:12:38 @stat.py:82][0m fc1/W/rms: 0.013293
+[32m[1106 05:12:38 @stat.py:82][0m fc1/Wn:0: 1.0714
+[32m[1106 05:12:38 @stat.py:82][0m fc1/Wp:0: 0.9266
+[32m[1106 05:12:38 @stat.py:82][0m fct/W/rms: 0.14321
+[32m[1106 05:12:38 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 05:12:38 @stat.py:82][0m train-error-top1: 0.23971
+[32m[1106 05:12:38 @stat.py:82][0m train-error-top5: 0.078546
+[32m[1106 05:12:38 @stat.py:82][0m val-error-top1: 0.43542
+[32m[1106 05:12:38 @stat.py:82][0m val-error-top5: 0.21302
+[32m[1106 05:12:38 @stat.py:82][0m validation_cost: 2.3587
+[32m[1106 05:12:38 @group.py:40][0m Callbacks took 538.811 sec in total. InferenceRunner: 531.179sec
+[32m[1106 05:12:38 @timer.py:46][0m Epoch 63 (global_step 630000) finished, time:2434.85sec.
+[32m[1106 05:44:25 @param.py:109][0m learning_rate at epoch 65 will change to 0.00000400
+[32m[1106 05:53:03 @stat.py:82][0m AddN: 0.22209
+[32m[1106 05:53:03 @stat.py:82][0m conv0/W/rms: 0.07189
+[32m[1106 05:53:03 @stat.py:82][0m conv1/W/rms: 0.1793
+[32m[1106 05:53:03 @stat.py:82][0m conv1/Wn:0: 1.2825
+[32m[1106 05:53:03 @stat.py:82][0m conv1/Wp:0: 0.7221
+[32m[1106 05:53:03 @stat.py:82][0m conv2/W/rms: 0.11966
+[32m[1106 05:53:03 @stat.py:82][0m conv2/Wn:0: 1.1089
+[32m[1106 05:53:03 @stat.py:82][0m conv2/Wp:0: 0.89617
+[32m[1106 05:53:03 @stat.py:82][0m conv3/W/rms: 0.11331
+[32m[1106 05:53:03 @stat.py:82][0m conv3/Wn:0: 1.0788
+[32m[1106 05:53:03 @stat.py:82][0m conv3/Wp:0: 0.92618
+[32m[1106 05:53:03 @stat.py:82][0m conv4/W/rms: 0.13646
+[32m[1106 05:53:03 @stat.py:82][0m conv4/Wn:0: 1.1192
+[32m[1106 05:53:03 @stat.py:82][0m conv4/Wp:0: 0.88501
+[32m[1106 05:53:03 @stat.py:82][0m cost: 1.1746
+[32m[1106 05:53:03 @stat.py:82][0m cross_entropy_loss: 0.95249
+[32m[1106 05:53:03 @stat.py:82][0m fc0/W/rms: 0.0062969
+[32m[1106 05:53:03 @stat.py:82][0m fc0/Wn:0: 1.1291
+[32m[1106 05:53:03 @stat.py:82][0m fc0/Wp:0: 0.87392
+[32m[1106 05:53:03 @stat.py:82][0m fc1/W/rms: 0.013108
+[32m[1106 05:53:03 @stat.py:82][0m fc1/Wn:0: 1.0712
+[32m[1106 05:53:03 @stat.py:82][0m fc1/Wp:0: 0.92678
+[32m[1106 05:53:03 @stat.py:82][0m fct/W/rms: 0.14359
+[32m[1106 05:53:03 @stat.py:82][0m learning_rate: 2e-05
+[32m[1106 05:53:03 @stat.py:82][0m train-error-top1: 0.24301
+[32m[1106 05:53:03 @stat.py:82][0m train-error-top5: 0.076833
+[32m[1106 05:53:03 @stat.py:82][0m val-error-top1: 0.44114
+[32m[1106 05:53:03 @stat.py:82][0m val-error-top5: 0.21382
+[32m[1106 05:53:03 @stat.py:82][0m validation_cost: 2.4093
+[32m[1106 05:53:03 @group.py:40][0m Callbacks took 528.616 sec in total. InferenceRunner: 517.875sec
+[32m[1106 05:53:03 @timer.py:46][0m Epoch 64 (global_step 640000) finished, time:2425.76sec.
+[32m[1106 06:34:13 @stat.py:82][0m AddN: 0.22224
+[32m[1106 06:34:13 @stat.py:82][0m conv0/W/rms: 0.071891
+[32m[1106 06:34:13 @stat.py:82][0m conv1/W/rms: 0.17935
+[32m[1106 06:34:13 @stat.py:82][0m conv1/Wn:0: 1.2827
+[32m[1106 06:34:13 @stat.py:82][0m conv1/Wp:0: 0.72187
+[32m[1106 06:34:13 @stat.py:82][0m conv2/W/rms: 0.11968
+[32m[1106 06:34:13 @stat.py:82][0m conv2/Wn:0: 1.1087
+[32m[1106 06:34:13 @stat.py:82][0m conv2/Wp:0: 0.8964
+[32m[1106 06:34:13 @stat.py:82][0m conv3/W/rms: 0.11333
+[32m[1106 06:34:13 @stat.py:82][0m conv3/Wn:0: 1.079
+[32m[1106 06:34:13 @stat.py:82][0m conv3/Wp:0: 0.92602
+[32m[1106 06:34:13 @stat.py:82][0m conv4/W/rms: 0.13649
+[32m[1106 06:34:13 @stat.py:82][0m conv4/Wn:0: 1.1195
+[32m[1106 06:34:13 @stat.py:82][0m conv4/Wp:0: 0.8847
+[32m[1106 06:34:13 @stat.py:82][0m cost: 1.0777
+[32m[1106 06:34:13 @stat.py:82][0m cross_entropy_loss: 0.85546
+[32m[1106 06:34:13 @stat.py:82][0m fc0/W/rms: 0.0062527
+[32m[1106 06:34:13 @stat.py:82][0m fc0/Wn:0: 1.1288
+[32m[1106 06:34:13 @stat.py:82][0m fc0/Wp:0: 0.87418
+[32m[1106 06:34:13 @stat.py:82][0m fc1/W/rms: 0.013057
+[32m[1106 06:34:13 @stat.py:82][0m fc1/Wn:0: 1.0708
+[32m[1106 06:34:13 @stat.py:82][0m fc1/Wp:0: 0.92722
+[32m[1106 06:34:13 @stat.py:82][0m fct/W/rms: 0.14368
+[32m[1106 06:34:13 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 06:34:13 @stat.py:82][0m train-error-top1: 0.21764
+[32m[1106 06:34:13 @stat.py:82][0m train-error-top5: 0.06492
+[32m[1106 06:34:13 @stat.py:82][0m val-error-top1: 0.42676
+[32m[1106 06:34:13 @stat.py:82][0m val-error-top5: 0.20314
+[32m[1106 06:34:13 @stat.py:82][0m validation_cost: 2.3015
+[32m[1106 06:34:13 @group.py:40][0m Callbacks took 572.335 sec in total. InferenceRunner: 566.742sec
+[32m[1106 06:34:13 @timer.py:46][0m Epoch 65 (global_step 650000) finished, time:2469.54sec.
+[32m[1106 07:15:23 @stat.py:82][0m AddN: 0.22239
+[32m[1106 07:15:23 @stat.py:82][0m conv0/W/rms: 0.071892
+[32m[1106 07:15:23 @stat.py:82][0m conv1/W/rms: 0.17939
+[32m[1106 07:15:23 @stat.py:82][0m conv1/Wn:0: 1.2829
+[32m[1106 07:15:23 @stat.py:82][0m conv1/Wp:0: 0.72174
+[32m[1106 07:15:23 @stat.py:82][0m conv2/W/rms: 0.1197
+[32m[1106 07:15:23 @stat.py:82][0m conv2/Wn:0: 1.1087
+[32m[1106 07:15:23 @stat.py:82][0m conv2/Wp:0: 0.89644
+[32m[1106 07:15:23 @stat.py:82][0m conv3/W/rms: 0.11334
+[32m[1106 07:15:23 @stat.py:82][0m conv3/Wn:0: 1.0793
+[32m[1106 07:15:23 @stat.py:82][0m conv3/Wp:0: 0.92575
+[32m[1106 07:15:23 @stat.py:82][0m conv4/W/rms: 0.13652
+[32m[1106 07:15:23 @stat.py:82][0m conv4/Wn:0: 1.1197
+[32m[1106 07:15:23 @stat.py:82][0m conv4/Wp:0: 0.88456
+[32m[1106 07:15:23 @stat.py:82][0m cost: 1.0182
+[32m[1106 07:15:23 @stat.py:82][0m cross_entropy_loss: 0.79578
+[32m[1106 07:15:23 @stat.py:82][0m fc0/W/rms: 0.0062084
+[32m[1106 07:15:23 @stat.py:82][0m fc0/Wn:0: 1.1284
+[32m[1106 07:15:23 @stat.py:82][0m fc0/Wp:0: 0.8746
+[32m[1106 07:15:23 @stat.py:82][0m fc1/W/rms: 0.013004
+[32m[1106 07:15:23 @stat.py:82][0m fc1/Wn:0: 1.0712
+[32m[1106 07:15:23 @stat.py:82][0m fc1/Wp:0: 0.9268
+[32m[1106 07:15:23 @stat.py:82][0m fct/W/rms: 0.14377
+[32m[1106 07:15:23 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 07:15:23 @stat.py:82][0m train-error-top1: 0.20052
+[32m[1106 07:15:23 @stat.py:82][0m train-error-top5: 0.059936
+[32m[1106 07:15:23 @stat.py:82][0m val-error-top1: 0.42798
+[32m[1106 07:15:23 @stat.py:82][0m val-error-top5: 0.20474
+[32m[1106 07:15:23 @stat.py:82][0m validation_cost: 2.3191
+[32m[1106 07:15:23 @group.py:40][0m Callbacks took 585.699 sec in total. InferenceRunner: 580.009sec
+[32m[1106 07:15:23 @timer.py:46][0m Epoch 66 (global_step 660000) finished, time:2470.20sec.
+[32m[1106 07:56:28 @stat.py:82][0m AddN: 0.22253
+[32m[1106 07:56:28 @stat.py:82][0m conv0/W/rms: 0.071893
+[32m[1106 07:56:28 @stat.py:82][0m conv1/W/rms: 0.17943
+[32m[1106 07:56:28 @stat.py:82][0m conv1/Wn:0: 1.2828
+[32m[1106 07:56:28 @stat.py:82][0m conv1/Wp:0: 0.72179
+[32m[1106 07:56:28 @stat.py:82][0m conv2/W/rms: 0.11972
+[32m[1106 07:56:28 @stat.py:82][0m conv2/Wn:0: 1.1088
+[32m[1106 07:56:28 @stat.py:82][0m conv2/Wp:0: 0.89635
+[32m[1106 07:56:28 @stat.py:82][0m conv3/W/rms: 0.11336
+[32m[1106 07:56:28 @stat.py:82][0m conv3/Wn:0: 1.0794
+[32m[1106 07:56:28 @stat.py:82][0m conv3/Wp:0: 0.92564
+[32m[1106 07:56:28 @stat.py:82][0m conv4/W/rms: 0.13655
+[32m[1106 07:56:28 @stat.py:82][0m conv4/Wn:0: 1.1201
+[32m[1106 07:56:28 @stat.py:82][0m conv4/Wp:0: 0.8841
+[32m[1106 07:56:28 @stat.py:82][0m cost: 1.0203
+[32m[1106 07:56:28 @stat.py:82][0m cross_entropy_loss: 0.7978
+[32m[1106 07:56:28 @stat.py:82][0m fc0/W/rms: 0.0061648
+[32m[1106 07:56:28 @stat.py:82][0m fc0/Wn:0: 1.1277
+[32m[1106 07:56:28 @stat.py:82][0m fc0/Wp:0: 0.87534
+[32m[1106 07:56:28 @stat.py:82][0m fc1/W/rms: 0.012951
+[32m[1106 07:56:28 @stat.py:82][0m fc1/Wn:0: 1.0706
+[32m[1106 07:56:28 @stat.py:82][0m fc1/Wp:0: 0.92741
+[32m[1106 07:56:28 @stat.py:82][0m fct/W/rms: 0.14385
+[32m[1106 07:56:28 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 07:56:28 @stat.py:82][0m train-error-top1: 0.19507
+[32m[1106 07:56:28 @stat.py:82][0m train-error-top5: 0.058501
+[32m[1106 07:56:28 @stat.py:82][0m val-error-top1: 0.42618
+[32m[1106 07:56:28 @stat.py:82][0m val-error-top5: 0.20284
+[32m[1106 07:56:28 @stat.py:82][0m validation_cost: 2.3093
+[32m[1106 07:56:28 @group.py:40][0m Callbacks took 571.982 sec in total. InferenceRunner: 564.990sec
+[32m[1106 07:56:28 @timer.py:46][0m Epoch 67 (global_step 670000) finished, time:2464.56sec.
+[32m[1106 08:37:48 @stat.py:82][0m AddN: 0.22269
+[32m[1106 08:37:48 @stat.py:82][0m conv0/W/rms: 0.071895
+[32m[1106 08:37:48 @stat.py:82][0m conv1/W/rms: 0.17948
+[32m[1106 08:37:48 @stat.py:82][0m conv1/Wn:0: 1.2828
+[32m[1106 08:37:48 @stat.py:82][0m conv1/Wp:0: 0.72177
+[32m[1106 08:37:48 @stat.py:82][0m conv2/W/rms: 0.11974
+[32m[1106 08:37:48 @stat.py:82][0m conv2/Wn:0: 1.1087
+[32m[1106 08:37:48 @stat.py:82][0m conv2/Wp:0: 0.89637
+[32m[1106 08:37:48 @stat.py:82][0m conv3/W/rms: 0.11338
+[32m[1106 08:37:48 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 08:37:48 @stat.py:82][0m conv3/Wp:0: 0.92579
+[32m[1106 08:37:48 @stat.py:82][0m conv4/W/rms: 0.13658
+[32m[1106 08:37:48 @stat.py:82][0m conv4/Wn:0: 1.1199
+[32m[1106 08:37:48 @stat.py:82][0m conv4/Wp:0: 0.88428
+[32m[1106 08:37:48 @stat.py:82][0m cost: 0.99877
+[32m[1106 08:37:48 @stat.py:82][0m cross_entropy_loss: 0.77609
+[32m[1106 08:37:48 @stat.py:82][0m fc0/W/rms: 0.0061218
+[32m[1106 08:37:48 @stat.py:82][0m fc0/Wn:0: 1.1269
+[32m[1106 08:37:48 @stat.py:82][0m fc0/Wp:0: 0.87605
+[32m[1106 08:37:48 @stat.py:82][0m fc1/W/rms: 0.012899
+[32m[1106 08:37:48 @stat.py:82][0m fc1/Wn:0: 1.0703
+[32m[1106 08:37:48 @stat.py:82][0m fc1/Wp:0: 0.92773
+[32m[1106 08:37:48 @stat.py:82][0m fct/W/rms: 0.14394
+[32m[1106 08:37:48 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 08:37:48 @stat.py:82][0m train-error-top1: 0.19944
+[32m[1106 08:37:48 @stat.py:82][0m train-error-top5: 0.057211
+[32m[1106 08:37:48 @stat.py:82][0m val-error-top1: 0.42662
+[32m[1106 08:37:48 @stat.py:82][0m val-error-top5: 0.20416
+[32m[1106 08:37:48 @stat.py:82][0m validation_cost: 2.315
+[32m[1106 08:37:48 @group.py:40][0m Callbacks took 572.697 sec in total. InferenceRunner: 565.063sec
+[32m[1106 08:37:48 @timer.py:46][0m Epoch 68 (global_step 680000) finished, time:2480.02sec.
+[32m[1106 09:17:57 @stat.py:82][0m AddN: 0.22284
+[32m[1106 09:17:57 @stat.py:82][0m conv0/W/rms: 0.071896
+[32m[1106 09:17:57 @stat.py:82][0m conv1/W/rms: 0.17952
+[32m[1106 09:17:57 @stat.py:82][0m conv1/Wn:0: 1.2829
+[32m[1106 09:17:57 @stat.py:82][0m conv1/Wp:0: 0.72171
+[32m[1106 09:17:57 @stat.py:82][0m conv2/W/rms: 0.11976
+[32m[1106 09:17:57 @stat.py:82][0m conv2/Wn:0: 1.1085
+[32m[1106 09:17:57 @stat.py:82][0m conv2/Wp:0: 0.89659
+[32m[1106 09:17:57 @stat.py:82][0m conv3/W/rms: 0.1134
+[32m[1106 09:17:57 @stat.py:82][0m conv3/Wn:0: 1.0794
+[32m[1106 09:17:57 @stat.py:82][0m conv3/Wp:0: 0.92561
+[32m[1106 09:17:57 @stat.py:82][0m conv4/W/rms: 0.13661
+[32m[1106 09:17:57 @stat.py:82][0m conv4/Wn:0: 1.1201
+[32m[1106 09:17:57 @stat.py:82][0m conv4/Wp:0: 0.88407
+[32m[1106 09:17:57 @stat.py:82][0m cost: 1.0002
+[32m[1106 09:17:57 @stat.py:82][0m cross_entropy_loss: 0.77739
+[32m[1106 09:17:57 @stat.py:82][0m fc0/W/rms: 0.0060796
+[32m[1106 09:17:57 @stat.py:82][0m fc0/Wn:0: 1.1264
+[32m[1106 09:17:57 @stat.py:82][0m fc0/Wp:0: 0.87663
+[32m[1106 09:17:57 @stat.py:82][0m fc1/W/rms: 0.012847
+[32m[1106 09:17:57 @stat.py:82][0m fc1/Wn:0: 1.0701
+[32m[1106 09:17:57 @stat.py:82][0m fc1/Wp:0: 0.92785
+[32m[1106 09:17:57 @stat.py:82][0m fct/W/rms: 0.14403
+[32m[1106 09:17:57 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 09:17:57 @stat.py:82][0m train-error-top1: 0.2034
+[32m[1106 09:17:57 @stat.py:82][0m train-error-top5: 0.053493
+[32m[1106 09:17:57 @stat.py:82][0m val-error-top1: 0.42434
+[32m[1106 09:17:57 @stat.py:82][0m val-error-top5: 0.2029
+[32m[1106 09:17:57 @stat.py:82][0m validation_cost: 2.309
+[32m[1106 09:17:57 @group.py:40][0m Callbacks took 506.908 sec in total. InferenceRunner: 499.899sec
+[32m[1106 09:17:57 @timer.py:46][0m Epoch 69 (global_step 690000) finished, time:2409.16sec.
+[32m[1106 09:59:08 @stat.py:82][0m AddN: 0.22299
+[32m[1106 09:59:08 @stat.py:82][0m conv0/W/rms: 0.071897
+[32m[1106 09:59:08 @stat.py:82][0m conv1/W/rms: 0.17957
+[32m[1106 09:59:08 @stat.py:82][0m conv1/Wn:0: 1.2826
+[32m[1106 09:59:08 @stat.py:82][0m conv1/Wp:0: 0.72201
+[32m[1106 09:59:08 @stat.py:82][0m conv2/W/rms: 0.11978
+[32m[1106 09:59:08 @stat.py:82][0m conv2/Wn:0: 1.1084
+[32m[1106 09:59:08 @stat.py:82][0m conv2/Wp:0: 0.89675
+[32m[1106 09:59:08 @stat.py:82][0m conv3/W/rms: 0.11341
+[32m[1106 09:59:08 @stat.py:82][0m conv3/Wn:0: 1.0796
+[32m[1106 09:59:08 @stat.py:82][0m conv3/Wp:0: 0.9254
+[32m[1106 09:59:08 @stat.py:82][0m conv4/W/rms: 0.13665
+[32m[1106 09:59:08 @stat.py:82][0m conv4/Wn:0: 1.12
+[32m[1106 09:59:08 @stat.py:82][0m conv4/Wp:0: 0.88426
+[32m[1106 09:59:08 @stat.py:82][0m cost: 1.0298
+[32m[1106 09:59:08 @stat.py:82][0m cross_entropy_loss: 0.80683
+[32m[1106 09:59:08 @stat.py:82][0m fc0/W/rms: 0.0060382
+[32m[1106 09:59:08 @stat.py:82][0m fc0/Wn:0: 1.126
+[32m[1106 09:59:08 @stat.py:82][0m fc0/Wp:0: 0.87699
+[32m[1106 09:59:08 @stat.py:82][0m fc1/W/rms: 0.012795
+[32m[1106 09:59:08 @stat.py:82][0m fc1/Wn:0: 1.07
+[32m[1106 09:59:08 @stat.py:82][0m fc1/Wp:0: 0.92799
+[32m[1106 09:59:08 @stat.py:82][0m fct/W/rms: 0.14412
+[32m[1106 09:59:08 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 09:59:08 @stat.py:82][0m train-error-top1: 0.20243
+[32m[1106 09:59:08 @stat.py:82][0m train-error-top5: 0.060663
+[32m[1106 09:59:08 @stat.py:82][0m val-error-top1: 0.42376
+[32m[1106 09:59:08 @stat.py:82][0m val-error-top5: 0.20178
+[32m[1106 09:59:08 @stat.py:82][0m validation_cost: 2.3106
+[32m[1106 09:59:08 @group.py:40][0m Callbacks took 566.051 sec in total. InferenceRunner: 555.222sec
+[32m[1106 09:59:08 @timer.py:46][0m Epoch 70 (global_step 700000) finished, time:2471.60sec.
+[32m[1106 10:40:58 @stat.py:82][0m AddN: 0.22315
+[32m[1106 10:40:58 @stat.py:82][0m conv0/W/rms: 0.071898
+[32m[1106 10:40:58 @stat.py:82][0m conv1/W/rms: 0.17962
+[32m[1106 10:40:58 @stat.py:82][0m conv1/Wn:0: 1.2826
+[32m[1106 10:40:58 @stat.py:82][0m conv1/Wp:0: 0.72204
+[32m[1106 10:40:58 @stat.py:82][0m conv2/W/rms: 0.11981
+[32m[1106 10:40:58 @stat.py:82][0m conv2/Wn:0: 1.1086
+[32m[1106 10:40:58 @stat.py:82][0m conv2/Wp:0: 0.89653
+[32m[1106 10:40:58 @stat.py:82][0m conv3/W/rms: 0.11343
+[32m[1106 10:40:58 @stat.py:82][0m conv3/Wn:0: 1.0796
+[32m[1106 10:40:58 @stat.py:82][0m conv3/Wp:0: 0.92544
+[32m[1106 10:40:58 @stat.py:82][0m conv4/W/rms: 0.13668
+[32m[1106 10:40:58 @stat.py:82][0m conv4/Wn:0: 1.12
+[32m[1106 10:40:58 @stat.py:82][0m conv4/Wp:0: 0.8842
+[32m[1106 10:40:58 @stat.py:82][0m cost: 0.97739
+[32m[1106 10:40:58 @stat.py:82][0m cross_entropy_loss: 0.75425
+[32m[1106 10:40:58 @stat.py:82][0m fc0/W/rms: 0.0059972
+[32m[1106 10:40:58 @stat.py:82][0m fc0/Wn:0: 1.1257
+[32m[1106 10:40:58 @stat.py:82][0m fc0/Wp:0: 0.8773
+[32m[1106 10:40:58 @stat.py:82][0m fc1/W/rms: 0.012743
+[32m[1106 10:40:58 @stat.py:82][0m fc1/Wn:0: 1.0694
+[32m[1106 10:40:58 @stat.py:82][0m fc1/Wp:0: 0.92861
+[32m[1106 10:40:58 @stat.py:82][0m fct/W/rms: 0.1442
+[32m[1106 10:40:58 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 10:40:58 @stat.py:82][0m train-error-top1: 0.19448
+[32m[1106 10:40:58 @stat.py:82][0m train-error-top5: 0.051315
+[32m[1106 10:40:58 @stat.py:82][0m val-error-top1: 0.4257
+[32m[1106 10:40:58 @stat.py:82][0m val-error-top5: 0.20246
+[32m[1106 10:40:58 @stat.py:82][0m validation_cost: 2.317
+[32m[1106 10:40:58 @group.py:40][0m Callbacks took 599.954 sec in total. InferenceRunner: 594.249sec
+[32m[1106 10:40:58 @timer.py:46][0m Epoch 71 (global_step 710000) finished, time:2509.72sec.
+[32m[1106 11:22:12 @stat.py:82][0m AddN: 0.2233
+[32m[1106 11:22:12 @stat.py:82][0m conv0/W/rms: 0.071899
+[32m[1106 11:22:12 @stat.py:82][0m conv1/W/rms: 0.17966
+[32m[1106 11:22:12 @stat.py:82][0m conv1/Wn:0: 1.2824
+[32m[1106 11:22:12 @stat.py:82][0m conv1/Wp:0: 0.72227
+[32m[1106 11:22:12 @stat.py:82][0m conv2/W/rms: 0.11983
+[32m[1106 11:22:12 @stat.py:82][0m conv2/Wn:0: 1.1086
+[32m[1106 11:22:12 @stat.py:82][0m conv2/Wp:0: 0.89657
+[32m[1106 11:22:12 @stat.py:82][0m conv3/W/rms: 0.11345
+[32m[1106 11:22:12 @stat.py:82][0m conv3/Wn:0: 1.0794
+[32m[1106 11:22:12 @stat.py:82][0m conv3/Wp:0: 0.92556
+[32m[1106 11:22:12 @stat.py:82][0m conv4/W/rms: 0.13671
+[32m[1106 11:22:12 @stat.py:82][0m conv4/Wn:0: 1.1199
+[32m[1106 11:22:12 @stat.py:82][0m conv4/Wp:0: 0.88427
+[32m[1106 11:22:12 @stat.py:82][0m cost: 1.0214
+[32m[1106 11:22:12 @stat.py:82][0m cross_entropy_loss: 0.79812
+[32m[1106 11:22:12 @stat.py:82][0m fc0/W/rms: 0.005957
+[32m[1106 11:22:12 @stat.py:82][0m fc0/Wn:0: 1.1252
+[32m[1106 11:22:12 @stat.py:82][0m fc0/Wp:0: 0.87781
+[32m[1106 11:22:12 @stat.py:82][0m fc1/W/rms: 0.012692
+[32m[1106 11:22:12 @stat.py:82][0m fc1/Wn:0: 1.069
+[32m[1106 11:22:12 @stat.py:82][0m fc1/Wp:0: 0.92897
+[32m[1106 11:22:12 @stat.py:82][0m fct/W/rms: 0.14429
+[32m[1106 11:22:12 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 11:22:12 @stat.py:82][0m train-error-top1: 0.20504
+[32m[1106 11:22:12 @stat.py:82][0m train-error-top5: 0.060246
+[32m[1106 11:22:12 @stat.py:82][0m val-error-top1: 0.4242
+[32m[1106 11:22:12 @stat.py:82][0m val-error-top5: 0.20308
+[32m[1106 11:22:12 @stat.py:82][0m validation_cost: 2.3237
+[32m[1106 11:22:12 @group.py:40][0m Callbacks took 562.849 sec in total. InferenceRunner: 556.181sec
+[32m[1106 11:22:12 @timer.py:46][0m Epoch 72 (global_step 720000) finished, time:2473.74sec.
+[32m[1106 12:03:36 @stat.py:82][0m AddN: 0.22346
+[32m[1106 12:03:36 @stat.py:82][0m conv0/W/rms: 0.071901
+[32m[1106 12:03:36 @stat.py:82][0m conv1/W/rms: 0.17971
+[32m[1106 12:03:36 @stat.py:82][0m conv1/Wn:0: 1.2822
+[32m[1106 12:03:36 @stat.py:82][0m conv1/Wp:0: 0.72245
+[32m[1106 12:03:36 @stat.py:82][0m conv2/W/rms: 0.11985
+[32m[1106 12:03:36 @stat.py:82][0m conv2/Wn:0: 1.1087
+[32m[1106 12:03:36 @stat.py:82][0m conv2/Wp:0: 0.89638
+[32m[1106 12:03:36 @stat.py:82][0m conv3/W/rms: 0.11347
+[32m[1106 12:03:36 @stat.py:82][0m conv3/Wn:0: 1.0794
+[32m[1106 12:03:36 @stat.py:82][0m conv3/Wp:0: 0.92563
+[32m[1106 12:03:36 @stat.py:82][0m conv4/W/rms: 0.13674
+[32m[1106 12:03:36 @stat.py:82][0m conv4/Wn:0: 1.12
+[32m[1106 12:03:36 @stat.py:82][0m conv4/Wp:0: 0.88418
+[32m[1106 12:03:36 @stat.py:82][0m cost: 0.98955
+[32m[1106 12:03:36 @stat.py:82][0m cross_entropy_loss: 0.76609
+[32m[1106 12:03:36 @stat.py:82][0m fc0/W/rms: 0.005917
+[32m[1106 12:03:36 @stat.py:82][0m fc0/Wn:0: 1.1249
+[32m[1106 12:03:36 @stat.py:82][0m fc0/Wp:0: 0.8781
+[32m[1106 12:03:36 @stat.py:82][0m fc1/W/rms: 0.01264
+[32m[1106 12:03:36 @stat.py:82][0m fc1/Wn:0: 1.0684
+[32m[1106 12:03:36 @stat.py:82][0m fc1/Wp:0: 0.92952
+[32m[1106 12:03:36 @stat.py:82][0m fct/W/rms: 0.14438
+[32m[1106 12:03:36 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 12:03:36 @stat.py:82][0m train-error-top1: 0.19411
+[32m[1106 12:03:36 @stat.py:82][0m train-error-top5: 0.054389
+[32m[1106 12:03:36 @stat.py:82][0m val-error-top1: 0.4247
+[32m[1106 12:03:36 @stat.py:82][0m val-error-top5: 0.2016
+[32m[1106 12:03:36 @stat.py:82][0m validation_cost: 2.3228
+[32m[1106 12:03:36 @group.py:40][0m Callbacks took 579.441 sec in total. InferenceRunner: 572.974sec
+[32m[1106 12:03:36 @timer.py:46][0m Epoch 73 (global_step 730000) finished, time:2484.14sec.
+[32m[1106 12:44:43 @stat.py:82][0m AddN: 0.22362
+[32m[1106 12:44:43 @stat.py:82][0m conv0/W/rms: 0.071902
+[32m[1106 12:44:43 @stat.py:82][0m conv1/W/rms: 0.17976
+[32m[1106 12:44:43 @stat.py:82][0m conv1/Wn:0: 1.2821
+[32m[1106 12:44:43 @stat.py:82][0m conv1/Wp:0: 0.72251
+[32m[1106 12:44:43 @stat.py:82][0m conv2/W/rms: 0.11987
+[32m[1106 12:44:43 @stat.py:82][0m conv2/Wn:0: 1.1085
+[32m[1106 12:44:43 @stat.py:82][0m conv2/Wp:0: 0.8966
+[32m[1106 12:44:43 @stat.py:82][0m conv3/W/rms: 0.11349
+[32m[1106 12:44:43 @stat.py:82][0m conv3/Wn:0: 1.0793
+[32m[1106 12:44:43 @stat.py:82][0m conv3/Wp:0: 0.92568
+[32m[1106 12:44:43 @stat.py:82][0m conv4/W/rms: 0.13678
+[32m[1106 12:44:43 @stat.py:82][0m conv4/Wn:0: 1.1197
+[32m[1106 12:44:43 @stat.py:82][0m conv4/Wp:0: 0.88452
+[32m[1106 12:44:43 @stat.py:82][0m cost: 0.97931
+[32m[1106 12:44:43 @stat.py:82][0m cross_entropy_loss: 0.75569
+[32m[1106 12:44:43 @stat.py:82][0m fc0/W/rms: 0.0058777
+[32m[1106 12:44:43 @stat.py:82][0m fc0/Wn:0: 1.1245
+[32m[1106 12:44:43 @stat.py:82][0m fc0/Wp:0: 0.87849
+[32m[1106 12:44:43 @stat.py:82][0m fc1/W/rms: 0.01259
+[32m[1106 12:44:43 @stat.py:82][0m fc1/Wn:0: 1.0686
+[32m[1106 12:44:43 @stat.py:82][0m fc1/Wp:0: 0.92941
+[32m[1106 12:44:43 @stat.py:82][0m fct/W/rms: 0.14446
+[32m[1106 12:44:43 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 12:44:43 @stat.py:82][0m train-error-top1: 0.19144
+[32m[1106 12:44:43 @stat.py:82][0m train-error-top5: 0.053352
+[32m[1106 12:44:43 @stat.py:82][0m val-error-top1: 0.42558
+[32m[1106 12:44:43 @stat.py:82][0m val-error-top5: 0.20386
+[32m[1106 12:44:43 @stat.py:82][0m validation_cost: 2.3247
+[32m[1106 12:44:43 @group.py:40][0m Callbacks took 562.424 sec in total. InferenceRunner: 556.842sec
+[32m[1106 12:44:43 @timer.py:46][0m Epoch 74 (global_step 740000) finished, time:2467.28sec.
+[32m[1106 13:26:20 @stat.py:82][0m AddN: 0.22379
+[32m[1106 13:26:20 @stat.py:82][0m conv0/W/rms: 0.071903
+[32m[1106 13:26:20 @stat.py:82][0m conv1/W/rms: 0.17981
+[32m[1106 13:26:20 @stat.py:82][0m conv1/Wn:0: 1.2822
+[32m[1106 13:26:20 @stat.py:82][0m conv1/Wp:0: 0.72242
+[32m[1106 13:26:20 @stat.py:82][0m conv2/W/rms: 0.11989
+[32m[1106 13:26:20 @stat.py:82][0m conv2/Wn:0: 1.1085
+[32m[1106 13:26:20 @stat.py:82][0m conv2/Wp:0: 0.89658
+[32m[1106 13:26:20 @stat.py:82][0m conv3/W/rms: 0.1135
+[32m[1106 13:26:20 @stat.py:82][0m conv3/Wn:0: 1.0793
+[32m[1106 13:26:20 @stat.py:82][0m conv3/Wp:0: 0.92566
+[32m[1106 13:26:20 @stat.py:82][0m conv4/W/rms: 0.13681
+[32m[1106 13:26:20 @stat.py:82][0m conv4/Wn:0: 1.1195
+[32m[1106 13:26:20 @stat.py:82][0m conv4/Wp:0: 0.88475
+[32m[1106 13:26:20 @stat.py:82][0m cost: 0.97235
+[32m[1106 13:26:20 @stat.py:82][0m cross_entropy_loss: 0.74856
+[32m[1106 13:26:20 @stat.py:82][0m fc0/W/rms: 0.0058391
+[32m[1106 13:26:20 @stat.py:82][0m fc0/Wn:0: 1.124
+[32m[1106 13:26:20 @stat.py:82][0m fc0/Wp:0: 0.87896
+[32m[1106 13:26:20 @stat.py:82][0m fc1/W/rms: 0.012539
+[32m[1106 13:26:20 @stat.py:82][0m fc1/Wn:0: 1.068
+[32m[1106 13:26:20 @stat.py:82][0m fc1/Wp:0: 0.92997
+[32m[1106 13:26:20 @stat.py:82][0m fct/W/rms: 0.14455
+[32m[1106 13:26:20 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 13:26:20 @stat.py:82][0m train-error-top1: 0.1891
+[32m[1106 13:26:20 @stat.py:82][0m train-error-top5: 0.055589
+[32m[1106 13:26:20 @stat.py:82][0m val-error-top1: 0.427
+[32m[1106 13:26:20 @stat.py:82][0m val-error-top5: 0.2032
+[32m[1106 13:26:20 @stat.py:82][0m validation_cost: 2.334
+[32m[1106 13:26:20 @group.py:40][0m Callbacks took 584.051 sec in total. InferenceRunner: 578.531sec
+[32m[1106 13:26:20 @timer.py:46][0m Epoch 75 (global_step 750000) finished, time:2496.36sec.
+[32m[1106 14:07:20 @stat.py:82][0m AddN: 0.22395
+[32m[1106 14:07:20 @stat.py:82][0m conv0/W/rms: 0.071904
+[32m[1106 14:07:20 @stat.py:82][0m conv1/W/rms: 0.17986
+[32m[1106 14:07:20 @stat.py:82][0m conv1/Wn:0: 1.2821
+[32m[1106 14:07:20 @stat.py:82][0m conv1/Wp:0: 0.72257
+[32m[1106 14:07:20 @stat.py:82][0m conv2/W/rms: 0.11992
+[32m[1106 14:07:20 @stat.py:82][0m conv2/Wn:0: 1.1085
+[32m[1106 14:07:20 @stat.py:82][0m conv2/Wp:0: 0.89661
+[32m[1106 14:07:20 @stat.py:82][0m conv3/W/rms: 0.11352
+[32m[1106 14:07:20 @stat.py:82][0m conv3/Wn:0: 1.0793
+[32m[1106 14:07:20 @stat.py:82][0m conv3/Wp:0: 0.92574
+[32m[1106 14:07:20 @stat.py:82][0m conv4/W/rms: 0.13684
+[32m[1106 14:07:20 @stat.py:82][0m conv4/Wn:0: 1.1193
+[32m[1106 14:07:20 @stat.py:82][0m conv4/Wp:0: 0.8849
+[32m[1106 14:07:20 @stat.py:82][0m cost: 0.94552
+[32m[1106 14:07:20 @stat.py:82][0m cross_entropy_loss: 0.72158
+[32m[1106 14:07:20 @stat.py:82][0m fc0/W/rms: 0.0058014
+[32m[1106 14:07:20 @stat.py:82][0m fc0/Wn:0: 1.1236
+[32m[1106 14:07:20 @stat.py:82][0m fc0/Wp:0: 0.87937
+[32m[1106 14:07:20 @stat.py:82][0m fc1/W/rms: 0.01249
+[32m[1106 14:07:20 @stat.py:82][0m fc1/Wn:0: 1.0681
+[32m[1106 14:07:20 @stat.py:82][0m fc1/Wp:0: 0.92984
+[32m[1106 14:07:20 @stat.py:82][0m fct/W/rms: 0.14464
+[32m[1106 14:07:20 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 14:07:20 @stat.py:82][0m train-error-top1: 0.18548
+[32m[1106 14:07:20 @stat.py:82][0m train-error-top5: 0.049105
+[32m[1106 14:07:20 @stat.py:82][0m val-error-top1: 0.42626
+[32m[1106 14:07:20 @stat.py:82][0m val-error-top5: 0.20492
+[32m[1106 14:07:20 @stat.py:82][0m validation_cost: 2.3353
+[32m[1106 14:07:20 @group.py:40][0m Callbacks took 553.424 sec in total. InferenceRunner: 547.394sec
+[32m[1106 14:07:20 @timer.py:46][0m Epoch 76 (global_step 760000) finished, time:2459.91sec.
+[32m[1106 14:48:16 @stat.py:82][0m AddN: 0.22411
+[32m[1106 14:48:16 @stat.py:82][0m conv0/W/rms: 0.071905
+[32m[1106 14:48:16 @stat.py:82][0m conv1/W/rms: 0.17991
+[32m[1106 14:48:16 @stat.py:82][0m conv1/Wn:0: 1.282
+[32m[1106 14:48:16 @stat.py:82][0m conv1/Wp:0: 0.72262
+[32m[1106 14:48:16 @stat.py:82][0m conv2/W/rms: 0.11994
+[32m[1106 14:48:16 @stat.py:82][0m conv2/Wn:0: 1.1086
+[32m[1106 14:48:16 @stat.py:82][0m conv2/Wp:0: 0.89654
+[32m[1106 14:48:16 @stat.py:82][0m conv3/W/rms: 0.11354
+[32m[1106 14:48:16 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 14:48:16 @stat.py:82][0m conv3/Wp:0: 0.9258
+[32m[1106 14:48:16 @stat.py:82][0m conv4/W/rms: 0.13688
+[32m[1106 14:48:16 @stat.py:82][0m conv4/Wn:0: 1.1194
+[32m[1106 14:48:16 @stat.py:82][0m conv4/Wp:0: 0.88479
+[32m[1106 14:48:16 @stat.py:82][0m cost: 0.94473
+[32m[1106 14:48:16 @stat.py:82][0m cross_entropy_loss: 0.72062
+[32m[1106 14:48:16 @stat.py:82][0m fc0/W/rms: 0.0057645
+[32m[1106 14:48:16 @stat.py:82][0m fc0/Wn:0: 1.1233
+[32m[1106 14:48:16 @stat.py:82][0m fc0/Wp:0: 0.87966
+[32m[1106 14:48:16 @stat.py:82][0m fc1/W/rms: 0.012441
+[32m[1106 14:48:16 @stat.py:82][0m fc1/Wn:0: 1.0675
+[32m[1106 14:48:16 @stat.py:82][0m fc1/Wp:0: 0.93047
+[32m[1106 14:48:16 @stat.py:82][0m fct/W/rms: 0.14472
+[32m[1106 14:48:16 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 14:48:16 @stat.py:82][0m train-error-top1: 0.18152
+[32m[1106 14:48:16 @stat.py:82][0m train-error-top5: 0.051084
+[32m[1106 14:48:16 @stat.py:82][0m val-error-top1: 0.42642
+[32m[1106 14:48:16 @stat.py:82][0m val-error-top5: 0.20578
+[32m[1106 14:48:16 @stat.py:82][0m validation_cost: 2.3468
+[32m[1106 14:48:16 @group.py:40][0m Callbacks took 550.767 sec in total. InferenceRunner: 545.330sec
+[32m[1106 14:48:16 @timer.py:46][0m Epoch 77 (global_step 770000) finished, time:2456.04sec.
+[32m[1106 15:29:47 @stat.py:82][0m AddN: 0.22428
+[32m[1106 15:29:47 @stat.py:82][0m conv0/W/rms: 0.071906
+[32m[1106 15:29:47 @stat.py:82][0m conv1/W/rms: 0.17996
+[32m[1106 15:29:47 @stat.py:82][0m conv1/Wn:0: 1.282
+[32m[1106 15:29:47 @stat.py:82][0m conv1/Wp:0: 0.72266
+[32m[1106 15:29:47 @stat.py:82][0m conv2/W/rms: 0.11996
+[32m[1106 15:29:47 @stat.py:82][0m conv2/Wn:0: 1.1084
+[32m[1106 15:29:47 @stat.py:82][0m conv2/Wp:0: 0.89667
+[32m[1106 15:29:47 @stat.py:82][0m conv3/W/rms: 0.11356
+[32m[1106 15:29:47 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 15:29:47 @stat.py:82][0m conv3/Wp:0: 0.92577
+[32m[1106 15:29:47 @stat.py:82][0m conv4/W/rms: 0.13691
+[32m[1106 15:29:47 @stat.py:82][0m conv4/Wn:0: 1.1194
+[32m[1106 15:29:47 @stat.py:82][0m conv4/Wp:0: 0.88477
+[32m[1106 15:29:47 @stat.py:82][0m cost: 0.98401
+[32m[1106 15:29:47 @stat.py:82][0m cross_entropy_loss: 0.75973
+[32m[1106 15:29:47 @stat.py:82][0m fc0/W/rms: 0.0057283
+[32m[1106 15:29:47 @stat.py:82][0m fc0/Wn:0: 1.1225
+[32m[1106 15:29:47 @stat.py:82][0m fc0/Wp:0: 0.88051
+[32m[1106 15:29:47 @stat.py:82][0m fc1/W/rms: 0.012392
+[32m[1106 15:29:47 @stat.py:82][0m fc1/Wn:0: 1.0673
+[32m[1106 15:29:47 @stat.py:82][0m fc1/Wp:0: 0.93062
+[32m[1106 15:29:47 @stat.py:82][0m fct/W/rms: 0.14481
+[32m[1106 15:29:47 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 15:29:47 @stat.py:82][0m train-error-top1: 0.19164
+[32m[1106 15:29:47 @stat.py:82][0m train-error-top5: 0.053268
+[32m[1106 15:29:47 @stat.py:82][0m val-error-top1: 0.42752
+[32m[1106 15:29:47 @stat.py:82][0m val-error-top5: 0.20506
+[32m[1106 15:29:47 @stat.py:82][0m validation_cost: 2.3572
+[32m[1106 15:29:47 @group.py:40][0m Callbacks took 586.142 sec in total. InferenceRunner: 579.051sec
+[32m[1106 15:29:47 @timer.py:46][0m Epoch 78 (global_step 780000) finished, time:2491.56sec.
+[32m[1106 16:10:29 @stat.py:82][0m AddN: 0.22444
+[32m[1106 16:10:29 @stat.py:82][0m conv0/W/rms: 0.071908
+[32m[1106 16:10:29 @stat.py:82][0m conv1/W/rms: 0.18001
+[32m[1106 16:10:29 @stat.py:82][0m conv1/Wn:0: 1.2817
+[32m[1106 16:10:29 @stat.py:82][0m conv1/Wp:0: 0.72292
+[32m[1106 16:10:29 @stat.py:82][0m conv2/W/rms: 0.11998
+[32m[1106 16:10:29 @stat.py:82][0m conv2/Wn:0: 1.1083
+[32m[1106 16:10:29 @stat.py:82][0m conv2/Wp:0: 0.89679
+[32m[1106 16:10:29 @stat.py:82][0m conv3/W/rms: 0.11358
+[32m[1106 16:10:29 @stat.py:82][0m conv3/Wn:0: 1.0792
+[32m[1106 16:10:29 @stat.py:82][0m conv3/Wp:0: 0.92581
+[32m[1106 16:10:29 @stat.py:82][0m conv4/W/rms: 0.13694
+[32m[1106 16:10:29 @stat.py:82][0m conv4/Wn:0: 1.1196
+[32m[1106 16:10:29 @stat.py:82][0m conv4/Wp:0: 0.88458
+[32m[1106 16:10:29 @stat.py:82][0m cost: 0.96179
+[32m[1106 16:10:29 @stat.py:82][0m cross_entropy_loss: 0.73735
+[32m[1106 16:10:29 @stat.py:82][0m fc0/W/rms: 0.0056931
+[32m[1106 16:10:29 @stat.py:82][0m fc0/Wn:0: 1.122
+[32m[1106 16:10:29 @stat.py:82][0m fc0/Wp:0: 0.88096
+[32m[1106 16:10:29 @stat.py:82][0m fc1/W/rms: 0.012344
+[32m[1106 16:10:29 @stat.py:82][0m fc1/Wn:0: 1.0668
+[32m[1106 16:10:29 @stat.py:82][0m fc1/Wp:0: 0.93113
+[32m[1106 16:10:29 @stat.py:82][0m fct/W/rms: 0.1449
+[32m[1106 16:10:29 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 16:10:29 @stat.py:82][0m train-error-top1: 0.19075
+[32m[1106 16:10:29 @stat.py:82][0m train-error-top5: 0.053535
+[32m[1106 16:10:29 @stat.py:82][0m val-error-top1: 0.42652
+[32m[1106 16:10:29 @stat.py:82][0m val-error-top5: 0.20222
+[32m[1106 16:10:29 @stat.py:82][0m validation_cost: 2.3355
+[32m[1106 16:10:30 @group.py:40][0m Callbacks took 537.059 sec in total. InferenceRunner: 531.334sec
+[32m[1106 16:10:30 @timer.py:46][0m Epoch 79 (global_step 790000) finished, time:2442.29sec.
+[32m[1106 16:51:44 @stat.py:82][0m AddN: 0.22461
+[32m[1106 16:51:44 @stat.py:82][0m conv0/W/rms: 0.071909
+[32m[1106 16:51:44 @stat.py:82][0m conv1/W/rms: 0.18006
+[32m[1106 16:51:44 @stat.py:82][0m conv1/Wn:0: 1.2815
+[32m[1106 16:51:44 @stat.py:82][0m conv1/Wp:0: 0.72312
+[32m[1106 16:51:44 @stat.py:82][0m conv2/W/rms: 0.12001
+[32m[1106 16:51:44 @stat.py:82][0m conv2/Wn:0: 1.1082
+[32m[1106 16:51:44 @stat.py:82][0m conv2/Wp:0: 0.89693
+[32m[1106 16:51:44 @stat.py:82][0m conv3/W/rms: 0.1136
+[32m[1106 16:51:44 @stat.py:82][0m conv3/Wn:0: 1.0791
+[32m[1106 16:51:44 @stat.py:82][0m conv3/Wp:0: 0.92595
+[32m[1106 16:51:44 @stat.py:82][0m conv4/W/rms: 0.13698
+[32m[1106 16:51:44 @stat.py:82][0m conv4/Wn:0: 1.1193
+[32m[1106 16:51:44 @stat.py:82][0m conv4/Wp:0: 0.88487
+[32m[1106 16:51:44 @stat.py:82][0m cost: 0.92602
+[32m[1106 16:51:44 @stat.py:82][0m cross_entropy_loss: 0.70142
+[32m[1106 16:51:44 @stat.py:82][0m fc0/W/rms: 0.0056584
+[32m[1106 16:51:44 @stat.py:82][0m fc0/Wn:0: 1.1219
+[32m[1106 16:51:44 @stat.py:82][0m fc0/Wp:0: 0.88111
+[32m[1106 16:51:44 @stat.py:82][0m fc1/W/rms: 0.012297
+[32m[1106 16:51:44 @stat.py:82][0m fc1/Wn:0: 1.0667
+[32m[1106 16:51:44 @stat.py:82][0m fc1/Wp:0: 0.93125
+[32m[1106 16:51:44 @stat.py:82][0m fct/W/rms: 0.14498
+[32m[1106 16:51:44 @stat.py:82][0m learning_rate: 4e-06
+[32m[1106 16:51:44 @stat.py:82][0m train-error-top1: 0.17256
+[32m[1106 16:51:44 @stat.py:82][0m train-error-top5: 0.048605
+[32m[1106 16:51:44 @stat.py:82][0m val-error-top1: 0.42828
+[32m[1106 16:51:44 @stat.py:82][0m val-error-top5: 0.20664
+[32m[1106 16:51:44 @stat.py:82][0m validation_cost: 2.3655
+[32m[1106 16:51:44 @group.py:40][0m Callbacks took 561.451 sec in total. InferenceRunner: 554.208sec
+[32m[1106 16:51:44 @timer.py:46][0m Epoch 80 (global_step 800000) finished, time:2474.79sec.
+[32m[1106 17:03:50 @trainer.py:139][0m Enqueue Thread Exited.
+[32m[1106 17:03:50 @prefetch.py:162][0m Prefetch process exiting...
+[32m[1106 17:03:50 @prefetch.py:170][0m Prefetch process exited.
