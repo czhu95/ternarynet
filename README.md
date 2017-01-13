@@ -29,13 +29,11 @@ cd examples/Ternary-Net/
 python ./tw-cifar10-resnet.py --gpu 0,1 [--load MODEL_PATH] [--t threshold] [--n NSIZE]
 ```
 **Note: We used 2 GPUs for training and pretrained model can be obtained using /examples/ResNet/**
-
 2. To train ResNet on CIFAR10 with fixed sparsity:
 ```
 cd examples/Ternary-Net/
 python ./p-cifar10-resnet.py --gpu 0,1 [--load MODEL_PATH] [—p sparsity] [--n NSIZE]
 ```
-
 3. To train AlexNet on ImageNet with fiexed threshold:
 ```
 cd examples/Ternary-Net/
