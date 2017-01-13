@@ -5,6 +5,25 @@ TensorFlow implementation of paper:
 
 This implementation is based on [tensorpack](https://github.com/ppwwyyxx/tensorpack). Thanks to this framework which made this implementation extremely easy.
 
+
+## Experimental Results:
+
+#### Error Rate of Finetuned TTQ ResNet models on CIFAR-10:
+
+| Network       | Full Precsion | TTQ         |
+| ------------- | ------------- | ----------- |
+| ResNet-20     | 8.23          | 8.87        |
+| ResNet-32     | 7.67          | 7.63        |
+| ResNet-44     | 7.18          | 7.02        |
+| ResNet-56     | 6.80          | 6.44        |
+
+#### Error Rate of TTQ AlexNet model on ImageNet from scratch:
+
+| Network       | Full Precsion | TTQ         |
+| ------------- | ------------- | ----------- |
+| Top1-error    | 42.8          | 42.5        |
+| Top5-error    | 19.7          | 20.3        |
+
 ## Dependencies:
 
 + Python 2 or 3
